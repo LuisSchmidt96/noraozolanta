@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+/* @import '@skeletonlabs/skeleton/optional/presets'; */
+@import '@skeletonlabs/skeleton';
+@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/playfair-display';
+
+:root {
+	--header-height: 5rem;
+	--footer-height: 4rem;
+}
+
+@theme {
+	/* color-primary: green-900;  */
+	/* --color-secondary: amber-400; */
+	--color-secondary: #ffc83f;
+	--color-tertiary: #bd897e;
+	--color-heading: #000000;
+	--color-primary-text: #1f2937;
+	--color-navbar: #000000;
+	--color-footer: #000000;
+	--default-font-family: 'InterVariable', sans-serif;
+	--heading-font-family: 'Playfair Display Variable', serif;
+	--radius-base: 20px;
+	--radius-container: 12px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	scroll-behavior: smooth;
+}
+
+header {
+	height: var(--header-height);
+}
+
+footer {
+	height: var(--footer-height);
+}
+
+section {
+	min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--heading-font-family);
+}
+
+a {
+	font-family: var(--anchor-font-family);
+	/* font-size: var(--anchor-font-size); */
+}
+
+p {
+	font-family: var(--text-font-family);
+	font-size: var(--text-xl);
+}
+
+/* a .btn-lg {
+	font-size: var(--anchor-font-size);
+} */
+.btn-xl {
+	font-size: var(--text-2xl)
+		/* calc(1.25rem * var(--text-scaling)) = calc(20px * var(--text-scaling)) */;
+	font-weight: bold;
+	line-height: var(--text-2xl--line-height)
+		/* calc(calc(1.75 / 1.25) ≈ 1.4 * var(--text-scaling)) */;
+	padding-block: calc(var(--spacing) * 5) /* 0.5rem = 8px */;
+	padding-inline: calc(var(--spacing) * 8) /* 1.25rem = 20px */;
+}
