@@ -11,7 +11,7 @@
 </script>
 
 <header class="md:relative sticky top-0 z-50">
-	<nav class="flex h-full border-b border-surface-200 bg-black text-lg">
+	<nav class="flex h-full border-b border-surface-200 bg-(--color-navbar) text-lg">
 		<div class="container mx-auto flex items-center justify-between px-4">
 			<div class="text-2xl font-bold text-white">
 				<h1>Nora Ozolanta</h1>
@@ -52,7 +52,7 @@
 						</a>
 					</li>
 				{/each}
-				<a href="/#contact" class="btn w-fit btn-lg bg-gray-900 border-white border text-white"
+				<a href="/#contact" class="btn w-fit btn-lg bg-stone-800 border-white border text-white"
 					>Pievienoties gaidītāju sarakstam</a
 				>
 			</ul>

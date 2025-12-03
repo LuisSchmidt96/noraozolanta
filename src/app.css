@@ -14,15 +14,39 @@
 	--footer-height: 4rem;
 }
 
-@theme {
-	/* color-primary: green-900;  */
-	/* --color-secondary: amber-400; */
-	--color-secondary: #ffc83f;
-	--color-tertiary: #bd897e;
+/* @theme { */
+/*  */
+/* color-primary: green-900;  */
+/* --color-secondary: amber-400; */
+/* --color-secondary: #ffc83f; */
+/* --color-tertiary: #bd897e;
 	--color-heading: #000000;
 	--color-primary-text: #1f2937;
 	--color-navbar: #000000;
-	--color-footer: #000000;
+	--color-footer: #000000; */
+/* } */
+
+[data-theme='nora'] {
+	--color-primary: #224932;
+	--color-primary-hover: #224932;
+	/* --color-secondary: var(--color-amber-300); */
+	--color-secondary: #ffc83f;
+	--color-tertiary-50: #eff8e2;
+	/* --color-fourth: #ada8b6;
+	--color-fifth: #23022e; */
+	/* --color-background: var(--color-stone-200); */
+	--base-font-color: var(--color-black);
+	--base-font-color-dark: var(--color-white);
+	/* --base-font-color: var(--color-stone-800); */
+	--base-heading-color: var(--color-stone-800);
+	--base-heading-color-dark: var(--color-stone-100);
+	--body-background-color: var(--color-black);
+	--body-background-color-dark: var(--color-black);
+	/* --color-background: hsl(30, 25%, 92%);
+	--color-background: hsl(90, 95%, 92%); */
+	/* --color-heading: #ffffff; */
+	--color-navbar: var(--body-background-color);
+	--color-footer: #111827;
 	--default-font-family: 'InterVariable', sans-serif;
 	--heading-font-family: 'Playfair Display Variable', serif;
 	--radius-base: 20px;
@@ -61,9 +85,10 @@ a {
 	/* font-size: var(--anchor-font-size); */
 }
 
+div,
 p {
 	font-family: var(--text-font-family);
-	font-size: var(--text-xl);
+	/* font-size: var(--text-xl); */
 }
 
 /* a .btn-lg {
@@ -77,4 +102,17 @@ p {
 		/* calc(calc(1.75 / 1.25) ≈ 1.4 * var(--text-scaling)) */;
 	padding-block: calc(var(--spacing) * 5) /* 0.5rem = 8px */;
 	padding-inline: calc(var(--spacing) * 8) /* 1.25rem = 20px */;
+}
+
+.btn-primary {
+	background-color: var(--color-primary);
+	border-color: var(--color-primary);
+}
+.btn-secondary {
+	background-color: var(--color-secondary);
+	border-color: var(--color-secondary);
+}
+
+.btn:not(:disabled):hover {
+	filter: brightness(115%);
 }
