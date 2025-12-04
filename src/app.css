@@ -35,22 +35,98 @@
 	/* --color-fourth: #ada8b6;
 	--color-fifth: #23022e; */
 	/* --color-background: var(--color-stone-200); */
-	--base-font-color: var(--color-black);
-	--base-font-color-dark: var(--color-white);
+
 	/* --base-font-color: var(--color-stone-800); */
-	--base-heading-color: var(--color-stone-800);
-	--base-heading-color-dark: var(--color-stone-100);
-	--body-background-color: var(--color-black);
-	--body-background-color-dark: var(--color-black);
 	/* --color-background: hsl(30, 25%, 92%);
 	--color-background: hsl(90, 95%, 92%); */
 	/* --color-heading: #ffffff; */
-	--color-navbar: var(--body-background-color);
+	/* --color-navbar: var(--body-background-color); */
 	--color-footer: #111827;
-	--default-font-family: 'InterVariable', sans-serif;
+	--base-font-family: 'InterVariable', sans-serif;
 	--heading-font-family: 'Playfair Display Variable', serif;
 	--radius-base: 20px;
 	--radius-container: 12px;
+	/* --text-scaling: 1.25; */
+	--base-font-color: var(--color-surface-950);
+	--base-font-color-dark: var(--color-surface-50);
+	--heading-font-color: var(--color-primary-950);
+	--heading-font-color-dark: var(--color-surface-950);
+	--anchor-font-color: var(--color-primary-500);
+	/* --anchor-font-color-dark: var(--color-primary-500); */
+	--body-background-color: var(--color-surface-50);
+	--body-background-color-dark: var(--color-surface-950);
+	--color-primary-50: oklch(97.23% 0.01 153.41deg);
+	--color-primary-100: oklch(91.49% 0.03 158.59deg);
+	--color-primary-200: oklch(85.77% 0.05 158.53deg);
+	--color-primary-300: oklch(80.13% 0.07 158.69deg);
+	--color-primary-400: oklch(74.55% 0.1 157.49deg);
+	--color-primary-500: oklch(69.11% 0.12 155.98deg);
+	--color-primary-600: oklch(60.61% 0.1 155.92deg);
+	--color-primary-700: oklch(51.48% 0.09 156.48deg);
+	--color-primary-800: oklch(42.22% 0.07 155.63deg);
+	--color-primary-900: oklch(32.1% 0.05 156.53deg);
+	--color-primary-950: oklch(21.48% 0.03 156.67deg);
+	--color-primary-contrast-dark: var(--color-primary-950);
+	--color-primary-contrast-light: var(--color-primary-50);
+	--color-primary-contrast-50: var(--color-primary-contrast-dark);
+	--color-primary-contrast-100: var(--color-primary-contrast-dark);
+	--color-primary-contrast-200: var(--color-primary-contrast-dark);
+	--color-primary-contrast-300: var(--color-primary-contrast-dark);
+	--color-primary-contrast-400: var(--color-primary-contrast-dark);
+	--color-primary-contrast-500: var(--color-primary-contrast-dark);
+	--color-primary-contrast-600: var(--color-primary-contrast-dark);
+	--color-primary-contrast-700: var(--color-primary-contrast-light);
+	--color-primary-contrast-800: var(--color-primary-contrast-light);
+	--color-primary-contrast-900: var(--color-primary-contrast-light);
+	--color-primary-contrast-950: var(--color-primary-contrast-light);
+	--color-secondary-50: oklch(97.93% 0.03 90.87deg);
+	--color-secondary-100: oklch(95.2% 0.06 89deg);
+	--color-secondary-200: oklch(92.79% 0.09 89.22deg);
+	--color-secondary-300: oklch(90.31% 0.12 88.23deg);
+	--color-secondary-400: oklch(88.16% 0.14 87.58deg);
+	--color-secondary-500: oklch(85.96% 0.16 85.6deg);
+	--color-secondary-600: oklch(75.13% 0.14 85.75deg);
+	--color-secondary-700: oklch(64.01% 0.12 85.37deg);
+	--color-secondary-800: oklch(52.04% 0.09 84.68deg);
+	--color-secondary-900: oklch(39.69% 0.07 83.52deg);
+	--color-secondary-950: oklch(26.13% 0.05 82.64deg);
+	--color-secondary-contrast-dark: var(--color-secondary-950);
+	--color-secondary-contrast-light: var(--color-secondary-50);
+	--color-secondary-contrast-50: var(--color-secondary-contrast-dark);
+	--color-secondary-contrast-100: var(--color-secondary-contrast-dark);
+	--color-secondary-contrast-200: var(--color-secondary-contrast-dark);
+	--color-secondary-contrast-300: var(--color-secondary-contrast-dark);
+	--color-secondary-contrast-400: var(--color-secondary-contrast-dark);
+	--color-secondary-contrast-500: var(--color-secondary-contrast-dark);
+	--color-secondary-contrast-600: var(--color-secondary-contrast-dark);
+	--color-secondary-contrast-700: var(--color-secondary-contrast-dark);
+	--color-secondary-contrast-800: var(--color-secondary-contrast-light);
+	--color-secondary-contrast-900: var(--color-secondary-contrast-light);
+	--color-secondary-contrast-950: var(--color-secondary-contrast-light);
+	--color-surface-50: oklch(100% 0 none);
+	--color-surface-100: oklch(90.67% 0 none);
+	--color-surface-200: oklch(81.41% 0 none);
+	--color-surface-300: oklch(71.55% 0 none);
+	--color-surface-400: oklch(61.67% 0 none);
+	--color-surface-500: oklch(51.03% 0 none);
+	--color-surface-600: oklch(44.95% 0 none);
+	--color-surface-700: oklch(38.67% 0 none);
+	--color-surface-800: oklch(32.11% 0 none);
+	--color-surface-900: oklch(25.2% 0 none);
+	--color-surface-950: oklch(17.76% 0 none);
+	--color-surface-contrast-dark: var(--color-surface-950);
+	--color-surface-contrast-light: var(--color-surface-50);
+	--color-surface-contrast-50: var(--color-surface-contrast-dark);
+	--color-surface-contrast-100: var(--color-surface-contrast-dark);
+	--color-surface-contrast-200: var(--color-surface-contrast-dark);
+	--color-surface-contrast-300: var(--color-surface-contrast-dark);
+	--color-surface-contrast-400: var(--color-surface-contrast-light);
+	--color-surface-contrast-500: var(--color-surface-contrast-light);
+	--color-surface-contrast-600: var(--color-surface-contrast-light);
+	--color-surface-contrast-700: var(--color-surface-contrast-light);
+	--color-surface-contrast-800: var(--color-surface-contrast-light);
+	--color-surface-contrast-900: var(--color-surface-contrast-light);
+	--color-surface-contrast-950: var(--color-surface-contrast-light);
 }
 
 html {
@@ -85,11 +161,10 @@ a {
 	/* font-size: var(--anchor-font-size); */
 }
 
-div,
+/* div,
 p {
 	font-family: var(--text-font-family);
-	/* font-size: var(--text-xl); */
-}
+} */
 
 /* a .btn-lg {
 	font-size: var(--anchor-font-size);
@@ -105,12 +180,12 @@ p {
 }
 
 .btn-primary {
-	background-color: var(--color-primary);
-	border-color: var(--color-primary);
+	background-color: var(--color-primary-800);
+	border-color: var(--color-primary-800);
 }
 .btn-secondary {
-	background-color: var(--color-secondary);
-	border-color: var(--color-secondary);
+	background-color: var(--color-secondary-500);
+	border-color: var(--color-secondary-500);
 }
 
 .btn:not(:disabled):hover {
