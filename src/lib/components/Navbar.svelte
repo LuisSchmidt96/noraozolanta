@@ -5,7 +5,7 @@
 	const links = [
 		{ name: 'Sākums', top: true, href: '/' },
 		{ name: 'Piedāvājumi', href: '/#about' },
-		{ name: 'Par mani', href: '/#services' },
+		{ name: 'Par mani', href: '/about' },
 		{ name: 'Kontakti', href: '/#contact' }
 	];
 </script>

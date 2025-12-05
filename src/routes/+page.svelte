@@ -4,8 +4,10 @@
 	import oranges from '$lib/assets/images/oranges.webp';
 	import nora_yeah from '$lib/assets/images/nora_hmm.webp';
 	import icon_quote from '$lib/assets/images/icon-quote.webp';
+	import circle_check from '$lib/assets/images/check-circle.svg';
+	import question from '$lib/assets/images/question.svg';
+	import lightbulb from '$lib/assets/images/lightbulb.svg';
 
-	import { CircleCheck } from 'lucide-svelte';
 	import TestimonialCard from '$lib/components/TestimonialCard.svelte';
 	// import { Quote } from 'lucide-svelte';
 </script>
@@ -17,7 +19,7 @@
 >
 	<div class="flex items-center justify-center gap-16">
 		<div class="flex flex-col space-y-6 text-lg leading-relaxed md:w-1/2">
-			<h1 class="h1 mb-8 font-extrabold tracking-tight md:text-5xl/tight">
+			<h1 class="h1 mb-8 font-bold tracking-tight md:text-5xl/tight">
 				Speak English with confidence. Without guilt.<br /> Without perfectionism.
 			</h1>
 			<div class="text-xl leading-relaxed text-black">
@@ -33,7 +35,7 @@
 				</a>
 				<a
 					href="#contact"
-					class="btn btn-secondary w-fit shadow-xl text-(--color-fifth) shadow-(--color-secondary)/30 btn-xl"
+					class="btn btn-secondary w-fit shadow-xl text-black shadow-(--color-secondary)/30 btn-xl"
 				>
 					Download the Free Guide
 				</a>
@@ -89,11 +91,22 @@
 				speaking fear.
 			</p>
 			<h3 class="h3 italic">Inside the guide you’ll learn:</h3>
-			<ul class="list-disc list-inside space-y-2 text-xl">
-				<li>why school-style language learning doesn’t work</li>
-				<li>how adults actually learn languages today</li>
-				<li>how to build speaking confidence</li>
-				<li>the psychological blocks that stop progress — and how to overcome them</li>
+			<ul class="list-inside space-y-2 text-xl">
+				<li class="flex gap-4 items-center">
+					<img src={circle_check} alt="CircleCheck" class="w-8" /> why school-style language learning
+					doesn’t work
+				</li>
+				<li class="flex gap-4 items-center">
+					<img src={circle_check} alt="CircleCheck" class="w-8" /> how adults actually learn languages
+					today
+				</li>
+				<li class="flex gap-4 items-center">
+					<img src={circle_check} alt="CircleCheck" class="w-8" /> how to build speaking confidence
+				</li>
+				<li class="flex gap-4 items-center">
+					<img src={circle_check} alt="CircleCheck" class="w-8" /> the psychological blocks that stop
+					progress — and how to overcome them
+				</li>
 			</ul>
 			<a
 				href="#contact"
@@ -262,38 +275,80 @@
 		</div>
 	</section>
 </div>
-<div class="bg-(--color-primary)/70"><section
-	id="faq"
-	class="container w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 px-4 text-left md:scroll-mt-0 md:my-0 my-20"
->
-	<!-- <div class="flex items-center justify-center gap-16"> -->
-	<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
-	<div class="flex flex-col items-start space-y-16 text-xl leading-relaxed text-black">
-		<h1 class="h1">FAQ</h1>
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 gap-x-36">
-			<div class="space-y-4">
-				<h3 class="h3">Do I need a specific English level?</h3>
-				<p>No. The method is built around your goals, not CEFR levels.</p>
-			</div>
-			<div class="space-y-4">
-				<h3 class="h3">Do I need a specific English level?</h3>
-				<p>No. The method is built around your goals, not CEFR levels.</p>
-			</div>
-			<div class="space-y-4">
-				<h3 class="h3">Do I need a specific English level?</h3>
-				<p>No. The method is built around your goals, not CEFR levels.</p>
-			</div>
-			<div class="space-y-4">
-				<h3 class="h3">Do I need a specific English level?</h3>
-				<p>No. The method is built around your goals, not CEFR levels.</p>
-			</div>
-			<div class="space-y-4">
-				<h3 class="h3">Do I need a specific English level?</h3>
-				<p>No. The method is built around your goals, not CEFR levels.</p>
+<div class="bg-(--color-primary)/70">
+	<section
+		id="faq"
+		class="container w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 px-4 text-left md:scroll-mt-0 md:my-0 my-20"
+	>
+		<!-- <div class="flex items-center justify-center gap-16"> -->
+		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
+		<div class="flex flex-col items-start space-y-16 text-xl leading-relaxed text-black">
+			<h1 class="h1">FAQ</h1>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 gap-x-36">
+				<div class="space-y-4">
+					<h3 class="h3 flex gap-4 items-center">
+						<img src={question} alt="CircleCheck" class="w-8" />
+						<div>Do I need a specific English level?</div>
+					</h3>
+					<p class="flex gap-4 items-center">
+						<img src={circle_check} alt="CircleCheck" class="w-8" /> No. The method is built around your
+						goals, not CEFR levels.
+					</p>
+				</div>
+				<div class="space-y-4">
+					<h3 class="h3 flex gap-4 items-center">
+						<img src={question} alt="CircleCheck" class="w-8" />
+						<div>Do I need a specific English level?</div>
+					</h3>
+					<p class="flex gap-4 items-center">
+						<img src={circle_check} alt="CircleCheck" class="w-8" /> No. The method is built around your
+						goals, not CEFR levels.
+					</p>
+				</div>
+				<div class="space-y-4">
+					<h3 class="h3 flex gap-4 items-center">
+						<img src={question} alt="CircleCheck" class="w-8" />
+						<div>Do I need a specific English level?</div>
+					</h3>
+					<p class="flex gap-4 items-center">
+						<img src={circle_check} alt="CircleCheck" class="w-8" /> No. The method is built around your
+						goals, not CEFR levels.
+					</p>
+				</div>
+				<div class="space-y-4">
+					<h3 class="h3 flex gap-4 items-center">
+						<img src={question} alt="CircleCheck" class="w-8" />
+						<div>Do I need a specific English level?</div>
+					</h3>
+					<p class="flex gap-4 items-center">
+						<img src={circle_check} alt="CircleCheck" class="w-8" /> No. The method is built around your
+						goals, not CEFR levels.
+					</p>
+				</div>
+				<div class="space-y-4">
+					<h3 class="h3 flex gap-4 items-center">
+						<img src={question} alt="CircleCheck" class="w-8" />
+						<div>Do I need a specific English level?</div>
+					</h3>
+					<p class="flex gap-4 items-center">
+						<img src={circle_check} alt="CircleCheck" class="w-8" /> No. The method is built around your
+						goals, not CEFR levels.
+					</p>
+				</div>
+				<div class="space-y-4">
+					<h3 class="h3 flex gap-4 items-center">
+						<img src={question} alt="CircleCheck" class="w-8" />
+						<div>Do I need a specific English level?</div>
+					</h3>
+					<p class="flex gap-4 items-center">
+						<img src={circle_check} alt="CircleCheck" class="w-8" /> No. The method is built around your
+						goals, not CEFR levels.
+					</p>
+				</div>
 			</div>
 		</div>
-	</div>
-</section></div>
+	</section>
+</div>
 <div class="bg-(--color-secondary)/70">
 	<section
 		id="leadmagnet"
