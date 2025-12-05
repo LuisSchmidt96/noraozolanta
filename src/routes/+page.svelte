@@ -7,6 +7,8 @@
 	import circle_check from '$lib/assets/images/check-circle.svg';
 	import question from '$lib/assets/images/question.svg';
 	import lightbulb from '$lib/assets/images/lightbulb.svg';
+	import { aos } from '$lib/utils/aos';
+	import { onMount } from 'svelte';
 
 	import TestimonialCard from '$lib/components/TestimonialCard.svelte';
 	// import { Quote } from 'lucide-svelte';
@@ -50,8 +52,13 @@
 		id="featured"
 		class="container w-full mx-auto flex flex-1 scroll-mt-16 flex-col justify-center gap-12 px-4 text-left md:scroll-mt-0 md:my-0 my-20"
 	>
-		<div class="flex items-center justify-center gap-16 text-black">
-			<img class="w-1/2 rounded-3xl" src={oranges} alt="" />
+		<div
+			class="flex items-center justify-center gap-16 text-black"
+			data-aos="fade-up"
+			data-aos-delay="100"
+		>
+			<img class="w-1/2 rounded-3xl" src={oranges} />
+			<!-- use:aos={'fade-up'} /> -->
 			<div class="flex flex-col space-y-6 text-xl leading-relaxed md:w-1/2">
 				<h1 class="h1">“Augļu valoda” Program</h1>
 				<p>
@@ -80,6 +87,8 @@
 	<section
 		id="leadmagnet"
 		class="w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 px-4 text-left md:scroll-mt-0 md:my-0 my-20"
+		data-aos="fade-up"
+		data-aos-delay="100"
 	>
 		<!-- <div class="flex items-center justify-center gap-16"> -->
 		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
@@ -121,101 +130,108 @@
 <div class="bg-(--color-background)">
 	<section
 		id="testimonials"
-		class="w-full py-36 text-black mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-16 px-4 text-left md:scroll-mt-0 md:my-0 my-20"
+		class="w-full py-36 text-black mx-auto px-4 text-left md:scroll-mt-0 md:my-0 my-20"
 	>
-		<h1 class="h1">Testimonials</h1>
-		<div class="flex gap-12 w-3/4 justify-evenly">
-			<TestimonialCard>
-				<div class="space-y-4 text-gray-800 leading-relaxed">
-					<p><strong>Uzsākot programmu:</strong></p>
+		<div
+			class="flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-16"
+			data-aos="fade-up"
+			data-aos-delay="100"
+			data-aos-offset="100"
+		>
+			<h1 class="h1">Testimonials</h1>
+			<div class="flex gap-12 w-3/4 justify-evenly">
+				<TestimonialCard>
+					<div class="space-y-4 text-gray-800 leading-relaxed">
+						<p><strong>Uzsākot programmu:</strong></p>
 
-					<p>
-						Manas domas latviski skrien ātrāk par paralēlajām domām atrast pareizos vārdus, lai to
-						pateiktu angliski. Beigās nepasaku neko vai sāku minstināties. Runa ir par valodu, kāda
-						man nepieciešama darbā, jo ikdienas angļu valoda ceļojumos vai uz ielas man nerada
-						šķēršļus.
-					</p>
+						<p>
+							Manas domas latviski skrien ātrāk par paralēlajām domām atrast pareizos vārdus, lai to
+							pateiktu angliski. Beigās nepasaku neko vai sāku minstināties. Runa ir par valodu,
+							kāda man nepieciešama darbā, jo ikdienas angļu valoda ceļojumos vai uz ielas man
+							nerada šķēršļus.
+						</p>
 
-					<p>
-						Es jūtu, ka beidzot TAS ir jāizdara, jo pārāk ilgi esmu iestrēgusi sajūtā, ka mana anglu
-						valoda nav piemerota darba sarunām manā darbā un šis beidzot ir jāatrisina.
-					</p>
+						<p>
+							Es jūtu, ka beidzot TAS ir jāizdara, jo pārāk ilgi esmu iestrēgusi sajūtā, ka mana
+							anglu valoda nav piemerota darba sarunām manā darbā un šis beidzot ir jāatrisina.
+						</p>
 
-					<p><strong>Nobeidzot programmu:</strong></p>
+						<p><strong>Nobeidzot programmu:</strong></p>
 
-					<p>
-						Es jūtos pārsteigta par progresu, jo es nevaru sevi atpazīt, kāda biju programmas sākumā
-						(es nevarēju psiholoģiski parunāt angliski) un kā ir beigās, kad varu ar Noru veselu
-						stundu norunāt tikai angliski. Apbrīnojami!
-					</p>
-				</div>
+						<p>
+							Es jūtos pārsteigta par progresu, jo es nevaru sevi atpazīt, kāda biju programmas
+							sākumā (es nevarēju psiholoģiski parunāt angliski) un kā ir beigās, kad varu ar Noru
+							veselu stundu norunāt tikai angliski. Apbrīnojami!
+						</p>
+					</div>
 
-				<!-- Name -->
-				<div>
-					<p class="font-semibold">Dalībniece E.</p>
-				</div>
-			</TestimonialCard>
-			<TestimonialCard>
-				<div class="space-y-4 text-gray-800 leading-relaxed">
-					<p><strong>Uzsākot programmu:</strong></p>
+					<!-- Name -->
+					<div>
+						<p class="font-semibold">Dalībniece E.</p>
+					</div>
+				</TestimonialCard>
+				<TestimonialCard>
+					<div class="space-y-4 text-gray-800 leading-relaxed">
+						<p><strong>Uzsākot programmu:</strong></p>
 
-					<p>
-						Manas domas latviski skrien ātrāk par paralēlajām domām atrast pareizos vārdus, lai to
-						pateiktu angliski. Beigās nepasaku neko vai sāku minstināties. Runa ir par valodu, kāda
-						man nepieciešama darbā, jo ikdienas angļu valoda ceļojumos vai uz ielas man nerada
-						šķēršļus.
-					</p>
+						<p>
+							Manas domas latviski skrien ātrāk par paralēlajām domām atrast pareizos vārdus, lai to
+							pateiktu angliski. Beigās nepasaku neko vai sāku minstināties. Runa ir par valodu,
+							kāda man nepieciešama darbā, jo ikdienas angļu valoda ceļojumos vai uz ielas man
+							nerada šķēršļus.
+						</p>
 
-					<p>
-						Es jūtu, ka beidzot TAS ir jāizdara, jo pārāk ilgi esmu iestrēgusi sajūtā, ka mana anglu
-						valoda nav piemerota darba sarunām manā darbā un šis beidzot ir jāatrisina.
-					</p>
+						<p>
+							Es jūtu, ka beidzot TAS ir jāizdara, jo pārāk ilgi esmu iestrēgusi sajūtā, ka mana
+							anglu valoda nav piemerota darba sarunām manā darbā un šis beidzot ir jāatrisina.
+						</p>
 
-					<p><strong>Nobeidzot programmu:</strong></p>
+						<p><strong>Nobeidzot programmu:</strong></p>
 
-					<p>
-						Es jūtos pārsteigta par progresu, jo es nevaru sevi atpazīt, kāda biju programmas sākumā
-						(es nevarēju psiholoģiski parunāt angliski) un kā ir beigās, kad varu ar Noru veselu
-						stundu norunāt tikai angliski. Apbrīnojami!
-					</p>
-				</div>
+						<p>
+							Es jūtos pārsteigta par progresu, jo es nevaru sevi atpazīt, kāda biju programmas
+							sākumā (es nevarēju psiholoģiski parunāt angliski) un kā ir beigās, kad varu ar Noru
+							veselu stundu norunāt tikai angliski. Apbrīnojami!
+						</p>
+					</div>
 
-				<!-- Name -->
-				<div>
-					<p class="font-semibold">Dalībniece E.</p>
-				</div>
-			</TestimonialCard>
-			<TestimonialCard>
-				<!-- Testimonial Text -->
-				<div class="space-y-4 text-gray-800 leading-relaxed">
-					<p><strong>Uzsākot programmu:</strong></p>
+					<!-- Name -->
+					<div>
+						<p class="font-semibold">Dalībniece E.</p>
+					</div>
+				</TestimonialCard>
+				<TestimonialCard>
+					<!-- Testimonial Text -->
+					<div class="space-y-4 text-gray-800 leading-relaxed">
+						<p><strong>Uzsākot programmu:</strong></p>
 
-					<p>
-						Manas domas latviski skrien ātrāk par paralēlajām domām atrast pareizos vārdus, lai to
-						pateiktu angliski. Beigās nepasaku neko vai sāku minstināties. Runa ir par valodu, kāda
-						man nepieciešama darbā, jo ikdienas angļu valoda ceļojumos vai uz ielas man nerada
-						šķēršļus.
-					</p>
+						<p>
+							Manas domas latviski skrien ātrāk par paralēlajām domām atrast pareizos vārdus, lai to
+							pateiktu angliski. Beigās nepasaku neko vai sāku minstināties. Runa ir par valodu,
+							kāda man nepieciešama darbā, jo ikdienas angļu valoda ceļojumos vai uz ielas man
+							nerada šķēršļus.
+						</p>
 
-					<p>
-						Es jūtu, ka beidzot TAS ir jāizdara, jo pārāk ilgi esmu iestrēgusi sajūtā, ka mana anglu
-						valoda nav piemerota darba sarunām manā darbā un šis beidzot ir jāatrisina.
-					</p>
+						<p>
+							Es jūtu, ka beidzot TAS ir jāizdara, jo pārāk ilgi esmu iestrēgusi sajūtā, ka mana
+							anglu valoda nav piemerota darba sarunām manā darbā un šis beidzot ir jāatrisina.
+						</p>
 
-					<p><strong>Nobeidzot programmu:</strong></p>
+						<p><strong>Nobeidzot programmu:</strong></p>
 
-					<p>
-						Es jūtos pārsteigta par progresu, jo es nevaru sevi atpazīt, kāda biju programmas sākumā
-						(es nevarēju psiholoģiski parunāt angliski) un kā ir beigās, kad varu ar Noru veselu
-						stundu norunāt tikai angliski. Apbrīnojami!
-					</p>
-				</div>
+						<p>
+							Es jūtos pārsteigta par progresu, jo es nevaru sevi atpazīt, kāda biju programmas
+							sākumā (es nevarēju psiholoģiski parunāt angliski) un kā ir beigās, kad varu ar Noru
+							veselu stundu norunāt tikai angliski. Apbrīnojami!
+						</p>
+					</div>
 
-				<!-- Name -->
-				<div>
-					<p class="font-semibold">Dalībniece E.</p>
-				</div>
-			</TestimonialCard>
+					<!-- Name -->
+					<div>
+						<p class="font-semibold">Dalībniece E.</p>
+					</div>
+				</TestimonialCard>
+			</div>
 		</div>
 	</section>
 </div>
@@ -226,7 +242,12 @@
 	>
 		<!-- <div class="flex items-center justify-center gap-16"> -->
 		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
-		<div class="flex flex-col items-start space-y-6 text-xl leading-relaxed text-black">
+		<div
+			class="flex flex-col items-start space-y-6 text-xl leading-relaxed text-black"
+			data-aos="fade-up"
+			data-aos-delay="100"
+			data-aos-offset="100"
+		>
 			<div class="flex gap-24">
 				<img src={nora_yeah} alt="Nora Ozolanta" class="w-1/2 rounded-3xl" />
 				<div class="flex flex-col gap-8 w-full">
@@ -278,11 +299,16 @@
 <div class="bg-(--color-primary)/70">
 	<section
 		id="faq"
-		class="container w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 px-4 text-left md:scroll-mt-0 md:my-0 my-20"
+		class="container w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 px-4 text-left md:scroll-mt-0 py-20"
 	>
 		<!-- <div class="flex items-center justify-center gap-16"> -->
 		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
-		<div class="flex flex-col items-start space-y-16 text-xl leading-relaxed text-black">
+		<div
+			class="flex flex-col items-start space-y-16 text-xl leading-relaxed text-black"
+			data-aos="fade-up"
+			data-aos-delay="100"
+			data-aos-offset="100"
+		>
 			<h1 class="h1">FAQ</h1>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 gap-x-36">
 				<div class="space-y-4">
@@ -352,11 +378,15 @@
 <div class="bg-(--color-secondary)/70">
 	<section
 		id="leadmagnet"
-		class="w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 px-4 text-left md:scroll-mt-0 md:my-0 my-20"
+		class="w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 px-4 text-left md:scroll-mt-0 py-20"
 	>
 		<!-- <div class="flex items-center justify-center gap-16"> -->
 		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
-		<div class="flex flex-col items-center space-y-6 text-xl leading-relaxed text-black">
+		<div
+			class="flex flex-col items-center space-y-6 text-xl leading-relaxed text-black"
+			data-aos="fade-up"
+			data-aos-delay="100"
+		>
 			<h1 class="h1">Want a calmer, more human approach to learning English?</h1>
 			<h3 class="h3">
 				A weekly letter with honest, grounding insights about language, confidence, and life.
