@@ -10,8 +10,9 @@
 	];
 </script>
 
-<header class="md:relative sticky top-0 z-50">
-	<nav class="flex h-full border-b border-white bg-black text-lg">
+<!-- md:relative sticky top-0 z-50 -->
+<header class="nav site-header headroom flex h-full border-b border-white bg-black text-lg">
+	<!-- <nav class="flex h-full border-b border-white bg-black text-lg"> -->
 		<div class="container mx-auto flex items-center justify-between px-4 text-white">
 			<div class="text-2xl font-bold">
 				<h1>Nora Ozolanta</h1>
@@ -79,5 +80,5 @@
 				>
 			</ul>
 		{/if}
-	</nav>
+	<!-- </nav> -->
 </header>

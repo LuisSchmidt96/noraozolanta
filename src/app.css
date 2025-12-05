@@ -161,6 +161,37 @@ a {
 	/* font-size: var(--anchor-font-size); */
 }
 
+.site-header {
+	width: 100%;
+	z-index: 99999;
+	
+	@media (min-width: 64em) {
+	position: fixed;
+		padding: 30px 0;
+	}
+}
+.headroom {
+	transition: transform 0.25s ease-in-out;
+	will-change: transform;
+}
+.headroom--pinned {
+	transform: translateY(0);
+}
+@media (min-width: 64em) {
+	.headroom--unpinned {
+		transform: translateY(-100%);
+	}
+}
+/* .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+} */
+
 /* div,
 p {
 	font-family: var(--text-font-family);
