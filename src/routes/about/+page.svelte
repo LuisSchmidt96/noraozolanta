@@ -87,7 +87,7 @@
 			</h3>
 			<a
 				href="#contact"
-				class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white"
+				class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white border"
 			>
 				Join the Newsletter
 			</a>

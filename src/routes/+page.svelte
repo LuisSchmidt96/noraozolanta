@@ -31,13 +31,13 @@
 			<div class="flex flex-col mt-8 gap-4">
 				<a
 					href="#contact"
-					class="btn w-fit shadow-xl shadow-(--color-primary)/30 btn-primary text-white btn-xl"
+					class="btn w-fit shadow-xl shadow-(--color-primary)/30 btn-primary text-white btn-xl border"
 				>
 					Join the “Augļu valoda” Waitlist
 				</a>
 				<a
 					href="#contact"
-					class="btn btn-secondary w-fit shadow-xl text-black shadow-(--color-secondary)/30 btn-xl"
+					class="btn btn-secondary w-fit shadow-xl text-black shadow-(--color-secondary)/30 btn-xl border"
 				>
 					Download the Free Guide
 				</a>
@@ -75,7 +75,7 @@
 				</ul>
 				<a
 					href="#contact"
-					class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white"
+					class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white border"
 				>
 					Explore the Program
 				</a>
@@ -119,7 +119,7 @@
 			</ul>
 			<a
 				href="#contact"
-				class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white"
+				class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white border"
 			>
 				Get the Free eBook
 			</a>
@@ -393,7 +393,7 @@
 			</h3>
 			<a
 				href="#contact"
-				class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white"
+				class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white border"
 			>
 				Join the Newsletter
 			</a>
