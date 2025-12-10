@@ -17,12 +17,12 @@
 <!-- <div class="bg-(--color-background)"> -->
 <section
 	id="hero"
-	class="container mx-auto flex flex-1 scroll-mt-16 flex-col justify-center px-4 text-left md:scroll-mt-0 md:my-0 my-20"
+	class="container mx-auto flex flex-1 scroll-mt-16 flex-col justify-center md:px-4 px-6 md:text-left md:scroll-mt-0 md:my-0"
 >
-	<div class="flex items-center justify-center gap-16">
+	<div class="flex items-center justify-center md:gap-16 mx-auto">
 		<div class="flex flex-col space-y-6 text-lg leading-relaxed md:w-1/2">
 			<h1 class="h1 mb-8 font-bold tracking-tight md:text-5xl/tight">
-				Speak English with confidence. Without guilt.<br /> Without perfectionism.
+				Speak English with confidence.<br /> Without guilt.<br /> Without perfectionism.
 			</h1>
 			<div class="text-xl leading-relaxed text-black">
 				A safe, supportive space for Latvian women to improve their English and build real speaking
@@ -43,21 +43,21 @@
 				</a>
 			</div>
 		</div>
-		<img class="w-[30%] rounded-3xl" src={hero_nora} alt="" />
+		<img class="md:block hidden w-[30%] rounded-3xl" src={hero_nora} alt="" />
 	</div>
 </section>
 <!-- </div> -->
 <div class="bg-(--color-secondary)/70">
 	<section
 		id="featured"
-		class="container w-full mx-auto flex flex-1 scroll-mt-16 flex-col justify-center gap-12 px-4 text-left md:scroll-mt-0 md:my-0 my-20"
+		class="container w-full mx-auto flex flex-1 scroll-mt-16 flex-col justify-center gap-12 md:px-4 px-6 text-left md:scroll-mt-0 md:my-0 py-16 md:py-24"
 	>
 		<div
 			class="flex items-center justify-center gap-16 text-black"
 			data-aos="fade-up"
 			data-aos-delay="100"
 		>
-			<img class="w-1/2 rounded-3xl" src={oranges} />
+			<img class="hidden md:block md:w-1/2 rounded-3xl" src={oranges} />
 			<!-- use:aos={'fade-up'} /> -->
 			<div class="flex flex-col space-y-6 text-xl leading-relaxed md:w-1/2">
 				<h1 class="h1">“Augļu valoda” Program</h1>
@@ -86,21 +86,21 @@
 <div class="bg-(--color-primary)/30">
 	<section
 		id="leadmagnet"
-		class="w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 px-4 text-left md:scroll-mt-0 md:my-0 my-20"
+		class="w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 md:px-4 px-6 text-left md:scroll-mt-0 md:my-0 py-16 md:py-24"
 		data-aos="fade-up"
 		data-aos-delay="100"
 	>
 		<!-- <div class="flex items-center justify-center gap-16"> -->
 		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
-		<div class="flex flex-col items-center space-y-6 text-xl leading-relaxed text-black">
-			<h1 class="h1">Free eBook:</h1>
-			<h1 class="h1">"How Modern Latvian Women Can Learn English Effectively"</h1>
+		<div class="flex flex-col items-center text-center md:text-left space-y-6 text-xl leading-relaxed text-black">
+			<h1 class="h1 text-center">Free eBook:</h1>
+			<h1 class="h2 md:h1 text-center">"How Modern Latvian Women Can Learn English Effectively"</h1>
 			<p>
 				English learning that brings real results — the safest and most effective way to remove
 				speaking fear.
 			</p>
 			<h3 class="h3 italic">Inside the guide you’ll learn:</h3>
-			<ul class="list-inside space-y-2 text-xl">
+			<ul class="list-inside space-y-4 text-xl">
 				<li class="flex gap-4 items-center">
 					<img src={circle_check} alt="CircleCheck" class="w-8" /> why school-style language learning
 					doesn’t work
@@ -130,16 +130,16 @@
 <div class="bg-(--color-background)">
 	<section
 		id="testimonials"
-		class="w-full py-36 text-black mx-auto px-4 text-left md:scroll-mt-0 md:my-0 my-20"
+		class="w-full text-black mx-auto md:px-4 px-6 text-left md:scroll-mt-0 md:my-0 py-16 md:py-24"
 	>
 		<div
-			class="flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-16"
+			class="flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 md:gap-16"
 			data-aos="fade-up"
 			data-aos-delay="100"
 			data-aos-offset="100"
 		>
 			<h1 class="h1">Testimonials</h1>
-			<div class="flex gap-12 w-3/4 justify-evenly">
+			<div class="grid md:grid-cols-3 gap-12 md:w-3/4 justify-evenly">
 				<TestimonialCard>
 					<div class="space-y-4 text-gray-800 leading-relaxed">
 						<p><strong>Uzsākot programmu:</strong></p>
@@ -238,19 +238,19 @@
 <div class="">
 	<section
 		id="casestudies"
-		class="container w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 px-4 text-left md:scroll-mt-0 py-32"
+		class="container w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 md:px-4 px-6 text-left md:scroll-mt-0 md:my-0 py-16 md:py-24"
 	>
 		<!-- <div class="flex items-center justify-center gap-16"> -->
 		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
 		<div
-			class="flex flex-col items-start space-y-6 text-xl leading-relaxed text-black"
+			class="flex flex-col items-center md:items-start space-y-6 text-xl leading-relaxed text-black"
 			data-aos="fade-up"
 			data-aos-delay="100"
 			data-aos-offset="100"
 		>
 			<div class="flex gap-24">
-				<img src={nora_yeah} alt="Nora Ozolanta" class="w-1/2 rounded-3xl" />
-				<div class="flex flex-col gap-8 w-full">
+				<img src={nora_yeah} alt="Nora Ozolanta" class="hidden md:block w-1/2 rounded-3xl" />
+				<div class="flex flex-col gap-8 w-full items-center">
 					<h1 class="h1 text-black mb-4">Case Studies</h1>
 					<div
 						class="relative grid items-start h-full border border-[#EAECED] rounded-xl shadow-xl bg-white p-8"
@@ -299,17 +299,17 @@
 <div class="bg-(--color-primary)/70">
 	<section
 		id="faq"
-		class="container w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 px-4 text-left md:scroll-mt-0 py-20"
+		class="container w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 md:px-4 px-6 text-left md:scroll-mt-0 md:my-0 py-16 md:py-24"
 	>
 		<!-- <div class="flex items-center justify-center gap-16"> -->
 		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
 		<div
-			class="flex flex-col items-start space-y-16 text-xl leading-relaxed text-black"
+			class="flex flex-col items-center md:items-start space-y-12 md:space-y-16 text-xl leading-relaxed text-black"
 			data-aos="fade-up"
 			data-aos-delay="100"
 			data-aos-offset="100"
 		>
-			<h1 class="h1">FAQ</h1>
+			<h1 class="h1 text-center md:text-left">FAQ</h1>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 gap-x-36">
 				<div class="space-y-4">
 					<h3 class="h3 flex gap-4 items-center">
@@ -378,7 +378,7 @@
 <div class="bg-(--color-secondary)/70">
 	<section
 		id="leadmagnet"
-		class="w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 px-4 text-left md:scroll-mt-0 py-20"
+		class="w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 px-4 text-center md:scroll-mt-0 py-20"
 	>
 		<!-- <div class="flex items-center justify-center gap-16"> -->
 		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->

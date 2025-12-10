@@ -22,7 +22,6 @@
 		// 	once: true,
 		// 	duration: 600
 		// });
-
 	});
 </script>
 

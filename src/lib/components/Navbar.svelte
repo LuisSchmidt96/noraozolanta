@@ -4,7 +4,7 @@
 	let menuOpen = false;
 	const links = [
 		{ name: 'Sākums', top: true, href: '/' },
-		{ name: 'Piedāvājumi', href: '/#about' },
+		{ name: 'Piedāvājumi', href: '/offers' },
 		{ name: 'Par mani', href: '/about' },
 		{ name: 'Kontakti', href: '/#contact' }
 	];

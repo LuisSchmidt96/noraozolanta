@@ -182,8 +182,32 @@ a {
 		transform: translateY(-100%);
 	}
 }
+.parallax {
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
-[animation^='fade'] {
+.parallax-orange {
+	/* The image used */
+	background-image: url('/src/lib/assets/images/oranges.webp');
+	opacity: 1;
+	/* Set a specific height */
+	min-height: 800px;
+}
+.parallax-orange:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+/* [animation^='fade'] {
 	opacity: 0;
 	transform: translateY(20px);
 	transition:
@@ -195,8 +219,7 @@ a {
 [animation^='fade'].aos-animate {
 	opacity: 1;
 	transform: translateY(0);
-	/* transform: translateZ(0); */
-}
+} */
 
 /* .nav {
   position: fixed;
@@ -217,13 +240,19 @@ p {
 	font-size: var(--anchor-font-size);
 } */
 .btn-xl {
-	font-size: var(--text-2xl)
+	font-size: var(--text-xl)
 		/* calc(1.25rem * var(--text-scaling)) = calc(20px * var(--text-scaling)) */;
 	font-weight: bold;
-	line-height: var(--text-2xl--line-height)
-		/* calc(calc(1.75 / 1.25) ≈ 1.4 * var(--text-scaling)) */;
+	line-height: var(--text-xl--line-height) /* calc(calc(1.75 / 1.25) ≈ 1.4 * var(--text-scaling)) */;
 	padding-block: calc(var(--spacing) * 5) /* 0.5rem = 8px */;
-	padding-inline: calc(var(--spacing) * 8) /* 1.25rem = 20px */;
+	padding-inline: calc(var(--spacing) * 6) /* 1.25rem = 20px */;
+
+	@media (min-width: 768px) {
+		font-size: var(--text-2xl);
+		line-height: var(--text-2xl--line-height);
+		padding-block: calc(var(--spacing) * 5) /* 0.5rem = 8px */;
+		padding-inline: calc(var(--spacing) * 8) /* 1.25rem = 20px */;
+	}
 }
 
 .btn-primary {
