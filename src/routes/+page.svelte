@@ -92,7 +92,9 @@
 	>
 		<!-- <div class="flex items-center justify-center gap-16"> -->
 		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
-		<div class="flex flex-col items-center text-center md:text-left space-y-6 text-xl leading-relaxed text-black">
+		<div
+			class="flex flex-col items-center text-center md:text-left space-y-6 text-xl leading-relaxed text-black"
+		>
 			<h1 class="h1 text-center">Free eBook:</h1>
 			<h1 class="h2 md:h1 text-center">"How Modern Latvian Women Can Learn English Effectively"</h1>
 			<p>
