@@ -1,14 +1,37 @@
 <script lang="ts">
 	import { clickOutside } from '$lib/utils/clickOutside';
+	import { tick } from 'svelte';
 
-	let { children, clickoutside, open = $bindable() } = $props();
- 
-	function handleOutsideClick() {
-		console.log('test');
-		if (open) {
-			clickoutside();
+	let { children, open = $bindable() } = $props();
+
+	let armed = false;
+
+	$effect(() => {
+		console.log('Popup open state changed:', open);
+		if (!open) {
+			armed = false;
+			return;
 		}
+
+		armed = false;
+
+		(async () => {
+			await tick(); // wartet bis DOM gerendert ist
+			armed = true; // erst jetzt Outside-Clicks erlauben
+		})();
+	});
+
+	function handleOutsideClick() {
+		if (!open || !armed) return;
+		console.log('Closing popup due to outside click');
+		open = false;
 	}
+
+	// $effect(() => {
+	// 	if (open) {
+	// 		initialized = true;
+	// 	}
+	// });
 </script>
 
 {#if open}

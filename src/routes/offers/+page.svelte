@@ -39,7 +39,7 @@
 					href="https://subscribepage.io/programmaaugluvaloda"
 					class="btn btn-xl btn-secondary border text-black">Check out the Offer</a
 				>
-				<a class="ml-onclick-form btn btn-xl btn-primary border" href="#" onclick={showForm}
+				<a class="ml-onclick-form btn btn-xl btn-primary border" href="" onclick={showForm}
 					>Join the Waitlist</a
 				>
 				<!-- <a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'wgy7oS', true)">Click here to show form</a> -->
@@ -56,7 +56,7 @@
 	><img src={x_circle} alt="x" /></button
 > -->
 <!-- {#if open} -->
-	<Popup clickoutside={closeForm} bind:open>
+	<Popup bind:open>
 		{#if $delayed}
 			<Spinner class="mx-auto h-12 w-12 fill-primary-600" />
 		{:else if $message?.status === 'success'}
