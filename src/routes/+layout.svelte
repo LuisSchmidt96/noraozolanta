@@ -6,8 +6,11 @@
 	import { onMount } from 'svelte';
 	import { initHeadroom } from '$lib/utils/headroom';
 	// import AOS from 'aos';
+	import { PreviewMode, VisualEditing } from '@sanity/sveltekit';
+	import type { LayoutProps } from './$types';
 
-	let { children } = $props();
+	const { children, data }: LayoutProps = $props();
+	const { previewEnabled } = data;
 
 	onMount(() => {
 		// AOS.init({ once: true,
@@ -47,10 +50,14 @@
 	<!-- End MailerLite Universal -->
 </svelte:head>
 
-<div class="relative flex min-h-screen flex-col bg-white">
-	<Navbar />
-	<main class="flex-1 md:mt-(--header-height)">
-		{@render children()}
-	</main>
-	<Footer />
-</div>
+<PreviewMode enabled={previewEnabled}>
+	<VisualEditing enabled={previewEnabled}>
+		<div class="relative flex min-h-screen flex-col bg-white">
+			<Navbar />
+			<main class="flex-1 md:mt-(--header-height)">
+				{@render children()}
+			</main>
+			<Footer />
+		</div>
+	</VisualEditing>
+</PreviewMode>

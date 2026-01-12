@@ -1,5 +1,4 @@
 <script lang="ts">
-	let { data } = $props();
 	import hero_nora from '$lib/assets/images/hero_nora.webp';
 	import oranges from '$lib/assets/images/oranges.webp';
 	import nora_yeah from '$lib/assets/images/nora_hmm.webp';
@@ -11,7 +10,9 @@
 	import { onMount } from 'svelte';
 
 	import TestimonialCard from '$lib/components/TestimonialCard.svelte';
-	// import { Quote } from 'lucide-svelte';
+	import type { PageProps } from './$types';
+
+	const { data }: PageProps = $props();
 </script>
 
 <!-- <div class="bg-(--color-background)"> -->
@@ -22,6 +23,7 @@
 	<div class="flex items-center justify-center md:gap-16 mx-auto">
 		<div class="flex flex-col space-y-6 text-lg leading-relaxed md:w-1/2">
 			<h1 class="h1 mb-8 font-bold tracking-tight md:text-5xl/tight">
+				<!-- {data.page.title} -->
 				Speak English with confidence.<br /> Without guilt.<br /> Without perfectionism.
 			</h1>
 			<div class="text-xl leading-relaxed text-black">
