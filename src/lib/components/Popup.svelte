@@ -15,7 +15,7 @@
 			use:clickOutside={handleOutsideClick}
 			class="bg-white p-6 rounded-xl max-w-lg w-full relative text-black"
 		>
-				<button class="absolute top-6 right-6" onclick={() => open = false}><img src={x} alt="" /></button>
+				<!-- <button class="absolute top-5 right-4" onclick={() => open = false}><img src={x} alt="" /></button> -->
 			{@render children?.()}
 		</div>
 	</div>

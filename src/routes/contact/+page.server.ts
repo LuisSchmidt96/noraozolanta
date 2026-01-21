@@ -1,22 +1,17 @@
 import type { Actions, PageServerLoad } from './$types';
 import { superValidate } from 'sveltekit-superforms';
 import { zod4 } from 'sveltekit-superforms/adapters';
-import { z } from 'zod';
-import { subscribeToWaitlist } from '$lib/server/actions';
-
-const schema = z.object({
-	name: z.string().min(1),
-	email: z.email()
-});
+import { submitContactForm } from '$lib/server/actions';
+import { contactSchema } from '$lib/schemas/schemas';
 
 export const load = (async () => {
-	const form = await superValidate(zod4(schema));
+	const form = await superValidate(zod4(contactSchema));
 
 	return { form };
 }) satisfies PageServerLoad;
 
 export const actions: Actions = {
 	default: async ({ request }) => {
-		return subscribeToWaitlist(request);
+		return submitContactForm(request);
 	}
 };

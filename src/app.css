@@ -245,8 +245,14 @@ a {
 	opacity: 1;
 	height: 100%;
 	width: 100%;
-	background-image: url('/src/lib/assets/images/hero_nora.webp');
 	background-size: cover;
+}
+
+.hero-image-home::before {
+	background-image: url('/src/lib/assets/images/hero_nora.webp');
+}
+.hero-image-about::before {
+	background-image: url('/src/lib/assets/images/nora.webp');
 }
 /* .hero-image-mobile::after {
 	content: '';

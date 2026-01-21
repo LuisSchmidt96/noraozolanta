@@ -23,6 +23,7 @@
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.1.17",
 		"@types/node": "^22",
+		"@types/nodemailer": "^7.0.5",
 		"eslint": "^9.39.1",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.13.0",
@@ -52,6 +53,9 @@
 		"@skeletonlabs/skeleton-svelte": "^4.7.1",
 		"@types/aos": "^3.0.7",
 		"aos": "^2.3.4",
-		"lucide-svelte": "^0.555.0"
+		"isomorphic-dompurify": "^2.35.0",
+		"lucide-svelte": "^0.555.0",
+		"nodemailer": "^7.0.12",
+		"postmark": "^4.0.5"
 	}
 }

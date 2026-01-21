@@ -2,6 +2,7 @@
 	import { superForm } from 'sveltekit-superforms';
 	import { Spinner } from 'flowbite-svelte';
 	import Popup from '$lib/components/Popup.svelte';
+	import NewsletterPopup from '$lib/components/NewsletterPopup.svelte';
 
 	let open = $state(false);
 
@@ -24,12 +25,14 @@
 		class="parallax parallax-orange relative z-10 flex h-[700px] w-full items-center justify-center bg-cover bg-center bg-fixed"
 	>
 		<!-- <div class="absolute inset-0 bg-black/40"></div> -->
-		<div class="relative z-10 flex flex-col items-center justify-center text-center text-white">
+		<div
+			class="relative z-10 flex flex-col items-center px-4 justify-center text-center text-white"
+		>
 			<h1 class="h1 mb-4 text-7xl font-extrabold text-white">Auglu Valoda</h1>
 			<p class="mb-6 text-lg">
 				A transformational 3-month program for women ready to stop being afraid of speaking English.
 			</p>
-			<div class="flex gap-4">
+			<div class="flex flex-col md:flex-row gap-4">
 				<a
 					href="https://subscribepage.io/programmaaugluvaloda"
 					class="btn btn-xl btn-secondary border text-black">Check out the Offer</a
@@ -51,7 +54,8 @@
 	><img src={x_circle} alt="x" /></button
 > -->
 <!-- {#if open} -->
-<Popup bind:open>
+<NewsletterPopup bind:open {data} />
+<!-- <Popup bind:open>
 	{#if $delayed}
 		<Spinner class="mx-auto h-12 w-12 fill-primary-600" />
 	{:else if $message?.status === 'success'}
@@ -87,5 +91,5 @@
 			</form>
 		</div>
 	{/if}
-</Popup>
+</Popup> -->
 <!-- {/if} -->

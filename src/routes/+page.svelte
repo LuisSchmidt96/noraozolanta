@@ -49,7 +49,7 @@
 			</div>
 		</div>
 		<img class="hidden md:block md:w-[30%] rounded-3xl" src={hero_nora} alt="" />
-		<div class="md:hidden hero-image-mobile"></div>
+		<div class="md:hidden hero-image-mobile hero-image-home"></div>
 	</div>
 </section>
 <!-- </div> -->
@@ -106,35 +106,37 @@
 		<div
 			class="flex flex-col items-center text-center md:text-left space-y-6 text-lg md:text-xl leading-relaxed text-black"
 		>
-			<h1 class="h1 text-center">Free eBook:</h1>
-			<h1 class="h2 md:h1 text-center">"How Modern Latvian Women Can Learn English Effectively"</h1>
+			<h1 class="h1 text-center">Bezmaksas e-grāmata:</h1>
+			<h1 class="h2 md:h1 text-center">
+				“Kā mūsdienu latviešu sievietes var efektīvi apgūt angļu valodu”
+			</h1>
 			<p>
-				English learning that brings real results — the safest and most effective way to remove
-				speaking fear.
+				Angļu valodas apguve, kas dod reālus rezultātus — drošākais un efektīvākais veids, kā
+				pārvarēt runāšanas bailes.
 			</p>
-			<h3 class="h3 italic">Inside the guide you’ll learn:</h3>
+			<h3 class="h3 italic">Šajā ceļvedī Tu uzzināsi:</h3>
 			<ul class="list-inside space-y-4 text-lg md:text-xl">
-				<li class="flex gap-4 items-center">
-					<img src={circle_check} alt="CircleCheck" class="w-8" /> why school-style language learning
-					doesn’t work
+				<li class="flex gap-4 text-start items-center">
+					<img src={circle_check} alt="CircleCheck" class="w-8" /> kāpēc skolas tipa valodas mācīšanās
+					nestrādā
 				</li>
-				<li class="flex gap-4 items-center">
-					<img src={circle_check} alt="CircleCheck" class="w-8" /> how adults actually learn languages
-					today
+				<li class="flex gap-4 text-start items-center">
+					<img src={circle_check} alt="CircleCheck" class="w-8" /> kā pieaugušie patiesībā apgūst valodas
+					mūsdienās today
 				</li>
-				<li class="flex gap-4 items-center">
-					<img src={circle_check} alt="CircleCheck" class="w-8" /> how to build speaking confidence
+				<li class="flex gap-4 text-start items-center">
+					<img src={circle_check} alt="CircleCheck" class="w-8" /> kā veidot pārliecību runājot
 				</li>
-				<li class="flex gap-4 items-center">
-					<img src={circle_check} alt="CircleCheck" class="w-8" /> the psychological blocks that stop
-					progress — and how to overcome them
+				<li class="flex gap-4 text-start items-center">
+					<img src={circle_check} alt="CircleCheck" class="w-8" /> kādi psiholoģiskie bloki kavē progresu
+					— un kā tos pārvarēt
 				</li>
 			</ul>
 			<a
 				href="#contact"
 				class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white border"
 			>
-				Get the Free eBook
+				Saņemt bezmaksas e-grāmatu
 			</a>
 		</div>
 		<!-- </div> -->
@@ -151,7 +153,7 @@
 			data-aos-delay="100"
 			data-aos-offset="100"
 		>
-			<h1 class="h1">Testimonials</h1>
+			<h1 class="h1 text-center">Dalībnieču rezultāti no programmas</h1>
 			<div class="grid md:grid-cols-3 gap-12 md:w-3/4 justify-evenly">
 				<TestimonialCard>
 					<div class="space-y-4 text-gray-800 leading-relaxed">
@@ -187,30 +189,31 @@
 					<div class="space-y-4 text-gray-800 leading-relaxed">
 						<p><strong>Uzsākot programmu:</strong></p>
 
-						<p>
-							Manas domas latviski skrien ātrāk par paralēlajām domām atrast pareizos vārdus, lai to
-							pateiktu angliski. Beigās nepasaku neko vai sāku minstināties. Runa ir par valodu,
-							kāda man nepieciešama darbā, jo ikdienas angļu valoda ceļojumos vai uz ielas man
-							nerada šķēršļus.
-						</p>
+						<p>Jūtos diezgan nepārliecināti, trūkst treniņu, bieži aizmirstas vārdi.</p>
 
 						<p>
-							Es jūtu, ka beidzot TAS ir jāizdara, jo pārāk ilgi esmu iestrēgusi sajūtā, ka mana
-							anglu valoda nav piemerota darba sarunām manā darbā un šis beidzot ir jāatrisina.
+							Gaidas - protams, ka uzlabot savas angļu valodas zināšanas, justies pārliecinātāk
+							runājot ar citiem, nebaidīties kļūdīties.
 						</p>
 
 						<p><strong>Nobeidzot programmu:</strong></p>
 
 						<p>
-							Es jūtos pārsteigta par progresu, jo es nevaru sevi atpazīt, kāda biju programmas
-							sākumā (es nevarēju psiholoģiski parunāt angliski) un kā ir beigās, kad varu ar Noru
-							veselu stundu norunāt tikai angliski. Apbrīnojami!
+							Esmu atgriezusies no komandējuma un tas noritēja ļoti veiksmīgi, par ko es Tev esmu
+							ļoti pateicīga.
+						</p>
+						<p>
+							Es nebaidījos uzdot jautājumus, kad tie radās, un nebaidījos uzsākt sarunas pat
+							ikdienišķās situācijās sabiedriskās vietās. Arī mani kolēģi, tostarp kolēģi Turcijā,
+							dažreiz aizmirsu vārdus angļu valodā, un tajos brīžos es atcerējos Tevi un to, cik
+							bieži Tu teici, cik tas ir normāli, mēs esam tikai cilvēki, un tā nav mūsu dzimtā
+							valoda.
 						</p>
 					</div>
 
 					<!-- Name -->
 					<div>
-						<p class="font-semibold">Dalībniece E.</p>
+						<p class="font-semibold">Dalībniece I.</p>
 					</div>
 				</TestimonialCard>
 				<TestimonialCard>
@@ -219,24 +222,13 @@
 						<p><strong>Uzsākot programmu:</strong></p>
 
 						<p>
-							Manas domas latviski skrien ātrāk par paralēlajām domām atrast pareizos vārdus, lai to
-							pateiktu angliski. Beigās nepasaku neko vai sāku minstināties. Runa ir par valodu,
-							kāda man nepieciešama darbā, jo ikdienas angļu valoda ceļojumos vai uz ielas man
-							nerada šķēršļus.
-						</p>
-
-						<p>
-							Es jūtu, ka beidzot TAS ir jāizdara, jo pārāk ilgi esmu iestrēgusi sajūtā, ka mana
-							anglu valoda nav piemerota darba sarunām manā darbā un šis beidzot ir jāatrisina.
+							Ja ir iespēja netunāt, tad nerunāšu. Sajūta, ka nav pietiekams vārdu krājums, vai
+							nevaru atsaukt atmiņā “īstos” vārdus tieši tad, kad tie visvairāk nepieciešami.
 						</p>
 
 						<p><strong>Nobeidzot programmu:</strong></p>
 
-						<p>
-							Es jūtos pārsteigta par progresu, jo es nevaru sevi atpazīt, kāda biju programmas
-							sākumā (es nevarēju psiholoģiski parunāt angliski) un kā ir beigās, kad varu ar Noru
-							veselu stundu norunāt tikai angliski. Apbrīnojami!
-						</p>
+						<p>(info sekos)</p>
 					</div>
 
 					<!-- Name -->
@@ -261,9 +253,9 @@
 			data-aos-delay="100"
 			data-aos-offset="100"
 		>
-			<div class="flex gap-24">
-				<img src={nora_yeah} alt="Nora Ozolanta" class="hidden md:block w-1/2 rounded-3xl" />
-				<div class="flex flex-col gap-8 w-full items-center">
+			<div class="flex justify-center md:gap-24">
+				<img src={nora_yeah} alt="Nora Ozolanta" class="hidden md:block rounded-3xl max-h-[700px]" />
+				<div class="flex flex-col gap-8 items-center md:w-1/2">
 					<h1 class="h1 text-black mb-4">Case Studies</h1>
 					<div
 						class="relative grid items-start h-full border border-[#EAECED] rounded-xl shadow-xl bg-white p-8"
@@ -400,15 +392,15 @@
 			data-aos="fade-up"
 			data-aos-delay="100"
 		>
-			<h1 class="h1">Want a calmer, more human approach to learning English?</h1>
+			<h1 class="h1">Vai vēlies mierīgāku, cilvēcīgāku pieeju angļu valodas apguvei?</h1>
 			<h3 class="h3">
-				A weekly letter with honest, grounding insights about language, confidence, and life.
+				Iknedēļas vēstule ar godīgām, piezemētām atziņām par valodu, pārliecību un dzīvi.
 			</h3>
 			<a
 				href="#contact"
 				class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white border"
 			>
-				Join the Newsletter
+				Pievienoties jaunumu vēstulei
 			</a>
 		</div>
 		<!-- </div> -->
