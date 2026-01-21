@@ -16,11 +16,10 @@
 		<div class="flex flex-col space-y-6 text-lg leading-relaxed md:w-1/3">
 			<h1 class="h1 mb-8 font-bold tracking-tight md:text-5xl/tight">Kas es tāda esmu?</h1>
 			<div class="text-black">
-				Čau! Ja neesam vēl pazīstamas/i, tad mani sauc Nora, es esmu angļu valodas pasniedzēja, kas
-				strādā ar runāšanas barjeru problēmām un kas ir gatava mest veco valodas mācīšanās modeli
-				vējā un darīt to tā, kā tas patiešām strādā: ar konkrētu valodas apgūšanas mērķi un
-				detalizētu plānu, kā to sasniegt 3 mēnešu laikā. Manī uzliesmo tāds prieks, kad redzu, ka
-				cilvēkiem patīk tas, ko viņi dara un es varu viņiem palīdzēt tikt tur, kur viņiem ir jābūt!
+				Čau! Ja vēl neesam pazīstamas/i, mani sauc Nora. Es esmu angļu valodas pasniedzēja, kas
+				strādā ar runāšanas barjerām un palīdz cilvēkiem beidzot sākt runāt — bez bailēm,
+				kaunsajūtas vai perfekcionisma. Es ticu, ka valodu var apgūt citādi: ar skaidru mērķi, drošu
+				vidi un reālu plānu, kas strādā arī tad, ja iepriekšējās metodes nav palīdzējušas.
 			</div>
 		</div>
 		<img class="rounded-3xl max-h-[600px]" src={nora} alt="" />
@@ -31,45 +30,40 @@
 		id="story-philosophy"
 		class="container mx-auto items-center flex gap-x-12 flex-row flex-1 scroll-mt-16 justify-evenly px-4 text-left py-24 md:scroll-mt-0 md:my-0 my-20"
 	>
-		<div class="flex flex-col gap-4">
-			<h1 class="h1 md:text-5xl/tight font-bold">Mans stāsts</h1>
-			<ul class="text-black gap-4 flex flex-col">
-				<li class="flex items-center gap-4 text-lg">
-					<img src={graduation_cap} alt="Flower" class="w-8" /> safety > perfection
-				</li>
-				<li class="flex items-center gap-4 text-lg">
-					<img src={graduation_cap} alt="Flower" class="w-8" /> 8+ years teaching English
-				</li>
-				<li class="flex items-center gap-4 text-lg">
-					<img src={graduation_cap} alt="Flower" class="w-8" /> 8+ years teaching English
-				</li>
-				<li class="flex items-center gap-4 text-lg">
-					<img src={graduation_cap} alt="Flower" class="w-8" /> 8+ years teaching English
-				</li>
-				<li class="flex items-center gap-4 text-lg">
-					<img src={graduation_cap} alt="Flower" class="w-8" /> 8+ years teaching English
-				</li>
-			</ul>
-		</div>
-		<div class="flex flex-col gap-4">
-			<h1 class="h1 md:text-5xl/tight font-bold">My Teaching Philosophy</h1>
-			<ul class="text-black gap-4 flex flex-col">
-				<li class="flex items-center gap-4 text-lg">
-					<img src={plant} alt="Flower" class="w-8" /> 8+ years teaching English
-				</li>
-				<li class="flex items-center gap-4 text-lg">
-					<img src={plant} alt="Flower" class="w-8" /> 8+ years teaching English
-				</li>
-				<li class="flex items-center gap-4 text-lg">
-					<img src={plant} alt="Flower" class="w-8" /> 8+ years teaching English
-				</li>
-				<li class="flex items-center gap-4 text-lg">
-					<img src={plant} alt="Flower" class="w-8" /> 8+ years teaching English
-				</li>
-				<li class="flex items-center gap-4 text-lg">
-					<img src={plant} alt="Flower" class="w-8" /> 8+ years teaching English
-				</li>
-			</ul>
+		<div class="flex mx-auto flex-col md:flex-row gap-x-16 gap-4 justify-evenly">
+			<div class="flex flex-col gap-4 w-1/2">
+				<h1 class="h1 md:text-5xl/tight font-bold">Kas man ir svarīgi darbā</h1>
+				<ul class="text-black text-2xl gap-4 flex flex-col">
+					<li class="flex items-center gap-4">
+						<img src={plant} alt="Flower" class="w-8" /> droša, atbalstoša vide
+					</li>
+					<li class="flex items-center gap-4 text-xl">
+						<img src={plant} alt="Flower" class="w-8" /> vieta, kur kļūdīties ir normāli un pat jautri
+					</li>
+					<li class="flex items-center gap-4 text-xl">
+						<img src={plant} alt="Flower" class="w-8" /> pārliecība svarīgāka par perfekciju
+					</li>
+					<li class="flex items-center gap-4 text-xl">
+						<img src={plant} alt="Flower" class="w-8" /> cilvēcīga pieeja bez spiediena
+					</li>
+				</ul>
+			</div>
+			<div class="flex flex-col gap-4">
+				<h1 class="h1 md:text-5xl/tight font-bold">Pieredze un uzticamība</h1>
+				<ul class="text-black gap-4 flex flex-col">
+					<li class="flex items-center gap-4 text-xl">
+						<img src={graduation_cap} alt="Flower" class="w-8" /> vairāk nekā 8 gadu pieredze angļu valodas
+						mācīšanā
+					</li>
+					<li class="flex items-center gap-4 text-xl">
+						<img src={graduation_cap} alt="Flower" class="w-8" /> darbs ar 100+ klientiem
+					</li>
+					<li class="flex items-center gap-4 text-xl">
+						<img src={graduation_cap} alt="Flower" class="w-8" /> 4 no 4 dalībniecēm manā jaunākajā programmā
+						ir ļoti apmierinātas ar rezultātu
+					</li>
+				</ul>
+			</div>
 		</div>
 	</section>
 </div>

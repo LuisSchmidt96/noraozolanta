@@ -1,11 +1,6 @@
 <script lang="ts">
-	import oranges from '$lib/assets/images/orange.webp';
-	import x_circle from '$lib/assets/images/x-circle.svg';
-	import { onMount } from 'svelte';
 	import { superForm } from 'sveltekit-superforms';
 	import { Spinner } from 'flowbite-svelte';
-	import { clickOutside } from '$lib/utils/clickOutside';
-	import { on } from 'svelte/events';
 	import Popup from '$lib/components/Popup.svelte';
 
 	let open = $state(false);
@@ -56,41 +51,41 @@
 	><img src={x_circle} alt="x" /></button
 > -->
 <!-- {#if open} -->
-	<Popup bind:open>
-		{#if $delayed}
-			<Spinner class="mx-auto h-12 w-12 fill-primary-600" />
-		{:else if $message?.status === 'success'}
-			<h3 class="mb-2 text-4xl font-extrabold tracking-tight md:text-3xl">
-				Paldies! Tu esi veiksmīgi pievienojusies waitlist-am!
-			</h3>
-		{:else}<div class="flex flex-col gap-4 text-black">
-				<h2 class="h2">Pievienoties waitlist-am</h2>
-				<p>
-					Jā, man šis interesē. Labprāt saņemšu jaunumus un informāciju saistībā ar šo, kā arī gribu
-					sev rezervēt vietu! (droši varēsi jebkurā brīdī pārdomāt, ja kas)
-				</p>
-				<form method="post" use:enhance class="flex flex-col gap-4">
-					<input
-						type="text"
-						aria-required="true"
-						class="input text-lg py-4"
-						placeholder="Vārds"
-						name="name"
-						bind:value={$form.name}
-					/>
-					<input
-						type="email"
-						aria-required="true"
-						class="input text-lg py-4"
-						placeholder="E-pasts"
-						name="email"
-						bind:value={$form.email}
-					/>
-					<button type="submit" class="btn btn-primary btn-lg border text-white py-4"
-						>Pievienoties</button
-					>
-				</form>
-			</div>
-		{/if}
-	</Popup>
+<Popup bind:open>
+	{#if $delayed}
+		<Spinner class="mx-auto h-12 w-12 fill-primary-600" />
+	{:else if $message?.status === 'success'}
+		<h3 class="mb-2 text-4xl font-extrabold tracking-tight md:text-3xl">
+			Paldies! Tu esi veiksmīgi pievienojusies waitlist-am!
+		</h3>
+	{:else}<div class="flex flex-col gap-4 text-black">
+			<h2 class="h2">Pievienoties waitlist-am</h2>
+			<p>
+				Jā, man šis interesē. Labprāt saņemšu jaunumus un informāciju saistībā ar šo, kā arī gribu
+				sev rezervēt vietu! (droši varēsi jebkurā brīdī pārdomāt, ja kas)
+			</p>
+			<form method="post" use:enhance class="flex flex-col gap-4">
+				<input
+					type="text"
+					aria-required="true"
+					class="input text-lg py-4"
+					placeholder="Vārds"
+					name="name"
+					bind:value={$form.name}
+				/>
+				<input
+					type="email"
+					aria-required="true"
+					class="input text-lg py-4"
+					placeholder="E-pasts"
+					name="email"
+					bind:value={$form.email}
+				/>
+				<button type="submit" class="btn btn-primary btn-lg border text-white py-4"
+					>Pievienoties</button
+				>
+			</form>
+		</div>
+	{/if}
+</Popup>
 <!-- {/if} -->

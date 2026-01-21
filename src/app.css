@@ -146,7 +146,9 @@ footer {
 }
 
 section {
-	min-height: calc(100vh - var(--header-height) - var(--footer-height));
+	@media (min-width: 768px) {
+		min-height: calc(100vh - var(--header-height) - var(--footer-height));
+	}
 }
 
 h1,
@@ -197,7 +199,7 @@ a {
 	/* Set a specific height */
 	min-height: 800px;
 }
-.parallax-orange:before {
+.parallax-orange::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -206,6 +208,59 @@ a {
 	bottom: 0;
 	background: rgba(0, 0, 0, 0.7);
 }
+.hero-wrapper {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	-webkit-box-pack: inherit;
+	-ms-flex-pack: inherit;
+	justify-content: inherit;
+	border-width: 0;
+	-webkit-transition: inherit;
+	transition: inherit;
+}
+
+.hero-image-mobile {
+	position: relative;
+	overflow: hidden;
+	min-height: 450px;
+	width: 100%;
+	border-radius: 24px 24px 0px 0px;
+}
+.hero-image-mobile::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 1;
+	height: 100%;
+	width: 100%;
+	background-image: url('/src/lib/assets/images/hero_nora.webp');
+	background-size: cover;
+}
+/* .hero-image-mobile::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 1;
+	height: 100%;
+	width: 100%;
+
+	background-image: url('/src/lib/assets/images/hero_nora.webp');
+} */
 
 /* [animation^='fade'] {
 	opacity: 0;
@@ -239,6 +294,22 @@ p {
 /* a .btn-lg {
 	font-size: var(--anchor-font-size);
 } */
+.btn-md {
+	font-size: var(--text-md)
+		/* calc(1.25rem * var(--text-scaling)) = calc(20px * var(--text-scaling)) */;
+	font-weight: bold;
+	line-height: var(--text-md--line-height) /* calc(calc(1.75 / 1.25) ≈ 1.4 * var(--text-scaling)) */;
+	padding-block: calc(var(--spacing) * 4) /* 0.5rem = 8px */;
+	padding-inline: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
+
+	@media (min-width: 768px) {
+		font-size: var(--text-2xl);
+		line-height: var(--text-2xl--line-height);
+		padding-block: calc(var(--spacing) * 5) /* 0.5rem = 8px */;
+		padding-inline: calc(var(--spacing) * 8) /* 1.25rem = 20px */;
+	}
+}
+
 .btn-xl {
 	font-size: var(--text-xl)
 		/* calc(1.25rem * var(--text-scaling)) = calc(20px * var(--text-scaling)) */;

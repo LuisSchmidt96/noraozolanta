@@ -17,33 +17,39 @@
 <!-- <div class="bg-(--color-background)"> -->
 <section
 	id="hero"
-	class="container mx-auto flex flex-1 scroll-mt-16 flex-col justify-center md:px-4 px-6 md:text-left md:scroll-mt-0 md:my-0"
+	class="container mx-auto flex flex-1 scroll-mt-16 flex-col justify-center pt-16 md:pt-0 px-4 md:text-left md:scroll-mt-0 md:my-0"
 >
-	<div class="flex items-center justify-center md:gap-16 mx-auto">
+	<div class="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 mx-auto">
 		<div class="flex flex-col space-y-6 text-lg leading-relaxed md:w-1/2">
 			<h1 class="h1 mb-8 font-bold tracking-tight md:text-5xl/tight">
-				Speak English with confidence.<br /> Without guilt.<br /> Without perfectionism.
+				Pārvari bailes un iegūsti pārliecību runājot angliski!
 			</h1>
-			<div class="text-xl leading-relaxed text-black">
-				A safe, supportive space for Latvian women to improve their English and build real speaking
-				confidence — gently, calmly, and in a way that fits their life.
+			<div class="flex flex-col gap-4">
+				<div class="text-lg md:text-xl leading-relaxed text-black">
+					Vienīgā angļu valodas pasniedzēja un koučs Latvijā, kas darbojas arī ar emocionālo un
+					psiholoģisko pusi valodas mācībās.
+				</div>
+				<div class="text-lg md:text-xl leading-relaxed text-black">
+					Šeit Tu vari trenēties drošā, atbalstošā vidē un tad runāšana beidzot nāk pati no sevis.
+				</div>
 			</div>
-			<div class="flex flex-col mt-8 gap-4">
+			<div class="flex flex-col gap-4 items-center md:items-start">
 				<a
 					href="#contact"
-					class="btn w-fit shadow-xl shadow-(--color-primary)/30 btn-primary text-white btn-xl border"
+					class="btn w-fit shadow-xl shadow-(--color-primary)/30 btn-primary text-white btn-md md:btn-xl border"
 				>
-					Join the “Augļu valoda” Waitlist
+					Iepazīsti programmu “Augļu valoda”
 				</a>
 				<a
 					href="#contact"
-					class="btn btn-secondary w-fit shadow-xl text-black shadow-(--color-secondary)/30 btn-xl border"
+					class="btn btn-secondary w-fit shadow-xl text-black shadow-(--color-secondary)/30 btn-md md:btn-xl border"
 				>
-					Download the Free Guide
+					Pieraksties jaunumiem
 				</a>
 			</div>
 		</div>
-		<img class="md:block hidden w-[30%] rounded-3xl" src={hero_nora} alt="" />
+		<img class="hidden md:block md:w-[30%] rounded-3xl" src={hero_nora} alt="" />
+		<div class="md:hidden hero-image-mobile"></div>
 	</div>
 </section>
 <!-- </div> -->
@@ -59,25 +65,30 @@
 		>
 			<img class="hidden md:block md:w-1/2 rounded-3xl" src={oranges} />
 			<!-- use:aos={'fade-up'} /> -->
-			<div class="flex flex-col space-y-6 text-xl leading-relaxed md:w-1/2">
-				<h1 class="h1">“Augļu valoda” Program</h1>
+			<div class="flex flex-col space-y-6 text-lg md:text-xl leading-relaxed md:w-1/2">
+				<div class="flex flex-col gap-4">
+					<h1 class="h1">Programma Augļu valoda:</h1>
+					<h2 class="h2">Valoda, kas nes augļus</h2>
+				</div>
 				<p>
-					English learning that brings real results — the safest and most effective way to remove
-					speaking fear.
+					Angļu valodas apguve, kas dod reālus rezultātus — drošākais un efektīvākais veids, kā
+					pārvarēt runāšanas bailes.
 				</p>
-				<h3 class="h3 italic">Perfect for women who:</h3>
-				<ul class="list-disc list-inside space-y-2">
-					<li>Feel insecure when speaking English</li>
-					<li>freeze or overthink before speaking</li>
-					<li>Are tired of traditional language learning methods that don’t work</li>
-					<li>want structure without pressure</li>
-					<li>want a human, emotionally supportive approach</li>
-				</ul>
+				<div class="flex flex-col gap-4">
+					<h3 class="h3 italic">Piemērota cilvēkiem, kuri:</h3>
+					<ul class="list-disc list-inside space-y-2">
+						<li>sastindzina vai jūtas nedroši, runājot angliski</li>
+						<li>saprot gandrīz visu, bet vārdi nenāk, kad jāsāk runāt</li>
+						<li>ir noguruši no tradicionālām metodēm, kas nestrādā</li>
+						<li>vēlas struktūru bez spiediena</li>
+						<li>meklē cilvēcīgu, emocionāli atbalstošu pieeju</li>
+					</ul>
+				</div>
 				<a
 					href="#contact"
-					class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white border"
+					class="btn w-fit mt-4 btn-primary self-center md:self-auto shadow-xl shadow-(--color-primary)/30 btn-xl text-white border"
 				>
-					Explore the Program
+					Iepazīt programmu
 				</a>
 			</div>
 		</div>
@@ -93,7 +104,7 @@
 		<!-- <div class="flex items-center justify-center gap-16"> -->
 		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
 		<div
-			class="flex flex-col items-center text-center md:text-left space-y-6 text-xl leading-relaxed text-black"
+			class="flex flex-col items-center text-center md:text-left space-y-6 text-lg md:text-xl leading-relaxed text-black"
 		>
 			<h1 class="h1 text-center">Free eBook:</h1>
 			<h1 class="h2 md:h1 text-center">"How Modern Latvian Women Can Learn English Effectively"</h1>
@@ -102,7 +113,7 @@
 				speaking fear.
 			</p>
 			<h3 class="h3 italic">Inside the guide you’ll learn:</h3>
-			<ul class="list-inside space-y-4 text-xl">
+			<ul class="list-inside space-y-4 text-lg md:text-xl">
 				<li class="flex gap-4 items-center">
 					<img src={circle_check} alt="CircleCheck" class="w-8" /> why school-style language learning
 					doesn’t work
@@ -245,7 +256,7 @@
 		<!-- <div class="flex items-center justify-center gap-16"> -->
 		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
 		<div
-			class="flex flex-col items-center md:items-start space-y-6 text-xl leading-relaxed text-black"
+			class="flex flex-col items-center md:items-start space-y-6 text-lg md:text-xl leading-relaxed text-black"
 			data-aos="fade-up"
 			data-aos-delay="100"
 			data-aos-offset="100"
@@ -306,7 +317,7 @@
 		<!-- <div class="flex items-center justify-center gap-16"> -->
 		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
 		<div
-			class="flex flex-col items-center md:items-start space-y-12 md:space-y-16 text-xl leading-relaxed text-black"
+			class="flex flex-col items-center md:items-start space-y-12 md:space-y-16 text-lg md:text-xl leading-relaxed text-black"
 			data-aos="fade-up"
 			data-aos-delay="100"
 			data-aos-offset="100"
@@ -385,7 +396,7 @@
 		<!-- <div class="flex items-center justify-center gap-16"> -->
 		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
 		<div
-			class="flex flex-col items-center space-y-6 text-xl leading-relaxed text-black"
+			class="flex flex-col items-center space-y-6 text-lg md:text-xl leading-relaxed text-black"
 			data-aos="fade-up"
 			data-aos-delay="100"
 		>
