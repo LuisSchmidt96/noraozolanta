@@ -4,8 +4,12 @@
 	import nora from '$lib/assets/images/nora.webp';
 	import plant from '$lib/assets/images/plant.svg';
 	import graduation_cap from '$lib/assets/images/graduation-cap.svg';
+	import NewsletterPopup from '$lib/components/NewsletterPopup.svelte';
+	import { superForm } from 'sveltekit-superforms';
 
 	let { data }: PageProps = $props();
+
+	let open = $state(false);
 </script>
 
 <section
@@ -31,7 +35,9 @@
 		id="story-philosophy"
 		class="container mx-auto items-center flex gap-x-12 flex-row flex-1 scroll-mt-16 justify-evenly px-4 text-left py-16 md:scroll-mt-0 md:my-0"
 	>
-		<div class="flex mx-auto flex-col md:flex-row gap-x-16 gap-y-8 justify-evenly text-lg md:text-xl">
+		<div
+			class="flex mx-auto flex-col md:flex-row gap-x-16 gap-y-8 justify-evenly text-lg md:text-xl"
+		>
 			<div class="flex flex-col gap-4 md:w-1/2">
 				<h1 class="h1 md:text-5xl/tight font-bold">Kas man ir svarīgi darbā</h1>
 				<ul class="text-black gap-4 flex flex-col">
@@ -72,6 +78,8 @@
 	<section
 		id="leadmagnet"
 		class="w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 px-4 text-left md:scroll-mt-0 md:my-0 py-16"
+		data-aos="fade-up"
+		data-aos-delay="100"
 	>
 		<!-- <div class="flex items-center justify-center gap-16"> -->
 		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
@@ -82,13 +90,15 @@
 			<h3 class="h3">
 				To help Latvian women speak English with confidence, clarity, and self-respect — not fear.
 			</h3>
-			<a
-				href="#contact"
+			<button
+				type="button"
+				on:click|stopPropagation={() => (open = true)}
 				class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white border"
 			>
 				Join the Newsletter
-			</a>
+			</button>
 		</div>
 		<!-- </div> -->
 	</section>
 </div>
+<NewsletterPopup bind:open {data} />

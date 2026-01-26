@@ -1,23 +1,9 @@
 <script lang="ts">
-	import { superForm } from 'sveltekit-superforms';
-	import { Spinner } from 'flowbite-svelte';
-	import Popup from '$lib/components/Popup.svelte';
-	import NewsletterPopup from '$lib/components/NewsletterPopup.svelte';
+	import WaitlistPopup from '$lib/components/WaitlistPopup.svelte';
 
 	let open = $state(false);
 
-	const showForm = () => {
-		open = true;
-		console.log('Opening form modal');
-	};
-
-	const closeForm = () => {
-		console.log('Closing');
-		open = false;
-	};
-
 	let { data } = $props();
-	const { form, errors, message, enhance, delayed } = superForm(data.form);
 </script>
 
 <section class="relative overflow-hidden h-screen">
@@ -37,8 +23,10 @@
 					href="https://subscribepage.io/programmaaugluvaloda"
 					class="btn btn-xl btn-secondary border text-black">Check out the Offer</a
 				>
-				<a class="ml-onclick-form btn btn-xl btn-primary border" href="" onclick={showForm}
-					>Join the Waitlist</a
+				<button
+					type="button"
+					on:click|stopPropagation={() => (open = true)}
+					class="ml-onclick-form btn btn-xl btn-primary border">Join the Waitlist</button
 				>
 				<!-- <a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'wgy7oS', true)">Click here to show form</a> -->
 				<!-- <a
@@ -54,7 +42,7 @@
 	><img src={x_circle} alt="x" /></button
 > -->
 <!-- {#if open} -->
-<NewsletterPopup bind:open {data} />
+<WaitlistPopup bind:open {data} />
 <!-- <Popup bind:open>
 	{#if $delayed}
 		<Spinner class="mx-auto h-12 w-12 fill-primary-600" />
