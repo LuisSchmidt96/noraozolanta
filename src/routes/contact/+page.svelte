@@ -8,27 +8,44 @@
 	const { form, errors, message, enhance, delayed } = superForm(data.form);
 </script>
 
-<section class="container mx-auto flex flex-col md:flex-row my-12">
+<section class="container mx-auto flex flex-col md:flex-row my-12 px-4">
 	<div class="flex flex-col md:flex-row gap-x-20 justify-center w-full text-black">
-		<div class="flex flex-col w-1/3 gap-6 md:mt-28">
+		<!-- <div class="flex flex-col w-1/3 gap-6 md:mt-28">
 			<h2 class="h2">
 				Vai varbūt vēlies pieteikties bezmaksas zvanam, lai saprastu, cik labi šī programma derēs
 				Tev?
 			</h2>
-			<h3
-				
-					>ied 
-				>eit , lai pieteiktos bezmaksas zva
-			nah3</h3>
-			<a href="https://tidycal.com/noraozolanta/konsultacija" type="button" class="btn btn-primary btn-lg border text-white py-4">Sütīt</>
-		</div>
-		<div class="w-1/3 flex justify-end">
+
+			<a
+				href="https://tidycal.com/noraozolanta/konsultacija"
+				type="button"
+				class="btn btn-primary btn-lg border text-white py-4">Sütīt</a
+			>
+		</div> -->
+		<div class="hidden md:w-1/3 md:flex justify-end">
 			<img src={nora_laptop} alt="" class="rounded-xl max-h-[700px]" />
 		</div>
-		<div class="flex flex-col space-y-6 w-1/3 text-lg leading-relaxed md:mt-28">
+		<div class="flex flex-col md:w-1/3 gap-6 md:mt-28">
+			<h2 class="h2">
+				Vai varbūt vēlies pieteikties bezmaksas zvanam, lai saprastu, cik labi šī programma derēs
+				Tev?
+			</h2>
+			<h2 class="h3">Spied šeit, lai pieteiktos bezmaksas zvanam!</h2>
+			<a
+				href="https://tidycal.com/noraozolanta/konsultacija"
+				type="button"
+				class="btn btn-primary btn-md border text-white py-4">Sütīt</a
+			>
+		</div>
+	</div>
+</section>
+<div class=" bg-(--color-primary)/30">
+	<section class="container mx-auto flex flex-col md:flex-row my-12 px-4">
+		<div class="flex flex-col space-y-5"></div>
+		<div class="flex flex-col space-y-6 md:w-1/3 text-lg leading-relaxed md:mt-28 text-black">
 			<form method="post" use:enhance class="max-w-[600px] flex flex-col gap-4">
 				<!-- <h1 class="h1 mb-8 font-bold tracking-tight md:text-5xl/tight">Kontakti</h1> -->
-				<div class="text-xl">
+				<div class="h2">
 					Ja vēlies "pa kluso" kaut ko pajautāt, tad droši uzraksti man ziņu šeit!
 				</div>
 				{#if $delayed}
@@ -38,11 +55,11 @@
 						Paldies! Tu esi veiksmīgi pievienojusies waitlist-am!
 					</h3>
 				{:else}
-					<div class="text-black flex flex-col gap-4">
+					<div class="flex flex-col gap-4">
 						<input
 							type="text"
 							aria-required="true"
-							class="input text-lg py-4"
+							class="input text-lg py-4 bg-white placeholder:text-gray-400"
 							placeholder="Vārds"
 							name="name"
 							required
@@ -65,12 +82,32 @@
 							required
 							bind:value={$form.message}
 						/>
-						<button type="submit" class="btn btn-primary btn-lg border text-white py-4"
-							>Sūtīt</button
+						<input
+							type="checkbox"
+							id="marketingConsent"
+							name="marketingConsent"
+							bind:checked={$form.marketingConsent}
+						/>
+						<button type="submit" class="btn btn-primary btn-md border py-4">Sūtīt</button>
+
+						<!-- Honeypot -->
+						<div
+							class="absolute left-[-10000px] top-auto w-px h-px overflow-hidden"
+							aria-hidden="true"
 						>
+							<label for="company">Company</label>
+							<input
+								id="company"
+								name="company"
+								type="text"
+								tabindex="-1"
+								autocomplete="off"
+								value=""
+							/>
+						</div>
 					</div>
 				{/if}
 			</form>
 		</div>
-	</div>
-</section>
+	</section>
+</div>

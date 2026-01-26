@@ -309,10 +309,10 @@ p {
 	padding-inline: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
 
 	@media (min-width: 768px) {
-		font-size: var(--text-2xl);
-		line-height: var(--text-2xl--line-height);
+		font-size: var(--text-xl);
+		line-height: var(--text-xl--line-height);
 		padding-block: calc(var(--spacing) * 5) /* 0.5rem = 8px */;
-		padding-inline: calc(var(--spacing) * 8) /* 1.25rem = 20px */;
+		padding-inline: calc(var(--spacing) * 6) /* 1.25rem = 20px */;
 	}
 }
 
@@ -335,6 +335,7 @@ p {
 .btn-primary {
 	background-color: var(--color-primary-800);
 	border-color: var(--color-primary-800);
+	color: var(--color-white);
 }
 .btn-secondary {
 	background-color: var(--color-secondary-500);

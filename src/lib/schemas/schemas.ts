@@ -1,4 +1,4 @@
-import z from "zod";
+import z from 'zod';
 
 export const waitlistSchema = z.object({
 	name: z.string().min(1),
@@ -7,11 +7,13 @@ export const waitlistSchema = z.object({
 
 export const newsletterSchema = z.object({
 	name: z.string().min(1),
-	email: z.email(),
+	email: z.email()
 });
 
 export const contactSchema = z.object({
 	name: z.string().min(1),
 	email: z.email(),
-    message: z.string().min(1).max(1000)
+	message: z.string().min(1).max(1000),
+	marketingConsent: z.boolean(),
+	company: z.string().optional() // honeypot
 });
