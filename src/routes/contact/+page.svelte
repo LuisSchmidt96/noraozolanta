@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageProps } from './$types';
-	import nora_laptop from '$lib/assets/images/nora_laptop.webp';
+	import nora_laptop_fruits from '$lib/assets/images/nora_laptop_fruits.webp';
 	import { superForm } from 'sveltekit-superforms';
 	import { Spinner } from 'flowbite-svelte';
 	import envelope from '$lib/assets/images/envelope.svg';
@@ -61,77 +61,80 @@
 			</div>
 		</div>
 		<div class="flex flex-col space-y-6 md:w-1/2 text-lg my-auto text-black py-16 md:py-0">
-			<form method="post" use:enhance class="max-w-[600px] flex flex-col gap-8">
+			<form method="post" use:enhance class="flex flex-col gap-8">
 				<!-- <h1 class="h1 mb-8 font-bold tracking-tight md:text-5xl/tight">Kontakti</h1> -->
 				<div class="flex flex-col space-y-4">
 					<div class="h2">Vēlies kaut ko pajautāt “pa kluso”?</div>
 					<div class="h4">Droši uzraksti man ziņu — atbildēšu personīgi.</div>
 				</div>
-				{#if $delayed}
-					<Spinner class="mx-auto h-12 w-12 fill-primary-600" />
-				{:else if $message?.status === 'success'}
-					<h3 class="mb-2 text-4xl font-extrabold tracking-tight md:text-3xl">
-						Paldies! Tu esi veiksmīgi pievienojusies waitlist-am!
-					</h3>
-				{:else}
-					<div class="flex flex-col gap-4">
-						<input
-							type="text"
-							aria-required="true"
-							class="input text-lg py-4 bg-white placeholder:text-gray-600"
-							placeholder="Vārds"
-							name="name"
-							required
-							bind:value={$form.name}
-						/>
-						<input
-							type="email"
-							aria-required="true"
-							class="input text-lg py-4 bg-white placeholder:text-gray-600"
-							placeholder="E-pasts"
-							name="email"
-							required
-							bind:value={$form.email}
-						/>
-						<textarea
-							aria-required="true"
-							class="input text-lg py-4 bg-white placeholder:text-gray-600"
-							placeholder="Par ko Tu vēlētos parunāt?"
-							name="message"
-							required
-							bind:value={$form.message}
-						/>
-						<div class="flex items-center space-x-4">
+				<div class="max-w-[600px] min-h-[420px] w-full flex items-center justify-center">
+					{#if $delayed}
+						<Spinner class="mx-auto h-12 w-12 fill-primary-600" />
+					{:else if $message?.status === 'success' }
+						<h3 class="mb-2 text-4xl font-extrabold tracking-tight md:text-3xl self-start">
+							Paldies! Tu esi veiksmīgi pievienojusies waitlist-am!
+						</h3>
+					{:else}
+						<div class="flex flex-col gap-4 w-full">
 							<input
-								type="checkbox"
-								class="checkbox bg-white"
-								id="marketingConsent"
-								name="marketingConsent"
-								bind:checked={$form.marketingConsent}
-							/>
-							<label for="marketingConsent" class="text-lg"
-								>Vēlos saņemt jaunumus e-pastā (pēc izvēles)</label
-							>
-						</div>
-						<button type="submit" class="btn btn-primary btn-md mt-2">Nosūtīt ziņu</button>
-
-						<!-- Honeypot -->
-						<div
-							class="absolute left-[-10000px] top-auto w-px h-px overflow-hidden"
-							aria-hidden="true"
-						>
-							<label for="company">Company</label>
-							<input
-								id="company"
-								name="company"
 								type="text"
-								tabindex="-1"
-								autocomplete="off"
-								value=""
+								aria-required="true"
+								class="input text-lg py-4 bg-white placeholder:text-gray-600"
+								placeholder="Vārds"
+								name="name"
+								required
+								bind:value={$form.name}
 							/>
+							<input
+								type="email"
+								aria-required="true"
+								class="input text-lg py-4 bg-white placeholder:text-gray-600"
+								placeholder="E-pasts"
+								name="email"
+								required
+								bind:value={$form.email}
+							/>
+							<textarea
+								aria-required="true"
+								class="input text-lg py-4 bg-white placeholder:text-gray-600"
+								placeholder="Par ko Tu vēlētos parunāt?"
+								name="message"
+								rows="5"
+								required
+								bind:value={$form.message}
+							/>
+							<div class="flex items-center space-x-4">
+								<input
+									type="checkbox"
+									class="checkbox bg-white"
+									id="marketingConsent"
+									name="marketingConsent"
+									bind:checked={$form.marketingConsent}
+								/>
+								<label for="marketingConsent" class="text-lg"
+									>Vēlos saņemt jaunumus e-pastā (pēc izvēles)</label
+								>
+							</div>
+							<button type="submit" class="btn btn-primary btn-md mt-2">Nosūtīt ziņu</button>
+
+							<!-- Honeypot -->
+							<div
+								class="absolute left-[-10000px] top-auto w-px h-px overflow-hidden"
+								aria-hidden="true"
+							>
+								<label for="company">Company</label>
+								<input
+									id="company"
+									name="company"
+									type="text"
+									tabindex="-1"
+									autocomplete="off"
+									value=""
+								/>
+							</div>
 						</div>
-					</div>
-				{/if}
+					{/if}
+				</div>
 			</form>
 		</div>
 		<!-- </div> -->
@@ -156,7 +159,7 @@
 			>
 		</div> -->
 		<div class="hidden md:w-1/3 md:flex justify-end">
-			<img src={nora_laptop} alt="" class="rounded-xl max-h-[700px]" />
+			<img src={nora_laptop_fruits} alt="" class="rounded-xl max-h-[700px]" />
 		</div>
 		<div class="flex flex-col md:w-1/3 gap-6 md:mt-28">
 			<h2 class="h2">

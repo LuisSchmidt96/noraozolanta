@@ -1,17 +1,15 @@
 <script lang="ts">
-	let { data } = $props();
 	import hero_nora from '$lib/assets/images/hero_nora.webp';
 	import oranges from '$lib/assets/images/oranges.webp';
 	import nora_yeah from '$lib/assets/images/nora_hmm.webp';
-	import icon_quote from '$lib/assets/images/icon-quote.webp';
 	import circle_check from '$lib/assets/images/check-circle.svg';
 	import question from '$lib/assets/images/question.svg';
-	import lightbulb from '$lib/assets/images/lightbulb.svg';
-	import { aos } from '$lib/utils/aos';
-	import { onMount } from 'svelte';
-
 	import TestimonialCard from '$lib/components/TestimonialCard.svelte';
-	// import { Quote } from 'lucide-svelte';
+	import NewsletterPopup from '$lib/components/NewsletterPopup.svelte';
+
+	let open = $state(false);
+
+	let { data } = $props();
 </script>
 
 <!-- <div class="bg-(--color-background)"> -->
@@ -35,17 +33,17 @@
 			</div>
 			<div class="flex flex-col gap-4 items-center md:items-start">
 				<a
-					href="#contact"
+					href="https://subscribepage.io/programmaaugluvaloda"
 					class="btn w-fit shadow-xl shadow-(--color-primary)/30 btn-primary text-white btn-md md:btn-xl border"
 				>
 					Iepazīsti programmu “Augļu valoda”
 				</a>
-				<a
-					href="#contact"
+				<button
+					on:click|stopPropagation={() => (open = true)}
 					class="btn btn-secondary w-fit shadow-xl text-black shadow-(--color-secondary)/30 btn-md md:btn-xl border"
 				>
 					Pieraksties jaunumiem
-				</a>
+				</button>
 			</div>
 		</div>
 		<img class="hidden md:block md:w-[30%] rounded-3xl" src={hero_nora} alt="" />
@@ -240,13 +238,11 @@
 		</div>
 	</section>
 </div>
-<div class="">
+<!-- <div class="">
 	<section
 		id="casestudies"
 		class="container w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 md:px-4 px-6 text-left md:scroll-mt-0 md:my-0 py-16 md:py-24"
 	>
-		<!-- <div class="flex items-center justify-center gap-16"> -->
-		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
 		<div
 			class="flex flex-col items-center md:items-start space-y-6 text-lg md:text-xl leading-relaxed text-black"
 			data-aos="fade-up"
@@ -254,14 +250,16 @@
 			data-aos-offset="100"
 		>
 			<div class="flex justify-center md:gap-24">
-				<img src={nora_yeah} alt="Nora Ozolanta" class="hidden md:block rounded-3xl max-h-[700px]" />
+				<img
+					src={nora_yeah}
+					alt="Nora Ozolanta"
+					class="hidden md:block rounded-3xl max-h-[700px]"
+				/>
 				<div class="flex flex-col gap-8 items-center md:w-1/2">
 					<h1 class="h1 text-black mb-4">Case Studies</h1>
 					<div
 						class="relative grid items-start h-full border border-[#EAECED] rounded-xl shadow-xl bg-white p-8"
 					>
-						<!-- <div class="flex justify-center items-center"> -->
-						<!-- Testimonial Text -->
 						<div class="space-y-4 text-gray-800 leading-relaxed flex flex-col h-full">
 							<p>
 								<strong>Agnese, 42 — From “I freeze in meetings” to “I speak freely at work”</strong
@@ -274,13 +272,11 @@
 								<li>After 3 months: joins discussions confidently</li>
 							</ul>
 						</div>
-						<!-- </div> -->
 					</div>
 					<div
 						class="relative grid items-start h-full border border-[#EAECED] rounded-xl shadow-xl bg-white p-8"
 					>
 						<div class="flex justify-between items-center">
-							<!-- Testimonial Text -->
 							<div class="space-y-4 text-gray-800 leading-relaxed flex flex-col h-full">
 								<p>
 									<strong
@@ -306,8 +302,6 @@
 		id="faq"
 		class="container w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 md:px-4 px-6 text-left md:scroll-mt-0 md:my-0 py-16 md:py-24"
 	>
-		<!-- <div class="flex items-center justify-center gap-16"> -->
-		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
 		<div
 			class="flex flex-col items-center md:items-start space-y-12 md:space-y-16 text-lg md:text-xl leading-relaxed text-black"
 			data-aos="fade-up"
@@ -379,7 +373,7 @@
 			</div>
 		</div>
 	</section>
-</div>
+</div> -->
 <div class="bg-(--color-secondary)/70">
 	<section
 		id="leadmagnet"
@@ -396,13 +390,14 @@
 			<h3 class="h3">
 				Iknedēļas vēstule ar godīgām, piezemētām atziņām par valodu, pārliecību un dzīvi.
 			</h3>
-			<a
-				href="#contact"
+			<button
+				on:click|stopPropagation={() => (open = true)}
 				class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white border"
 			>
 				Pievienoties jaunumu vēstulei
-			</a>
+			</button>
 		</div>
 		<!-- </div> -->
 	</section>
 </div>
+<NewsletterPopup bind:open {data} />
