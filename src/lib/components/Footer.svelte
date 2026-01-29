@@ -8,10 +8,10 @@
 	class="md:relative sticky bottom-0 z-50 border-t border-primary-300 bg-surface-100 py-4 text-primary-900"
 >
 	<div
-		class="container mx-auto flex flex-col items-center justify-between gap-4 bg-surface-100 px-4 md:flex-row"
+		class="container mx-auto flex flex-col items-center justify-between py-2 lg:py-0 gap-4 bg-surface-100 px-4 md:flex-row"
 	>
 		<div class="text-center md:text-left text-xl">© 2026 Nora Ozolanta</div>
-		<div class="flex gap-8 justify-center text-lg">
+		<div class="flex gap-2 lg:gap-8 justify-center text-md md:text-lg">
 			<a href="/rekviziti">Rekvizīti</a>
 			<a href="/privatuma-politika">Privātuma politika</a>
 			<a href="/sikdatnes">Sīkdatņu politika</a>

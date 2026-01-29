@@ -4,8 +4,9 @@
 	import { waitlistModalOpen } from '$lib/stores/waitlistModal';
 	import NewsletterPopup from './NewsletterPopup.svelte';
 	import { newsletterModalOpen } from '$lib/stores/newsletterModal';
+	import { clickOutside } from '$lib/utils/clickOutside';
 
-	let menuOpen = false;
+	let menuOpen = $state(false);
 	const links = [
 		{ name: 'Sākums', top: true, href: '/' },
 		{ name: 'Piedāvājumi', href: '/offers' },
@@ -25,7 +26,7 @@
 		</div>
 		<button
 			class="block cursor-pointer border-none bg-none text-3xl md:hidden"
-			on:click={() => (menuOpen = !menuOpen)}
+			on:click|stopPropagation={() => (menuOpen = !menuOpen)}
 			aria-label="Toggle menu"
 		>
 			<svg
@@ -70,25 +71,34 @@
 	</div>
 	{#if menuOpen}
 		<ul
-			class="absolute top-16 right-0 z-10 flex flex-col gap-4 rounded border border-surface-200 bg-surface-100 py-4 shadow-lg md:hidden"
+			use:clickOutside={() => {
+				console.log('clickoutside');
+				menuOpen = false;
+			}}
+			class="absolute w-full top-20 bg-black text-white right-0 z-10 flex flex-col gap-8 rounded-b-xl border border-surface-200 py-6 px-8 shadow-lg md:hidden"
 		>
 			{#each links as link}
-				<li class="w-full h-full text-center">
+				<li class="w-full h-full text-center text-xl">
 					<a
 						href={link.href}
-						on:click={(e) => {
+						on:click|stopPropagation={(e) => {
 							menuOpen = false;
 							goToAnchor(e);
 						}}
-						class="btn rounded px-8 py-2 text-primary-700 no-underline transition hover:bg-primary-100 focus:bg-primary-100"
+						class="rounded px-8 py-2 no-underline transition hover:bg-primary-100 focus:bg-primary-100"
 						data-sveltekit-keepfocus
 					>
 						{link.name}
 					</a>
 				</li>
 			{/each}
-			<button type="button" class="bg-none py-2 text-xl md:hidden"
-				>Pievienoties gaidītāju sarakstam</button
+			<button
+				type="button"
+				class="btn text-xl lg:text-xl py-4 px-5 border my-2"
+				on:click|stopPropagation={() => {
+					menuOpen = false;
+					waitlistModalOpen.set(true);
+				}}>Pievienoties gaidītāju sarakstam</button
 			>
 		</ul>
 	{/if}
