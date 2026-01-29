@@ -1,6 +1,6 @@
 import type { Actions } from './$types';
 import {
-	subscribeToWaitlist as subscribeToNewsletter,
+	subscribeToNewsletter,
 	subscribeToWaitlist
 } from '$lib/server/actions';
 

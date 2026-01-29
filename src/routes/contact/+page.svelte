@@ -61,7 +61,7 @@
 			</div>
 		</div>
 		<div class="flex flex-col space-y-6 md:w-1/2 text-lg my-auto text-black py-16 md:py-0">
-			<form method="post" use:enhance class="flex flex-col gap-8">
+			<form method="post" action="?/contact" use:enhance class="flex flex-col gap-8">
 				<!-- <h1 class="h1 mb-8 font-bold tracking-tight md:text-5xl/tight">Kontakti</h1> -->
 				<div class="flex flex-col space-y-4">
 					<div class="h2">Vēlies kaut ko pajautāt “pa kluso”?</div>

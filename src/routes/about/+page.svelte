@@ -8,7 +8,7 @@
 	import graduation_cap from '$lib/assets/images/graduation-cap.svg';
 	import NewsletterPopup from '$lib/components/NewsletterPopup.svelte';
 	import { superForm } from 'sveltekit-superforms';
-	import { newsletterModalOpen } from '$lib/stores/newsletterModal';
+	import { newsletterModalOpen, openNewsletterModal } from '$lib/stores/newsletterModal';
 
 	let { data }: PageProps = $props();
 
@@ -131,7 +131,7 @@
 			</h3>
 			<button
 				type="button"
-				on:click|stopPropagation={() => (open = true)}
+				on:click|stopPropagation={openNewsletterModal}
 				class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white border"
 			>
 				Pievienoties jaunumu vēstulei
@@ -140,4 +140,4 @@
 		<!-- </div> -->
 	</section>
 </div>
-<NewsletterPopup bind:open={$newsletterModalOpen} newsletterForm={data.newsletterForm} />
+<!-- <NewsletterPopup bind:open={$newsletterModalOpen} newsletterForm={data.newsletterForm} /> -->

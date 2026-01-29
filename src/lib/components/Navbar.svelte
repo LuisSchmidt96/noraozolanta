@@ -94,5 +94,5 @@
 	{/if}
 	<!-- </nav> -->
 </header>
-<WaitlistPopup bind:open={$waitlistModalOpen} waitlistForm={data.waitlistForm} />
-<NewsletterPopup bind:open={$newsletterModalOpen} newsletterForm={data.newsletterForm} />
+<WaitlistPopup bind:open={$waitlistModalOpen} form={data.waitlistForm} />
+<NewsletterPopup bind:open={$newsletterModalOpen} form={data.newsletterForm} />

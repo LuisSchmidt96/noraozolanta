@@ -2,28 +2,16 @@
 	import { Spinner } from 'flowbite-svelte';
 	import Popup from './Popup.svelte';
 	import { superForm } from 'sveltekit-superforms';
-	import { applyAction } from '$app/forms';
-	import { goto } from '$app/navigation';
 
-	let { newsletterForm, open = $bindable() } = $props();
+	let { form, open = $bindable() } = $props();
 
-	const { form, enhance, errors, message, delayed } = superForm(newsletterForm, {
-		applyAction: false,
-		onResult: (result) => {
-			console.log('NewsletterPopup onResult', result);
-			if (result.type === 'redirect') {
-				goto(result.location);
-			} else {
-				applyAction(result);
-			}
-		}
-	});
+	const { form: newsletterForm, enhance: newsletterEnhance, message: newsletterMessage, delayed: newsletterDelayed } = superForm(form);
 </script>
 
 <Popup bind:open>
-	{#if $delayed}
+	{#if $newsletterDelayed}
 		<Spinner class="mx-auto h-12 w-12 fill-primary-600" />
-	{:else if $message?.status === 'success'}
+	{:else if $newsletterMessage?.status === 'success'}
 		<h3 class="mb-2 text-4xl font-extrabold tracking-tight md:text-3xl">
 			Paldies! Prieks Tevi redzēt jaunumu vēstulē.
 		</h3>
@@ -34,14 +22,14 @@
 				personīgo izaugsmi. Dalīšos ar domām, pieredzi un praktiskiem ieteikumiem. (No vēstules vari
 				atteikties jebkurā brīdī.)
 			</p>
-			<form method="post" action="/newsletter" use:enhance class="flex flex-col gap-4">
+			<form method="post" action="?/newsletter" use:newsletterEnhance class="flex flex-col gap-4">
 				<input
 					type="text"
 					aria-required="true"
 					class="input text-lg py-4"
 					placeholder="Vārds"
 					name="name"
-					bind:value={$form.name}
+					bind:value={$newsletterForm.name}
 				/>
 				<input
 					type="email"
@@ -49,7 +37,7 @@
 					class="input text-lg py-4"
 					placeholder="E-pasts"
 					name="email"
-					bind:value={$form.email}
+					bind:value={$newsletterForm.email}
 				/>
 				<button type="submit" class="btn btn-primary btn-lg border text-white py-4"
 					>Pievienoties</button

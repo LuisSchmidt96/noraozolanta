@@ -16,7 +16,7 @@ export const load = (async () => {
 }) satisfies PageServerLoad;
 
 export const actions: Actions = {
-	default: async ({ request }) => {
+	waitlist: async ({ request }) => {
 		return subscribeToWaitlist(request);
 	}
 };
