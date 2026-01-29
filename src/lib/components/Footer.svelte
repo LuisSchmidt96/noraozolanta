@@ -10,6 +10,12 @@
 	<div
 		class="container mx-auto flex flex-col items-center justify-between gap-4 bg-surface-100 px-4 md:flex-row"
 	>
+		<div class="text-center md:text-left text-xl">© 2026 Nora Ozolanta</div>
+		<div class="flex gap-8 justify-center text-lg">
+			<a href="/rekviziti">Rekvizīti</a>
+			<a href="/privatuma-politika">Privātuma politika</a>
+			<a href="/sikdatnes">Sīkdatņu politika</a>
+		</div>
 		<a
 			href="https://www.instagram.com/nora.ozolanta/"
 			target="_blank"

@@ -3,9 +3,9 @@
 	import Popup from "./Popup.svelte";
 	import { superForm } from "sveltekit-superforms";
 
-    let { data, open = $bindable()} = $props();
+    let { waitlistForm, open = $bindable()} = $props();
 
-    const { form, enhance, errors, message, delayed } = superForm(data.form);
+    const { form, enhance, errors, message, delayed } = superForm(waitlistForm);
 </script>
 <Popup bind:open>
 	{#if $delayed}
@@ -20,7 +20,7 @@
 				Jā, man šis interesē. Labprāt saņemšu jaunumus un informāciju saistībā ar šo, kā arī gribu
 				sev rezervēt vietu! (droši varēsi jebkurā brīdī pārdomāt, ja kas)
 			</p>
-			<form method="post" use:enhance class="flex flex-col gap-4">
+			<form method="post" action="/actions?/waitlist" use:enhance class="flex flex-col gap-4">
 				<input
 					type="text"
 					aria-required="true"

@@ -6,6 +6,7 @@
 	import question from '$lib/assets/images/question.svg';
 	import TestimonialCard from '$lib/components/TestimonialCard.svelte';
 	import NewsletterPopup from '$lib/components/NewsletterPopup.svelte';
+	import { newsletterModalOpen, openNewsletterModal } from '$lib/stores/newsletterModal.js';
 
 	let open = $state(false);
 
@@ -39,7 +40,7 @@
 					Iepazīsti programmu “Augļu valoda”
 				</a>
 				<button
-					on:click|stopPropagation={() => (open = true)}
+					on:click|stopPropagation={openNewsletterModal}
 					class="btn btn-secondary w-fit shadow-xl text-black shadow-(--color-secondary)/30 btn-md md:btn-xl border"
 				>
 					Pieraksties jaunumiem
@@ -391,7 +392,7 @@
 				Iknedēļas vēstule ar godīgām, piezemētām atziņām par valodu, pārliecību un dzīvi.
 			</h3>
 			<button
-				on:click|stopPropagation={() => (open = true)}
+				on:click|stopPropagation={openNewsletterModal}
 				class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white border"
 			>
 				Pievienoties jaunumu vēstulei
@@ -400,4 +401,4 @@
 		<!-- </div> -->
 	</section>
 </div>
-<NewsletterPopup bind:open {data} />
+<!-- <NewsletterPopup bind:open={$newsletterModalOpen} newsletterForm={data.newsletterForm} /> -->

@@ -7,7 +7,7 @@
 	import { initHeadroom } from '$lib/utils/headroom';
 	// import AOS from 'aos';
 
-	let { children } = $props();
+	let { children, data } = $props();
 
 	onMount(() => {
 		// AOS.init({ once: true,
@@ -48,9 +48,10 @@
 </svelte:head>
 
 <div class="relative flex min-h-screen flex-col bg-white">
-	<Navbar />
-	<main class="flex-1 md:mt-(--header-height)">
+	<Navbar {data} />
+	<main class="flex-1 lg:mt-(--header-height)">
 		{@render children()}
 	</main>
 	<Footer />
+
 </div>

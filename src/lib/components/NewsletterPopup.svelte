@@ -2,10 +2,22 @@
 	import { Spinner } from 'flowbite-svelte';
 	import Popup from './Popup.svelte';
 	import { superForm } from 'sveltekit-superforms';
+	import { applyAction } from '$app/forms';
+	import { goto } from '$app/navigation';
 
-	let { data, open = $bindable() } = $props();
+	let { newsletterForm, open = $bindable() } = $props();
 
-	const { form, enhance, errors, message, delayed } = superForm(data.form);
+	const { form, enhance, errors, message, delayed } = superForm(newsletterForm, {
+		applyAction: false,
+		onResult: (result) => {
+			console.log('NewsletterPopup onResult', result);
+			if (result.type === 'redirect') {
+				goto(result.location);
+			} else {
+				applyAction(result);
+			}
+		}
+	});
 </script>
 
 <Popup bind:open>
@@ -22,7 +34,7 @@
 				personīgo izaugsmi. Dalīšos ar domām, pieredzi un praktiskiem ieteikumiem. (No vēstules vari
 				atteikties jebkurā brīdī.)
 			</p>
-			<form method="post" use:enhance class="flex flex-col gap-4">
+			<form method="post" action="/newsletter" use:enhance class="flex flex-col gap-4">
 				<input
 					type="text"
 					aria-required="true"

@@ -1,17 +1,14 @@
-import type { Actions, PageServerLoad } from './$types';
-import { superValidate } from 'sveltekit-superforms';
-import { zod4 } from 'sveltekit-superforms/adapters';
-import { subscribeToWaitlist as subscribeToNewsletter } from '$lib/server/actions';
-import { newsletterSchema } from '$lib/schemas/schemas';
-
-export const load = (async () => {
-	const form = await superValidate(zod4(newsletterSchema));
-
-	return { form };
-}) satisfies PageServerLoad;
+import type { Actions } from './$types';
+import {
+	subscribeToWaitlist as subscribeToNewsletter,
+	subscribeToWaitlist
+} from '$lib/server/actions';
 
 export const actions: Actions = {
-	default: async ({ request }) => {
+	newsletter: async ({ request }) => {
 		return subscribeToNewsletter(request);
+	},
+	waitlist: async ({ request }) => {
+		return subscribeToWaitlist(request);
 	}
 };

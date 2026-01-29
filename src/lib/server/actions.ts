@@ -133,29 +133,33 @@ ${clean.message}
 
 export async function subscribeToNewsletter(request: Request) {
 	const form = await superValidate(request, zod4(newsletterSchema));
-	// console.log(form);
-
+	
+	// return message(form, {
+		// 	status: 'success',
+	// 	text: 'Paldies! Tu esi veiksmīgi pievienojies waitlist-am!'
+	// });
 	if (!form.valid) {
 		// Return { form } and things will just work.
 		return fail(400, { form });
 	}
-
-	const res = await createOrUpdateSubscriber({
-		email: form.data.email,
-		name: form.data.name,
-		groupIds: [env.GROUP_ID_NEWSLETTER],
-		status: 'unconfirmed' // only here, because this is consent/DOI flow
-	});
-
-	if (!res.ok) {
-		// log full detail, show generic text
-		console.error('MailerLite error:', res.status, res.detail);
-		return message(form, {
-			status: 'error',
-			text: 'Kaut kas nogāja greizi! Mēģini vēlreiz vēlāk.'
-		});
-	}
-
+	
+	// const res = await createOrUpdateSubscriber({
+		// 	email: form.data.email,
+		// 	name: form.data.name,
+		// 	groupIds: [env.GROUP_ID_NEWSLETTER],
+		// 	status: 'unconfirmed' // only here, because this is consent/DOI flow
+		// });
+		
+		// if (!res.ok) {
+			// 	// log full detail, show generic text
+			// 	console.error('MailerLite error:', res.status, res.detail);
+			// 	return message(form, {
+				// 		status: 'error',
+				// 		text: 'Kaut kas nogāja greizi! Mēģini vēlreiz vēlāk.'
+				// 	});
+				// }
+				
+				console.log('funktioniert?');
 	return message(form, {
 		status: 'success',
 		text: 'Paldies! Tu esi veiksmīgi pievienojies waitlist-am!'
@@ -164,8 +168,11 @@ export async function subscribeToNewsletter(request: Request) {
 
 export async function subscribeToWaitlist(request: Request) {
 	const form = await superValidate(request, zod4(waitlistSchema));
-	// console.log(form);
-
+	console.log(form);
+	// return message(form, {
+	// 	status: 'success',
+	// 	text: 'Ziņojums nosūtīts! Paldies — pārbaudiet e-pastu, lai apstiprinātu jaunumu saņemšanu.'
+	// });
 	if (!form.valid) {
 		// Return { form } and things will just work.
 		return fail(400, { form });
@@ -183,18 +190,20 @@ export async function subscribeToWaitlist(request: Request) {
 		subscribed_at: timestamp // yyyy-MM-dd HH:mm:ss
 	};
 	// TODO: Do something with the validated form.data
-	mailerlite.subscribers
-		.createOrUpdate(params as CreateOrUpdateSubscriberParams)
-		.then((response) => {
-			console.log(response.data);
-		})
-		.catch((error) => {
-			if (error.response)
-				return message(form, {
-					status: 'error',
-					text: 'Kaut kas nogāja greizi! Mēģini vēlreiz vēlāk.'
-				});
-		});
+	// mailerlite.subscribers
+	// 	.createOrUpdate(params as CreateOrUpdateSubscriberParams)
+	// 	.then((response) => {
+	// 		console.log(response.data);
+	// 	})
+	// 	.catch((error) => {
+	// 		if (error.response)
+	// 			return message(form, {
+	// 				status: 'error',
+	// 				text: 'Kaut kas nogāja greizi! Mēģini vēlreiz vēlāk.'
+	// 			});
+	// 	});
+	console.log(params)
+	console.log('funktioniert?');
 
 	// Return the form with a status message
 	return message(form, {
