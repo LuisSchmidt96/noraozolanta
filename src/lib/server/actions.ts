@@ -184,7 +184,7 @@ export async function subscribeToWaitlist(request: Request) {
 		fields: {
 			name: form.data.name
 		},
-		groups: [env.GROUP_ID_TESTWAITLIST], // TODO: change to actual group id
+		groups: [env.GROUP_ID_WAITLIST], // TODO: change to actual group id
 		// status: 'unconfirmed', // possible statuses: active, unsubscribed, unconfirmed, bounced or junk.
 		subscribed_at: timestamp // yyyy-MM-dd HH:mm:ss
 	};

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/fruits_favicon.jpg';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import { onMount } from 'svelte';
@@ -27,6 +27,11 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>Nora Ozolanta | Angļu valodas pasniedzēja</title>
+	<meta name="description" content="Nora Ozolanta - angļu valodas pasniedzēja, kas palīdz pārvarēt runāšanas barjeras un sasniegt valodu apguves mērķus." />
+	<meta name="keywords" content="angļu valoda, valodu apguve, runāšanas barjeras, valodu mācīšana, valodu kurss, valodu treneris, valodu konsultācijas, valodu nodarbības, valodu prakse, valodu padomi" />
+	<meta name="author" content="Nora Ozolanta" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<!-- MailerLite Universal -->
 	<script>
