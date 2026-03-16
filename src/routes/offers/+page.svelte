@@ -1,3 +1,12 @@
+<svelte:head>
+	<title>Programma "Augļu valoda" | Nora Ozolanta</title>
+	<meta name="description" content="3 mēnešu programma angļu valodas runāšanas baižu pārvarēšanai. Droša, cilvēcīga pieeja, kas dod reālus rezultātus." />
+	<meta property="og:title" content="Programma &quot;Augļu valoda&quot; | Nora Ozolanta" />
+	<meta property="og:description" content="3 mēnešu programma angļu valodas runāšanas baižu pārvarēšanai. Droša, cilvēcīga pieeja, kas dod reālus rezultātus." />
+	<meta property="og:url" content="https://noraozolanta.com/offers" />
+	<link rel="canonical" href="https://noraozolanta.com/offers" />
+</svelte:head>
+
 <script lang="ts">
 	import WaitlistPopup from '$lib/components/WaitlistPopup.svelte';
 	import { openWaitlistModal } from '$lib/stores/waitlistModal.js';

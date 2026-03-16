@@ -17,6 +17,15 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Nora Ozolanta | Pārvar angļu valodas runāšanas bailes</title>
+	<meta name="description" content="Vienīgā angļu valodas pasniedzēja un koučs Latvijā, kas strādā ar emocionālo un psiholoģisko pusi valodas apguvē. Sāc runāt angliski ar pārliecību." />
+	<meta property="og:title" content="Nora Ozolanta | Pārvar angļu valodas runāšanas bailes" />
+	<meta property="og:description" content="Vienīgā angļu valodas pasniedzēja un koučs Latvijā, kas strādā ar emocionālo un psiholoģisko pusi valodas apguvē. Sāc runāt angliski ar pārliecību." />
+	<meta property="og:url" content="https://noraozolanta.com/" />
+	<link rel="canonical" href="https://noraozolanta.com/" />
+</svelte:head>
+
 <!-- Hero -->
 <section
 	id="hero"

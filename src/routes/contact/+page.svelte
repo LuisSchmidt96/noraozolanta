@@ -1,3 +1,12 @@
+<svelte:head>
+	<title>Kontakti | Nora Ozolanta</title>
+	<meta name="description" content="Sazinies ar Noru — e-pasts, WhatsApp, sociālie tīkli vai bezmaksas konsultācija Zoom. Atbildi var sagaidīt 24–48 stundu laikā." />
+	<meta property="og:title" content="Kontakti | Nora Ozolanta" />
+	<meta property="og:description" content="Sazinies ar Noru — e-pasts, WhatsApp, sociālie tīkli vai bezmaksas konsultācija Zoom. Atbildi var sagaidīt 24–48 stundu laikā." />
+	<meta property="og:url" content="https://noraozolanta.com/contact" />
+	<link rel="canonical" href="https://noraozolanta.com/contact" />
+</svelte:head>
+
 <script lang="ts">
 	import type { PageProps } from './$types';
 	import nora_laptop_fruits from '$lib/assets/images/nora_laptop_fruits.webp';

@@ -1,3 +1,12 @@
+<svelte:head>
+	<title>Par mani | Nora Ozolanta</title>
+	<meta name="description" content="Iepazīsti Noru — angļu valodas pasniedzēju ar 8+ gadu pieredzi, kas strādā ar runāšanas barjerām un palīdz cilvēkiem sākt runāt bez bailēm un perfekcionisma." />
+	<meta property="og:title" content="Par mani | Nora Ozolanta" />
+	<meta property="og:description" content="Iepazīsti Noru — angļu valodas pasniedzēju ar 8+ gadu pieredzi, kas strādā ar runāšanas barjerām un palīdz cilvēkiem sākt runāt bez bailēm un perfekcionisma." />
+	<meta property="og:url" content="https://noraozolanta.com/about" />
+	<link rel="canonical" href="https://noraozolanta.com/about" />
+</svelte:head>
+
 <script lang="ts">
 	import type { PageProps } from './$types';
 
@@ -29,7 +38,7 @@
 				vidi un reālu plānu, kas strādā arī tad, ja iepriekšējās metodes nav palīdzējušas.
 			</div>
 		</div>
-		<img class="hidden md:block rounded-3xl max-h-[600px]" src={nora} alt="" />
+		<img class="hidden md:block rounded-3xl max-h-150" src={nora} alt="" />
 		<div class="md:hidden hero-image-mobile hero-image-about"></div>
 	</div>
 </section>
@@ -38,7 +47,7 @@
 	class="container mx-auto flex flex-1 scroll-mt-16 flex-col justify-center px-4 text-left md:scroll-mt-0 md:my-0 mt-20"
 >
 	<div class="flex flex-col md:flex-row items-center justify-center gap-12 gap-x-24">
-		<img class="hidden md:block rounded-3xl max-h-[600px]" src={nora_tired} alt="" />
+		<img class="hidden md:block rounded-3xl max-h-150" src={nora_tired} alt="" />
 		<div class="md:hidden hero-image-mobile hero-image-about"></div>
 		<div class="flex flex-col space-y-6 text-lg leading-relaxed md:w-1/3">
 			<h1 class="h1 mb-8 font-bold tracking-tight md:text-5xl/tight">Kas es tāda esmu?</h1>
@@ -65,7 +74,7 @@
 				vidi un reālu plānu, kas strādā arī tad, ja iepriekšējās metodes nav palīdzējušas.
 			</div>
 		</div>
-		<img class="hidden md:block rounded-3xl max-h-[600px]" src={nora_happy} alt="" />
+		<img class="hidden md:block rounded-3xl max-h-150" src={nora_happy} alt="" />
 		<div class="md:hidden hero-image-mobile hero-image-about"></div>
 	</div>
 </section> -->

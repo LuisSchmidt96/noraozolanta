@@ -28,28 +28,38 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 	<title>Nora Ozolanta | Angļu valodas pasniedzēja</title>
-	<meta name="description" content="Nora Ozolanta - angļu valodas pasniedzēja, kas palīdz pārvarēt runāšanas barjeras un sasniegt valodu apguves mērķus." />
-	<meta name="keywords" content="angļu valoda, valodu apguve, runāšanas barjeras, valodu mācīšana, valodu kurss, valodu treneris, valodu konsultācijas, valodu nodarbības, valodu prakse, valodu padomi" />
+	<meta name="description" content="Nora Ozolanta — angļu valodas pasniedzēja Latvijā. Palīdz pārvarēt runāšanas bailes un sākt runāt angliski ar pārliecību." />
+	<meta name="keywords" content="angļu valoda, valodu apguve, runāšanas barjeras, angļu valodas kurss latvija, angļu valoda tiešsaistē, valodu treneris" />
 	<meta name="author" content="Nora Ozolanta" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Open Graph -->
+	<meta property="og:site_name" content="Nora Ozolanta" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Nora Ozolanta | Angļu valodas pasniedzēja" />
+	<meta property="og:description" content="Nora Ozolanta — angļu valodas pasniedzēja Latvijā. Palīdz pārvarēt runāšanas bailes un sākt runāt angliski ar pārliecību." />
+	<meta property="og:image" content="https://noraozolanta.com/og-image.webp" />
+	<meta property="og:locale" content="lv_LV" />
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Nora Ozolanta | Angļu valodas pasniedzēja" />
+	<meta name="twitter:description" content="Nora Ozolanta — angļu valodas pasniedzēja Latvijā. Palīdz pārvarēt runāšanas bailes un sākt runāt angliski ar pārliecību." />
+	<meta name="twitter:image" content="https://noraozolanta.com/og-image.webp" />
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<!-- MailerLite Universal -->
-	<script>
-		(function (w, d, e, u, f, l, n) {
-			((w[f] =
-				w[f] ||
-				function () {
-					(w[f].q = w[f].q || []).push(arguments);
-				}),
-				(l = d.createElement(e)),
-				(l.async = 1),
-				(l.src = u),
-				(n = d.getElementsByTagName(e)[0]),
-				n.parentNode.insertBefore(l, n));
-		})(window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
-		ml('account', '1213635');
-	</script>
-	<!-- End MailerLite Universal -->
+	<script type="application/ld+json">{JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Nora Ozolanta",
+		"jobTitle": "Angļu valodas pasniedzēja",
+		"description": "Angļu valodas pasniedzēja un koučs Latvijā, kas palīdz pārvarēt runāšanas bailes un sākt runāt angliski ar pārliecību.",
+		"url": "https://noraozolanta.com",
+		"image": "https://noraozolanta.com/og-image.webp",
+		"email": "contact@noraozolanta.com",
+		"knowsAbout": ["angļu valoda", "valodu apguve", "runāšanas barjeras", "koučings"],
+		"sameAs": [
+			"https://www.instagram.com/nora.ozolanta",
+			"https://www.facebook.com/nora.ozolanta",
+			"https://www.linkedin.com/in/nora-ozolanta"
+		]
+	})}</script>
 </svelte:head>
 
 <div class="relative flex min-h-screen flex-col bg-white">

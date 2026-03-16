@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Privātuma politika | Nora Ozolanta</title>
+	<meta name="robots" content="noindex, follow" />
+</svelte:head>
+
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import AOS from 'aos';
