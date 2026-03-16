@@ -163,14 +163,13 @@
 		</div>
 		<div class="flex flex-col md:w-1/3 gap-6 md:mt-28">
 			<h2 class="h2">
-				Vai varbūt vēlies pieteikties bezmaksas zvanam, lai saprastu, cik labi šī programma derēs
-				Tev?
+				Vai varbūt vēlies pieteikties bezmaksas Zoom konsultācijai, lai saprastu, kā varam sadarboties?
 			</h2>
 			<h2 class="h4">Spied šeit, lai pieteiktos bezmaksas zvanam!</h2>
 			<a
 				href="https://tidycal.com/noraozolanta/konsultacija"
 				type="button"
-				class="btn btn-primary btn-md border text-white py-4">Sütīt</a
+				class="btn btn-primary btn-md border text-white py-4">Sūtīt</a
 			>
 		</div>
 	</div>

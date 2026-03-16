@@ -127,7 +127,7 @@
 		>
 			<h1 class="h1">Mana misija</h1>
 			<h3 class="h3">
-				Palīdzēt Latvijas sievietēm runāt angļu valodā ar pārliecību, skaidrību un pašcieņu — nevis bailēm.
+				Palīdzēt latvietēm/šiem runāt angļu valodā ar pārliecību, skaidrību un mieru. 
 			</h3>
 			<button
 				type="button"

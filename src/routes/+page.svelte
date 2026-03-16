@@ -76,11 +76,11 @@
 				<div class="flex flex-col gap-4">
 					<h3 class="h3 italic">Piemērota cilvēkiem, kuri:</h3>
 					<ul class="list-disc list-inside space-y-2">
-						<li>sastindzina vai jūtas nedroši, runājot angliski</li>
-						<li>saprot gandrīz visu, bet vārdi nenāk, kad jāsāk runāt</li>
-						<li>ir noguruši no tradicionālām metodēm, kas nestrādā</li>
-						<li>vēlas struktūru bez spiediena</li>
-						<li>meklē cilvēcīgu, emocionāli atbalstošu pieeju</li>
+						<li>Sastings vai jūtas nedroši, runājot angliski</li>
+						<li>Saprot gandrīz visu, bet vārdi pazūd, kad jāsāk runāt</li>
+						<li>Necieš gramatikas uzdevumus</li>
+						<li>Vēlas struktūru, kas neprasa vairāk par 2-3 stundām nedēļā</li>
+						<li>Meklē cilvēcīgu, emocionāli atbalstošu pieeju</li>
 					</ul>
 				</div>
 				<a
@@ -218,22 +218,19 @@
 				<TestimonialCard>
 					<!-- Testimonial Text -->
 					<div class="space-y-4 text-gray-800 leading-relaxed">
-						<p><strong>Uzsākot programmu:</strong></p>
-
 						<p>
-							Ja ir iespēja netunāt, tad nerunāšu. Sajūta, ka nav pietiekams vārdu krājums, vai
-							nevaru atsaukt atmiņā “īstos” vārdus tieši tad, kad tie visvairāk nepieciešami.
+							Man personīgi šī programma kļuva par būtisku profesionālu atbalstu brīdī, kad man
+							angļu valodu vajadzēja sākt lietot aktīvi – gan darbā, gan karjeras vajadzībām. Šodien
+							spēju pārliecinoši runāt par visdažādākajām tēmām savā ikdienā, sarunās un
+							profesionālajā vidē. Individuālais mācību process man deva fantastiskus rīkus, kas
+							mani atbalsta arī pēc programmas noslēguma. Šī programma ir būtiski cēlusi manu
+							pārliecību un izmainījusi veidu, kā ikdienā lietoju angļu valodu.
 						</p>
 
-						<p><strong>Nobeidzot programmu:</strong></p>
-
-						<p>(info sekos)</p>
+						<p><strong>Dalībniece Madara</strong></p>
 					</div>
 
 					<!-- Name -->
-					<div>
-						<p class="font-semibold">Dalībniece E.</p>
-					</div>
 				</TestimonialCard>
 			</div>
 		</div>

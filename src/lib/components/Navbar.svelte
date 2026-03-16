@@ -64,7 +64,7 @@
 				<button
 					on:click|stopPropagation={() => waitlistModalOpen.set(true)}
 					class="btn w-fit text-md lg:text-xl py-4 px-5 border my-2"
-					>Pievienoties gaidītāju sarakstam</button
+					>Pievienoties programmas waitlist-am</button
 				>
 			</li>
 		</ul>
@@ -98,7 +98,7 @@
 				on:click|stopPropagation={() => {
 					menuOpen = false;
 					waitlistModalOpen.set(true);
-				}}>Pievienoties gaidītāju sarakstam</button
+				}}>Pievienoties programmas waitlist-am</button
 			>
 		</ul>
 	{/if}

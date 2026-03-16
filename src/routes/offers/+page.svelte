@@ -29,7 +29,7 @@
 					type="button"
 					on:click|stopPropagation={openWaitlistModal}
 					class="ml-onclick-form btn btn-lg md:btn-xl btn-primary border"
-					>Pievienoties gaidīšanas sarakstam</button
+					>Pievienoties waitlist-am</button
 				>
 				<!-- <a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'wgy7oS', true)">Click here to show form</a> -->
 				<!-- <a
