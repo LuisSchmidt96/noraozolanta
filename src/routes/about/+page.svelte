@@ -33,7 +33,7 @@
 		<div class="md:hidden hero-image-mobile hero-image-about"></div>
 	</div>
 </section>
-<section
+<!-- <section
 	id="hero"
 	class="container mx-auto flex flex-1 scroll-mt-16 flex-col justify-center px-4 text-left md:scroll-mt-0 md:my-0 mt-20"
 >
@@ -68,7 +68,7 @@
 		<img class="hidden md:block rounded-3xl max-h-[600px]" src={nora_happy} alt="" />
 		<div class="md:hidden hero-image-mobile hero-image-about"></div>
 	</div>
-</section>
+</section> -->
 <!-- <div class="bg-(--color-primary)/30">
 	<section
 		id="story-philosophy"
