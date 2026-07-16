@@ -6,8 +6,8 @@ import { newsletterSchema, waitlistSchema } from '$lib/schemas/schemas';
 export const load = (async () => {
 	const newsletterForm = await superValidate(zod4(newsletterSchema), { id: 'newsletter' });
 	const waitlistForm = await superValidate(zod4(waitlistSchema), { id: 'waitlist' });
-	return { newsletterForm, waitlistForm };
+	const footerNewsletterForm = await superValidate(zod4(newsletterSchema), {
+		id: 'newsletter-footer'
+	});
+	return { newsletterForm, waitlistForm, footerNewsletterForm };
 }) satisfies LayoutServerLoad;
-
-
-

@@ -6,6 +6,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import AOS from 'aos';
+	import 'aos/dist/aos.css';
 
 	onMount(() => {
 		AOS.init({ once: true, duration: 600, offset: 60 });
@@ -26,7 +27,7 @@
 <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
 
 	<!-- Intro -->
-	<div class="space-y-4 text-[15px] leading-7 text-gray-800" data-aos="fade-up">
+	<div class="space-y-4 text-[15px] leading-7 text-ink" data-aos="fade-up">
 		<p>
 			This Privacy Notice for Nora Ozolanta ("we," "us," or "our"), describes how and why we might
 			access, collect, store, use, and/or share ("process") your personal information when you use
@@ -53,12 +54,12 @@
 		data-aos="fade-up"
 	>
 		<h2 class="policy-heading">Summary of Key Points</h2>
-		<p class="italic text-gray-600 text-sm">
+		<p class="italic text-ink-2 text-sm">
 			This summary provides key points from our Privacy Notice. Use the
 			<a href="#toc" class="policy-link">table of contents</a> below to find the section you are
 			looking for.
 		</p>
-		<div class="text-[15px] leading-7 text-gray-800 divide-y divide-gray-200">
+		<div class="text-[15px] leading-7 text-ink divide-y divide-gray-200">
 			<p class="pb-3">
 				<span class="font-semibold">What personal information do we process?</span>
 				When you interact with our Services, we may process personal information. Learn more about
@@ -114,7 +115,7 @@
 				['12', 'how-can-you-review-update-or-delete-the-data-we-collect-from-you', 'How can you review, update, or delete the data we collect from you?'],
 			] as [num, id, label] (id)}
 				<li class="flex gap-3 items-baseline">
-					<span class="text-xs font-bold text-gray-400 w-5 shrink-0">{num}</span>
+					<span class="text-xs font-bold text-ink-2 w-5 shrink-0">{num}</span>
 					<a href="#{id}" class="policy-link">{label}</a>
 				</li>
 			{/each}
@@ -127,7 +128,7 @@
 		<h2 class="policy-heading">What information do we collect?</h2>
 		<h3 class="policy-subheading">Personal information you disclose to us</h3>
 		<p class="policy-inshort"><span class="font-semibold">In Short:</span> We collect personal information that you provide to us.</p>
-		<div class="space-y-3 text-[15px] leading-7 text-gray-800">
+		<div class="space-y-3 text-[15px] leading-7 text-ink">
 			<p>
 				We collect personal information that you voluntarily provide when you express an interest in
 				obtaining information about us or our Services, or otherwise when you contact us.
@@ -166,7 +167,7 @@
 			We process your information to provide, improve, and administer our Services, communicate with you,
 			for security and fraud prevention, and to comply with law.
 		</p>
-		<div class="space-y-3 text-[15px] leading-7 text-gray-800">
+		<div class="space-y-3 text-[15px] leading-7 text-ink">
 			<p>We process your personal information for a variety of reasons, including:</p>
 			<ul class="space-y-2 pl-2">
 				{#each [
@@ -196,7 +197,7 @@
 			<span class="font-semibold">In Short:</span>
 			We only process your personal information when we have a valid legal reason to do so under applicable law.
 		</p>
-		<div class="space-y-3 text-[15px] leading-7 text-gray-800">
+		<div class="space-y-3 text-[15px] leading-7 text-ink">
 			<p>
 				The GDPR and UK GDPR require us to explain the valid legal bases we rely on. We may rely on
 				the following legal bases:
@@ -226,7 +227,7 @@
 			<span class="font-semibold">In Short:</span>
 			We may share information in specific situations described in this section.
 		</p>
-		<div class="space-y-3 text-[15px] leading-7 text-gray-800">
+		<div class="space-y-3 text-[15px] leading-7 text-ink">
 			<p>We may need to share your personal information in the following situations:</p>
 			<ul class="space-y-3 pl-2">
 				<li class="flex gap-3">
@@ -249,7 +250,7 @@
 			<span class="font-semibold">In Short:</span>
 			We offer products, features, or tools powered by artificial intelligence, machine learning, or similar technologies.
 		</p>
-		<div class="space-y-4 text-[15px] leading-7 text-gray-800">
+		<div class="space-y-4 text-[15px] leading-7 text-ink">
 			<p>
 				As part of our Services, we offer AI-powered products and tools (collectively, "AI Products").
 				The terms in this Privacy Notice govern your use of the AI Products within our Services.
@@ -275,7 +276,7 @@
 			<span class="font-semibold">In Short:</span>
 			We keep your information for as long as necessary to fulfill the purposes outlined in this Privacy Notice unless otherwise required by law.
 		</p>
-		<div class="space-y-3 text-[15px] leading-7 text-gray-800">
+		<div class="space-y-3 text-[15px] leading-7 text-ink">
 			<p>
 				We will only keep your personal information for as long as it is necessary for the purposes
 				set out in this Privacy Notice, unless a longer retention period is required by law.
@@ -296,7 +297,7 @@
 			<span class="font-semibold">In Short:</span>
 			We do not knowingly collect data from or market to children under 18 years of age.
 		</p>
-		<div class="space-y-3 text-[15px] leading-7 text-gray-800">
+		<div class="space-y-3 text-[15px] leading-7 text-ink">
 			<p>
 				We do not knowingly collect, solicit data from, or market to children under 18 years of age.
 				By using the Services, you represent that you are at least 18.
@@ -322,7 +323,7 @@
 			In some regions, such as the EEA, UK, and Switzerland, you have rights that allow you greater
 			access to and control over your personal information.
 		</p>
-		<div class="space-y-4 text-[15px] leading-7 text-gray-800">
+		<div class="space-y-4 text-[15px] leading-7 text-ink">
 			<p>
 				In these regions, your rights may include: (i) requesting access and obtaining a copy of your
 				personal information, (ii) requesting rectification or erasure, (iii) restricting the
@@ -367,7 +368,7 @@
 	<div class="policy-section" id="controls-for-do-not-track-features" data-aos="fade-up">
 		<div class="policy-section-number">09</div>
 		<h2 class="policy-heading">Controls for do-not-track features</h2>
-		<p class="text-[15px] leading-7 text-gray-800">
+		<p class="text-[15px] leading-7 text-ink">
 			Most web browsers include a Do-Not-Track ("DNT") feature you can activate to signal your
 			privacy preference. At this stage, no uniform technology standard for recognizing and
 			implementing DNT signals has been finalized. As such, we do not currently respond to DNT
@@ -384,7 +385,7 @@
 			<span class="font-semibold">In Short:</span>
 			Yes, we will update this notice as necessary to stay compliant with relevant laws.
 		</p>
-		<p class="text-[15px] leading-7 text-gray-800">
+		<p class="text-[15px] leading-7 text-ink">
 			We may update this Privacy Notice from time to time. The updated version will be indicated by
 			an updated "Revised" date at the top of this Privacy Notice. If we make material changes, we
 			may notify you by prominently posting a notice or by directly sending you a notification. We
@@ -396,14 +397,14 @@
 	<div class="policy-section" id="how-can-you-contact-us-about-this-notice" data-aos="fade-up">
 		<div class="policy-section-number">11</div>
 		<h2 class="policy-heading">How can you contact us about this notice?</h2>
-		<div class="space-y-4 text-[15px] leading-7 text-gray-800">
+		<div class="space-y-4 text-[15px] leading-7 text-ink">
 			<p>
 				If you have questions or comments about this notice, you may email us at
 				<a href="mailto:contact@noraozolanta.com" class="policy-link">contact@noraozolanta.com</a>
 				or contact us by post at:
 			</p>
-			<div class="rounded-xl bg-gray-50 border border-gray-200 px-6 py-4 space-y-0.5 text-gray-700">
-				<p class="font-semibold text-gray-900">Nora Ozolanta</p>
+			<div class="rounded-xl bg-paper-2 border border-rule px-6 py-4 space-y-0.5 text-ink-2">
+				<p class="font-semibold text-ink">Nora Ozolanta</p>
 				<p>H&uuml;bschstra&szlig;e 15</p>
 				<p>Karlsruhe, Baden-W&uuml;rttemberg 76135</p>
 				<p>Germany</p>
@@ -415,13 +416,13 @@
 	<div class="policy-section mb-16" id="how-can-you-review-update-or-delete-the-data-we-collect-from-you" data-aos="fade-up">
 		<div class="policy-section-number">12</div>
 		<h2 class="policy-heading">How can you review, update, or delete the data we collect from you?</h2>
-		<p class="text-[15px] leading-7 text-gray-800">
+		<p class="text-[15px] leading-7 text-ink">
 			Based on the applicable laws of your country, you may have the right to request access to the
 			personal information we collect from you, correct inaccuracies, or delete your personal
 			information. To request to review, update, or delete your personal information, please contact
 			us at <a href="mailto:contact@noraozolanta.com" class="policy-link">contact@noraozolanta.com</a>.
 		</p>
-		<p class="text-xs text-gray-400">
+		<p class="text-xs text-ink-2">
 			This Privacy Policy was created using Termly's Privacy Policy Generator.
 		</p>
 	</div>

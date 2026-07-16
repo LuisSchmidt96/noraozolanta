@@ -1,50 +1,88 @@
-<script>
-	import { goToAnchor } from '$lib/utils/navigation';
+<script lang="ts">
+	import { superForm } from 'sveltekit-superforms';
+	import { Instagram } from 'lucide-svelte';
 
-	// No JS needed for static footer
+	let { form: formData } = $props();
+
+	const { form, enhance, message, delayed } = superForm(formData);
 </script>
 
-<footer
-	class="md:relative sticky bottom-0 z-50 border-t border-primary-300 bg-surface-100 py-4 text-primary-900"
->
+<!-- Ft7 Newsletter-first · knobs: layout=split · submit=filled · privacy-line=yes -->
+<footer id="newsletter" class="border-t border-rule bg-paper-2">
 	<div
-		class="container mx-auto flex flex-col items-center justify-between py-2 lg:py-0 gap-4 bg-surface-100 px-4 md:flex-row"
+		class="container mx-auto grid gap-10 px-4 py-14 md:grid-cols-[3fr_2fr] md:items-start md:gap-16"
 	>
-		<div class="text-center md:text-left text-xl">© 2026 Nora Ozolanta</div>
-		<div class="flex gap-2 lg:gap-8 justify-center text-md md:text-lg">
-			<a href="/rekviziti">Rekvizīti</a>
-			<a href="/privatuma-politika">Privātuma politika</a>
-			<a href="/sikdatnes">Sīkdatņu politika</a>
+		<div class="max-w-xl">
+			{#if $message?.status === 'success'}
+				<p class="font-display text-2xl font-semibold">Paldies!</p>
+				<p class="mt-2 text-ink-2">{$message.text}</p>
+			{:else}
+				<label for="footer-name" class="font-display text-2xl font-semibold tracking-tight">
+					Iknedēļas vēstule par valodu, pārliecību un dzīvi
+				</label>
+				<p class="mt-2 text-ink-2">
+					Godīgas, piezemētas atziņas par angļu valodas apguvi — bez spiediena.
+				</p>
+				<form method="post" action="?/newsletter" use:enhance class="mt-5">
+					<div class="flex flex-col gap-3 sm:flex-row">
+						<input
+							id="footer-name"
+							type="text"
+							name="name"
+							class="input sm:max-w-44"
+							placeholder="Vārds"
+							required
+							aria-required="true"
+							bind:value={$form.name}
+						/>
+						<input
+							type="email"
+							name="email"
+							class="input"
+							placeholder="E-pasts"
+							required
+							aria-required="true"
+							aria-label="E-pasta adrese"
+							bind:value={$form.email}
+						/>
+						<button type="submit" class="btn btn-primary" disabled={$delayed}>
+							{$delayed ? 'Sūta…' : 'Pierakstīties'}
+						</button>
+					</div>
+					{#if $message?.status === 'error'}
+						<p class="mt-3 text-sm text-error" role="alert">
+							{$message.text}
+						</p>
+					{/if}
+					<p class="mt-3 text-sm text-ink-2">
+						Vari atteikties jebkurā brīdī. <a href="/privatuma-politika" class="underline"
+							>Privātuma politika</a
+						>
+					</p>
+				</form>
+			{/if}
 		</div>
-		<a
-			href="https://www.instagram.com/nora.ozolanta/"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="hover:opacity-70"
-		>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="32"
-				height="32"
-				fill="#000000"
-				viewBox="0 0 256 256"
-				><path
-					d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
-				></path></svg
-			>
-		</a>
-		<!-- <div class="flex flex-col items-center gap-4 gap-y-8 bg-surface-100 md:flex-row">
-			<span class="text-lg font-bold">© 2025 CYBERSCHMIDT</span>
-			<nav class="flex gap-4 text-base">
-				<a href="/impressum" class="hover:underline">Impressum</a>
-				<a href="/datenschutz" data-sveltekit-noscroll class="hover:underline">Datenschutz</a>
-				<a href="/#contact" on:click={goToAnchor} class="hover:underline" data-sveltekit-keepfocus
-					>Kontakt</a
+
+		<div class="flex flex-col gap-3 text-sm text-ink-2 md:items-end md:text-right">
+			<a href="/" class="font-display text-lg font-semibold text-ink no-underline">Nora Ozolanta</a>
+			<nav aria-label="Juridiskā informācija" class="flex flex-wrap gap-x-5 gap-y-1 md:justify-end">
+				<a href="/rekviziti" class="whitespace-nowrap hover:underline">Rekvizīti</a>
+				<a href="/privatuma-politika" class="whitespace-nowrap hover:underline"
+					>Privātuma politika</a
 				>
+				<a href="/sikdatnes" class="whitespace-nowrap hover:underline">Sīkdatņu politika</a>
 			</nav>
+			<a
+				href="https://www.instagram.com/nora.ozolanta/"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Instagram — nora.ozolanta"
+				class="mt-1 inline-flex w-fit items-center gap-2 hover:text-ink md:self-end"
+			>
+				<Instagram size={20} aria-hidden="true" />
+				<span>nora.ozolanta</span>
+			</a>
+			<p>© 2026 Nora Ozolanta</p>
 		</div>
-		<div class="flex items-center gap-2 pb-4 text-sm md:pb-0">
-			<span>Mit ❤️ gemacht für alle Generationen</span>
-		</div> -->
 	</div>
 </footer>

@@ -1,5 +1,4 @@
 <script>
-	import { Spinner } from 'flowbite-svelte';
 	import Popup from './Popup.svelte';
 	import { superForm } from 'sveltekit-superforms';
 
@@ -14,38 +13,48 @@
 </script>
 
 <Popup bind:open>
-	{#if $waitlistDelayed}
-		<Spinner class="mx-auto h-12 w-12 fill-primary-600" />
-	{:else if $waitlistMessage?.status === 'success'}
-		<h3 class="mb-2 text-4xl font-extrabold tracking-tight md:text-3xl">
-			Paldies! Tu esi veiksmīgi pievienojusies waitlist-am!
-		</h3>
-	{:else}<div class="flex flex-col gap-4 text-black">
-			<h2 class="h2">Pievienoties waitlist-am</h2>
+	{#if $waitlistMessage?.status === 'success'}
+		<p class="pr-8 font-display text-2xl font-semibold" role="status">
+			{$waitlistMessage.text}
+		</p>
+	{:else}
+		<div class="flex flex-col gap-4">
+			<h2 class="pr-8 font-display text-2xl font-semibold">Rezervēt vietu programmā</h2>
 			<p>
 				Jā, man šis interesē. Labprāt saņemšu jaunumus un informāciju saistībā ar šo, kā arī gribu
 				sev rezervēt vietu! (droši varēsi jebkurā brīdī pārdomāt, ja kas)
 			</p>
 			<form method="post" action="?/waitlist" use:waitlistEnhance class="flex flex-col gap-4">
-				<input
-					type="text"
-					aria-required="true"
-					class="input text-lg py-4"
-					placeholder="Vārds"
-					name="name"
-					bind:value={$waitlistForm.name}
-				/>
-				<input
-					type="email"
-					aria-required="true"
-					class="input text-lg py-4"
-					placeholder="E-pasts"
-					name="email"
-					bind:value={$waitlistForm.email}
-				/>
-				<button type="submit" class="btn btn-primary btn-lg border text-white py-4"
-					>Pievienoties</button
-				>
+				<div class="flex flex-col gap-1">
+					<label for="waitlist-name" class="text-sm font-medium">Vārds</label>
+					<input
+						id="waitlist-name"
+						type="text"
+						required
+						aria-required="true"
+						class="input"
+						name="name"
+						bind:value={$waitlistForm.name}
+					/>
+				</div>
+				<div class="flex flex-col gap-1">
+					<label for="waitlist-email" class="text-sm font-medium">E-pasts</label>
+					<input
+						id="waitlist-email"
+						type="email"
+						required
+						aria-required="true"
+						class="input"
+						name="email"
+						bind:value={$waitlistForm.email}
+					/>
+				</div>
+				{#if $waitlistMessage?.status === 'error'}
+					<p class="text-sm text-error" role="alert">{$waitlistMessage.text}</p>
+				{/if}
+				<button type="submit" class="btn btn-primary mt-1" disabled={$waitlistDelayed}>
+					{$waitlistDelayed ? 'Sūta…' : 'Rezervēt vietu'}
+				</button>
 			</form>
 		</div>
 	{/if}

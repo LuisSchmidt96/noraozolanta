@@ -1,152 +1,68 @@
-<svelte:head>
-	<title>Par mani | Nora Ozolanta</title>
-	<meta name="description" content="Iepazīsti Noru — angļu valodas pasniedzēju ar 8+ gadu pieredzi, kas strādā ar runāšanas barjerām un palīdz cilvēkiem sākt runāt bez bailēm un perfekcionisma." />
-	<meta property="og:title" content="Par mani | Nora Ozolanta" />
-	<meta property="og:description" content="Iepazīsti Noru — angļu valodas pasniedzēju ar 8+ gadu pieredzi, kas strādā ar runāšanas barjerām un palīdz cilvēkiem sākt runāt bez bailēm un perfekcionisma." />
-	<meta property="og:url" content="https://noraozolanta.com/about" />
-	<link rel="canonical" href="https://noraozolanta.com/about" />
-</svelte:head>
-
 <script lang="ts">
 	import type { PageProps } from './$types';
 
 	import nora from '$lib/assets/images/nora.webp';
-	import nora_tired from '$lib/assets/images/nora_tired.webp';
-	import nora_happy from '$lib/assets/images/nora_happy.webp';
-	import plant from '$lib/assets/images/plant.svg';
-	import graduation_cap from '$lib/assets/images/graduation-cap.svg';
-	import NewsletterPopup from '$lib/components/NewsletterPopup.svelte';
-	import { superForm } from 'sveltekit-superforms';
-	import { newsletterModalOpen, openNewsletterModal } from '$lib/stores/newsletterModal';
+	import { openNewsletterModal } from '$lib/stores/newsletterModal';
 
 	let { data }: PageProps = $props();
-
-	let open = $state(false);
 </script>
 
-<section
-	id="hero"
-	class="container mx-auto flex flex-1 scroll-mt-16 flex-col justify-center px-4 text-left md:scroll-mt-0 md:my-0 mt-20"
->
-	<div class="flex flex-col md:flex-row items-center justify-center gap-12 gap-x-24">
-		<div class="flex flex-col space-y-6 text-lg leading-relaxed md:w-1/3">
-			<h1 class="h1 mb-8 font-bold tracking-tight md:text-5xl/tight">Kas es tāda esmu?</h1>
-			<div class="text-black">
-				Čau! Ja vēl neesam pazīstamas/i, mani sauc Nora. Es esmu angļu valodas pasniedzēja, kas
-				strādā ar runāšanas barjerām un palīdz cilvēkiem beidzot sākt runāt — bez bailēm,
-				kaunsajūtas vai perfekcionisma. Es ticu, ka valodu var apgūt citādi: ar skaidru mērķi, drošu
-				vidi un reālu plānu, kas strādā arī tad, ja iepriekšējās metodes nav palīdzējušas.
-			</div>
+<svelte:head>
+	<title>Par mani | Nora Ozolanta</title>
+	<meta
+		name="description"
+		content="Iepazīsti Noru — angļu valodas pasniedzēju ar 8+ gadu pieredzi, kas strādā ar runāšanas barjerām un palīdz cilvēkiem sākt runāt bez bailēm un perfekcionisma."
+	/>
+	<meta property="og:title" content="Par mani | Nora Ozolanta" />
+	<meta
+		property="og:description"
+		content="Iepazīsti Noru — angļu valodas pasniedzēju ar 8+ gadu pieredzi, kas strādā ar runāšanas barjerām un palīdz cilvēkiem sākt runāt bez bailēm un perfekcionisma."
+	/>
+	<meta property="og:url" content="https://noraozolanta.com/about" />
+	<link rel="canonical" href="https://noraozolanta.com/about" />
+</svelte:head>
+
+<!-- Letter · H5 letter hero · salutation + prose + quiet photo + sign-off -->
+<section class="container mx-auto px-4 pt-14 pb-24 md:pt-24 md:pb-32">
+	<div class="mx-auto grid max-w-4xl gap-12 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:gap-16">
+		<div class="flex max-w-[58ch] flex-col gap-6 text-lg leading-relaxed">
+			<h1 class="text-4xl font-bold md:text-5xl">Čau!</h1>
+			<p>
+				Ja vēl neesam pazīstamas/i, mani sauc Nora. Es esmu angļu valodas pasniedzēja, kas strādā ar
+				runāšanas barjerām un palīdz cilvēkiem beidzot sākt runāt — bez bailēm, kaunsajūtas vai
+				perfekcionisma.
+			</p>
+			<p>
+				Es ticu, ka valodu var apgūt citādi: ar skaidru mērķi, drošu vidi un reālu plānu, kas strādā
+				arī tad, ja iepriekšējās metodes nav palīdzējušas.
+			</p>
+			<p>
+				Mana misija — palīdzēt latvietēm/šiem runāt angļu valodā ar pārliecību, skaidrību un mieru.
+			</p>
+			<p class="font-display text-2xl">— Nora</p>
+			<p class="mt-4 text-base text-ink-2">
+				P.S. Reizi nedēļā rakstu vēstuli par valodu, pārliecību un dzīvi —
+				<button
+					type="button"
+					onclick={(e) => {
+						e.stopPropagation();
+						openNewsletterModal();
+					}}
+					class="link-cta cursor-pointer border-none bg-transparent p-0 text-base"
+				>
+					pieraksties →
+				</button>
+			</p>
 		</div>
-		<img class="hidden md:block rounded-3xl max-h-150" src={nora} alt="" />
-		<div class="md:hidden hero-image-mobile hero-image-about"></div>
+		<figure class="md:pt-16">
+			<img
+				src={nora}
+				alt="Nora Ozolanta"
+				width="613"
+				height="815"
+				fetchpriority="high"
+				class="mx-auto w-full max-w-xs rounded-(--radius-card) md:max-w-none"
+			/>
+		</figure>
 	</div>
 </section>
-<!-- <section
-	id="hero"
-	class="container mx-auto flex flex-1 scroll-mt-16 flex-col justify-center px-4 text-left md:scroll-mt-0 md:my-0 mt-20"
->
-	<div class="flex flex-col md:flex-row items-center justify-center gap-12 gap-x-24">
-		<img class="hidden md:block rounded-3xl max-h-150" src={nora_tired} alt="" />
-		<div class="md:hidden hero-image-mobile hero-image-about"></div>
-		<div class="flex flex-col space-y-6 text-lg leading-relaxed md:w-1/3">
-			<h1 class="h1 mb-8 font-bold tracking-tight md:text-5xl/tight">Kas es tāda esmu?</h1>
-			<div class="text-black">
-				Čau! Ja vēl neesam pazīstamas/i, mani sauc Nora. Es esmu angļu valodas pasniedzēja, kas
-				strādā ar runāšanas barjerām un palīdz cilvēkiem beidzot sākt runāt — bez bailēm,
-				kaunsajūtas vai perfekcionisma. Es ticu, ka valodu var apgūt citādi: ar skaidru mērķi, drošu
-				vidi un reālu plānu, kas strādā arī tad, ja iepriekšējās metodes nav palīdzējušas.
-			</div>
-		</div>
-	</div>
-</section>
-<section
-	id="hero"
-	class="container mx-auto flex flex-1 scroll-mt-16 flex-col justify-center px-4 text-left md:scroll-mt-0 md:my-0 mt-20"
->
-	<div class="flex flex-col md:flex-row items-center justify-center gap-12 gap-x-24">
-		<div class="flex flex-col space-y-6 text-lg leading-relaxed md:w-1/3">
-			<h1 class="h1 mb-8 font-bold tracking-tight md:text-5xl/tight">Kas es tāda esmu?</h1>
-			<div class="text-black">
-				Čau! Ja vēl neesam pazīstamas/i, mani sauc Nora. Es esmu angļu valodas pasniedzēja, kas
-				strādā ar runāšanas barjerām un palīdz cilvēkiem beidzot sākt runāt — bez bailēm,
-				kaunsajūtas vai perfekcionisma. Es ticu, ka valodu var apgūt citādi: ar skaidru mērķi, drošu
-				vidi un reālu plānu, kas strādā arī tad, ja iepriekšējās metodes nav palīdzējušas.
-			</div>
-		</div>
-		<img class="hidden md:block rounded-3xl max-h-150" src={nora_happy} alt="" />
-		<div class="md:hidden hero-image-mobile hero-image-about"></div>
-	</div>
-</section> -->
-<!-- <div class="bg-(--color-primary)/30">
-	<section
-		id="story-philosophy"
-		class="container mx-auto items-center flex gap-x-12 flex-row flex-1 scroll-mt-16 justify-evenly px-4 text-left py-16 md:scroll-mt-0 md:my-0"
-	>
-		<div
-			class="flex mx-auto flex-col md:flex-row gap-x-16 gap-y-8 justify-evenly text-lg md:text-xl"
-		>
-			<div class="flex flex-col gap-4 md:w-1/2">
-				<h1 class="h1 md:text-5xl/tight font-bold">Kas man ir svarīgi darbā</h1>
-				<ul class="text-black gap-4 flex flex-col">
-					<li class="flex items-center gap-4">
-						<img src={plant} alt="Flower" class="w-8" /> droša, atbalstoša vide
-					</li>
-					<li class="flex items-center gap-4">
-						<img src={plant} alt="Flower" class="w-8" /> vieta, kur kļūdīties ir normāli un pat jautri
-					</li>
-					<li class="flex items-center gap-4">
-						<img src={plant} alt="Flower" class="w-8" /> pārliecība svarīgāka par perfekciju
-					</li>
-					<li class="flex items-center gap-4">
-						<img src={plant} alt="Flower" class="w-8" /> cilvēcīga pieeja bez spiediena
-					</li>
-				</ul>
-			</div>
-			<div class="flex flex-col gap-4">
-				<h1 class="h1 md:text-5xl/tight font-bold">Pieredze un uzticamība</h1>
-				<ul class="text-black gap-4 flex flex-col">
-					<li class="flex items-center gap-4">
-						<img src={graduation_cap} alt="Flower" class="w-8" /> vairāk nekā 8 gadu pieredze angļu valodas
-						mācīšanā
-					</li>
-					<li class="flex items-center gap-4">
-						<img src={graduation_cap} alt="Flower" class="w-8" /> darbs ar 100+ klientiem
-					</li>
-					<li class="flex items-center gap-4">
-						<img src={graduation_cap} alt="Flower" class="w-8" /> 4 no 4 dalībniecēm manā jaunākajā programmā
-						ir ļoti apmierinātas ar rezultātu
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section>
-</div> -->
-<div class="bg-(--color-secondary)/70">
-	<section
-		id="leadmagnet"
-		class="w-full mx-auto flex flex-1 scroll-mt-16 flex-col items-center justify-center gap-12 px-4 text-left md:scroll-mt-0 md:my-0 py-16"
-		data-aos="fade-up"
-		data-aos-delay="100"
-	>
-		<!-- <div class="flex items-center justify-center gap-16"> -->
-		<!-- <img class="w-1/2 rounded-3xl" src={oranges} alt="" /> -->
-		<div
-			class="flex flex-col text-center items-center space-y-6 text-xl leading-relaxed text-black"
-		>
-			<h1 class="h1">Mana misija</h1>
-			<h3 class="h3">
-				Palīdzēt latvietēm/šiem runāt angļu valodā ar pārliecību, skaidrību un mieru. 
-			</h3>
-			<button
-				type="button"
-				on:click|stopPropagation={openNewsletterModal}
-				class="btn w-fit mt-4 btn-primary shadow-xl shadow-(--color-primary)/30 btn-xl text-white border"
-			>
-				Pievienoties jaunumu vēstulei
-			</button>
-		</div>
-		<!-- </div> -->
-	</section>
-</div>
-<!-- <NewsletterPopup bind:open={$newsletterModalOpen} newsletterForm={data.newsletterForm} /> -->

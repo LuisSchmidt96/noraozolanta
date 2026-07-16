@@ -1,15 +1,13 @@
-<script lang="ts">
-	import icon_quote from '$lib/assets/images/icon-quote.webp';
-</script>
-
-<div class="relative grid items-start h-full border shadow-xl border-[#EAECED] rounded-xl bg-white p-8">
-	<div class="flex flex-col space-y-6">
-		<!-- Quote Icon -->
-		<div class="flex">
-			<img src={icon_quote} alt="" class="w-10 h-10" />
-		</div>
-
-		<!-- Testimonial Text -->
-		<slot></slot>
-	</div>
+<div class="flex h-full flex-col gap-5 rounded-(--radius-card) border border-rule bg-paper p-8">
+	<span class="quote-mark font-display" aria-hidden="true">&ldquo;</span>
+	<slot></slot>
 </div>
+
+<style>
+	.quote-mark {
+		font-size: 3.5rem;
+		line-height: 0.6;
+		color: var(--color-accent-2);
+		user-select: none;
+	}
+</style>

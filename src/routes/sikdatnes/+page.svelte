@@ -3,7 +3,7 @@
 	<meta name="robots" content="noindex, follow" />
 </svelte:head>
 
-<div class="container mx-auto px-4 py-16 text-black flex flex-col space-y-4">
+<div class="container mx-auto px-4 py-16 text-ink flex flex-col space-y-4">
 	<h1 class="h1 mb-8">Sīkdatņu politika</h1>
 
 	<div>Šī tīmekļa vietne neizmanto sīkdatnes.</div>

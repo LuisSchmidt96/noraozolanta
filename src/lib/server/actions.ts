@@ -161,7 +161,7 @@ export async function subscribeToNewsletter(request: Request) {
 
 	return message(form, {
 		status: 'success',
-		text: 'Paldies! Tu esi veiksmīgi pievienojies waitlist-am!'
+		text: 'Pārbaudi savu e-pastu, lai apstiprinātu pierakstīšanos jaunumu vēstulei.'
 	});
 }
 
@@ -205,6 +205,6 @@ export async function subscribeToWaitlist(request: Request) {
 	// Return the form with a status message
 	return message(form, {
 		status: 'success',
-		text: 'Paldies! Tu esi veiksmīgi pievienojies waitlist-am!'
+		text: 'Paldies! Tava vieta gaidītāju sarakstā ir rezervēta.'
 	});
 }
