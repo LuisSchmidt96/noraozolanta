@@ -52,7 +52,7 @@
 							width="24"
 							height="24"
 							fill="currentColor"
-							viewBox="0 0 256 256"
+							viewBox="22 22 212 212"
 							class="shrink-0 text-accent"
 							aria-label="WhatsApp"
 							><path
