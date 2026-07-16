@@ -1,15 +1,7 @@
 <script lang="ts">
 	import hero_nora from '$lib/assets/images/hero_nora.webp';
-	import oranges from '$lib/assets/images/oranges.webp';
-	import ebook_nora from '$lib/assets/images/ebook_nora.webp';
 	import TestimonialCard from '$lib/components/TestimonialCard.svelte';
 	import { openNewsletterModal } from '$lib/stores/newsletterModal.js';
-	import { Check } from 'lucide-svelte';
-
-	let { data } = $props();
-
-	const offersHref = '/offers';
-	const contactHref = '/contact';
 </script>
 
 <svelte:head>
@@ -66,89 +58,6 @@
 		/>
 	</div>
 </section>
-
-<!-- Programma · diptych reversed, paper-2 band -->
-<div class="bg-paper-2">
-	<section id="featured" class="container mx-auto px-4 py-14 md:py-20">
-		<div class="grid items-center gap-10 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-16">
-			<img
-				src={oranges}
-				alt="Apelsīni — programmas “Augļu valoda” simbols"
-				width="1886"
-				height="1256"
-				loading="lazy"
-				class="w-full rounded-(--radius-card)"
-			/>
-			<div class="flex max-w-2xl flex-col gap-5">
-				<div>
-					<h2 class="text-3xl font-semibold md:text-4xl">Programma “Augļu valoda”</h2>
-					<p class="mt-2 font-display text-xl text-ink-2 md:text-2xl">
-						Valoda, kas nes <span class="mark-amber">augļus</span>
-					</p>
-				</div>
-				<p class="max-w-[60ch] text-lg leading-relaxed">
-					Angļu valodas apguve, kas dod reālus rezultātus — drošākais un efektīvākais veids, kā
-					pārvarēt runāšanas bailes.
-				</p>
-				<div class="flex flex-col gap-3">
-					<p class="font-medium">Piemērota cilvēkiem, kuri:</p>
-					<ul class="list-inside list-disc space-y-2 text-lg">
-						<li>Sastings vai jūtas nedroši, runājot angliski</li>
-						<li>Saprot gandrīz visu, bet vārdi pazūd, kad jāsāk runāt</li>
-						<li>Necieš gramatikas uzdevumus</li>
-						<li>Vēlas struktūru, kas neprasa vairāk par 2–3 stundām nedēļā</li>
-						<li>Meklē cilvēcīgu, emocionāli atbalstošu pieeju</li>
-					</ul>
-				</div>
-				<a href={offersHref} class="btn btn-outline mt-2 w-fit">Iepazīt programmu</a>
-			</div>
-		</div>
-	</section>
-</div>
-
-<!-- E-grāmata · diptych, amber tint band -->
-<div class="bg-paper-amber">
-	<section id="leadmagnet" class="container mx-auto px-4 py-16 md:py-24">
-		<div class="grid items-center gap-10 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] md:gap-16">
-			<div class="flex max-w-2xl flex-col gap-5">
-				<div>
-					<h2 class="text-3xl font-semibold md:text-4xl">Bezmaksas e-grāmata</h2>
-					<p class="mt-2 font-display text-xl text-ink-2 md:text-2xl">
-						“Kā mūsdienu latviešu sievietes var efektīvi apgūt angļu valodu”
-					</p>
-				</div>
-				<p class="max-w-[60ch] text-lg leading-relaxed">Šajā ceļvedī Tu uzzināsi:</p>
-				<ul class="space-y-3 text-lg">
-					<li class="flex items-start gap-3">
-						<Check class="mt-1 shrink-0 text-accent" size={22} aria-hidden="true" />
-						kāpēc skolas tipa valodas mācīšanās nestrādā
-					</li>
-					<li class="flex items-start gap-3">
-						<Check class="mt-1 shrink-0 text-accent" size={22} aria-hidden="true" />
-						kā pieaugušie patiesībā apgūst valodas mūsdienās
-					</li>
-					<li class="flex items-start gap-3">
-						<Check class="mt-1 shrink-0 text-accent" size={22} aria-hidden="true" />
-						kā veidot pārliecību runājot
-					</li>
-					<li class="flex items-start gap-3">
-						<Check class="mt-1 shrink-0 text-accent" size={22} aria-hidden="true" />
-						kādi psiholoģiskie bloki kavē progresu — un kā tos pārvarēt
-					</li>
-				</ul>
-				<a href={contactHref} class="btn btn-primary mt-2 w-fit">Saņemt e-grāmatu</a>
-			</div>
-			<img
-				src={ebook_nora}
-				alt="E-grāmatas vāks"
-				width="1365"
-				height="2048"
-				loading="lazy"
-				class="mx-auto w-full max-w-xs rounded-(--radius-card) md:max-w-sm"
-			/>
-		</div>
-	</section>
-</div>
 
 <!-- Dalībnieču rezultāti · lead quote + two before/after cards -->
 <section id="testimonials" class="container mx-auto px-4 py-16 md:py-28">

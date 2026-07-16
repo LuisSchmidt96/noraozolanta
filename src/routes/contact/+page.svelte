@@ -2,7 +2,7 @@
 	import type { PageProps } from './$types';
 	import nora_laptop_fruits from '$lib/assets/images/nora_laptop_fruits.webp';
 	import { superForm } from 'sveltekit-superforms';
-	import { Mail, Linkedin, Instagram, Facebook } from 'lucide-svelte';
+	import { Mail, MessageCircle, Linkedin, Instagram, Facebook } from 'lucide-svelte';
 	let { data }: PageProps = $props();
 
 	const { form, errors, message, enhance, delayed } = superForm(data.form);
@@ -40,17 +40,15 @@
 						contact@noraozolanta.com
 					</a>
 				</li>
-				<!-- TODO: WhatsApp row removed — the number shown (+371 12345678) was a placeholder.
-				     Restore with the real number when available. -->
 				<li>
 					<a
-						href="https://www.linkedin.com/in/nora-ozolanta/"
+						href="https://wa.me/37129901290"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="inline-flex items-center gap-3 hover:underline"
 					>
-						<Linkedin size={24} class="shrink-0 text-accent" aria-hidden="true" />
-						linkedin.com/in/nora-ozolanta
+						<MessageCircle size={24} class="shrink-0 text-accent" aria-hidden="true" />
+						<span class="whitespace-nowrap">WhatsApp: +371 29901290</span>
 					</a>
 				</li>
 				<li>
@@ -73,6 +71,17 @@
 					>
 						<Facebook size={24} class="shrink-0 text-accent" aria-hidden="true" />
 						facebook.com/nora.ozolanta
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://www.linkedin.com/in/nora-ozolanta/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-flex items-center gap-3 hover:underline"
+					>
+						<Linkedin size={24} class="shrink-0 text-accent" aria-hidden="true" />
+						linkedin.com/in/nora-ozolanta
 					</a>
 				</li>
 			</ul>

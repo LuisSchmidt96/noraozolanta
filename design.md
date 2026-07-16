@@ -13,9 +13,11 @@ default-off; stillness is part of the voice.
 
 - Marketing pages (`/`, `/offers`): **Split Studio** — alternating text/photo
   diptychs, direction flips per section, real photography carries the proof side.
-  Hero archetype: H2 Split diptych (7/5 or 5/7). Allowance: `/offers` may move to
-  **Narrative Workflow** once real program-phase content (module list, weekly
-  rhythm) is supplied — do not invent phases before then.
+  Hero archetype: H2 Split diptych (7/5 or 5/7). `/offers` now uses an **Offer
+  Ladder** variant within Split Studio — stacked hairline-ruled rows ordered
+  free → paid, purely typographic (no cards-in-cards). Allowance: `/offers` may
+  move to **Narrative Workflow** once real program-phase content (module list,
+  weekly rhythm) is supplied — do not invent phases before then.
 - Content pages (`/about`): **Letter** — first-person, ≤ 60ch measure, salutation
   display, sign-off, no buttons in the fold. Hero archetype: H5 Letter hero.
 - Legal pages (`/privatuma-politika`, `/sikdatnes`, `/rekviziti`): **Long

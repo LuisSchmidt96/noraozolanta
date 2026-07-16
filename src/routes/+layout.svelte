@@ -1,10 +1,24 @@
 <script lang="ts">
 	import '../app.css';
+	import { onMount } from 'svelte';
+	import { get } from 'svelte/store';
 	import favicon from '$lib/assets/fruits_favicon.jpg';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import { newsletterModalOpen, openNewsletterModal } from '$lib/stores/newsletterModal';
+	import { waitlistModalOpen } from '$lib/stores/waitlistModal';
 
 	let { children, data } = $props();
+
+	onMount(() => {
+		if (localStorage.getItem('nl-popup-shown')) return;
+		const timeout = setTimeout(() => {
+			if (get(waitlistModalOpen) || get(newsletterModalOpen)) return;
+			localStorage.setItem('nl-popup-shown', '1');
+			openNewsletterModal();
+		}, 30000);
+		return () => clearTimeout(timeout);
+	});
 </script>
 
 <svelte:head>

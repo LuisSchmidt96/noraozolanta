@@ -76,11 +76,11 @@
 					<button
 						onclick={(e) => {
 							e.stopPropagation();
-							waitlistModalOpen.set(true);
+							newsletterModalOpen.set(true);
 						}}
 						class="btn btn-outline"
 					>
-						Rezervēt vietu
+						Pieraksties jaunumiem
 					</button>
 				</li>
 			</ul>
@@ -123,10 +123,10 @@
 						onclick={(e) => {
 							e.stopPropagation();
 							menuOpen = false;
-							waitlistModalOpen.set(true);
+							newsletterModalOpen.set(true);
 						}}
 					>
-						Rezervēt vietu
+						Pieraksties jaunumiem
 					</button>
 				</li>
 			</ul>

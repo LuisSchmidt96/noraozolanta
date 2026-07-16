@@ -2,7 +2,7 @@ import type { Actions, PageServerLoad } from './$types';
 import { superValidate } from 'sveltekit-superforms';
 import { zod4 } from 'sveltekit-superforms/adapters';
 import { z } from 'zod';
-import { subscribeToWaitlist } from '$lib/server/actions';
+import { subscribeToNewsletter, subscribeToWaitlist } from '$lib/server/actions';
 
 const schema = z.object({
 	name: z.string().min(1),
@@ -18,5 +18,8 @@ export const load = (async () => {
 export const actions: Actions = {
 	waitlist: async ({ request }) => {
 		return subscribeToWaitlist(request);
+	},
+	newsletter: async ({ request }) => {
+		return subscribeToNewsletter(request);
 	}
 };
