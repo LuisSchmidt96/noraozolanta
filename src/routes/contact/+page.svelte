@@ -108,7 +108,7 @@
 			{#if $message?.status === 'success'}
 				<p class="font-display text-2xl font-semibold" role="status">{$message.text}</p>
 			{:else}
-				<form method="post" action="?/contact" use:enhance class="flex flex-col gap-4">
+				<form method="post" action="?/contact" use:enhance class="flex flex-col gap-1">
 					<div class="flex flex-col gap-1">
 						<label for="contact-name" class="text-sm font-medium">Vārds</label>
 						<input
@@ -172,7 +172,7 @@
 					{#if $message?.status === 'error'}
 						<p class="text-sm text-error" role="alert">{$message.text}</p>
 					{/if}
-					<button type="submit" class="btn btn-primary mt-1 w-fit" disabled={$delayed}>
+					<button type="submit" class="btn btn-primary mt-6 w-fit" disabled={$delayed}>
 						{$delayed ? 'Sūta…' : 'Nosūtīt ziņu'}
 					</button>
 

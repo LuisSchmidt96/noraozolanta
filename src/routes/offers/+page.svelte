@@ -33,7 +33,7 @@
 			class="grid gap-4 border-b border-rule py-8 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10"
 		>
 			<div class="max-w-[60ch]">
-				<h2 class="font-display text-2xl font-semibold">Essential Phrases for Work</h2>
+				<h2 class="font-display text-2xl font-semibold md:text-3xl">Essential Phrases for Work</h2>
 				<p class="mt-2 text-ink-2">Bezmaksas PDF ar noderīgām darba frāzēm.</p>
 				<p class="mt-4">
 					<a
@@ -52,7 +52,7 @@
 			class="grid gap-4 border-b border-rule py-8 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10"
 		>
 			<div class="max-w-[60ch]">
-				<h2 class="font-display text-2xl font-semibold">Self-Talk Freebie</h2>
+				<h2 class="font-display text-2xl font-semibold md:text-3xl">Self-Talk Freebie</h2>
 				<p class="mt-2 text-ink-2">Bezmaksas resurss par pašrunu, runājot angliski.</p>
 				<p class="mt-4">
 					<a
@@ -84,7 +84,7 @@
 					>
 				</div>
 			</div>
-			<p class="font-medium md:text-right">27 €</p>
+			<p class="font-medium md:text-right">27 €</p>
 		</article>
 
 		<!-- 4 · Speak Freely Club -->
@@ -109,7 +109,7 @@
 
 		<!-- 5 · Programma “Augļu valoda” · flagship -->
 		<article
-			class="grid gap-4 border-b border-rule bg-paper-2 px-4 py-10 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10 md:px-6 md:py-12"
+			class="-mx-4 grid gap-4 bg-paper-2 px-4 py-10 md:-mx-6 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10 md:px-6 md:py-12"
 		>
 			<div class="max-w-[60ch]">
 				<h2 class="font-display text-3xl font-semibold md:text-4xl">Programma “Augļu valoda”</h2>
@@ -141,13 +141,13 @@
 			</div>
 		</article>
 
-		<!-- 6 · 12 nodarbību 1:1 pakete -->
+		<!-- 6 · 12 nodarbību 1:1 paka -->
 		<article
 			class="grid gap-4 border-b border-rule py-10 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10"
 		>
 			<div class="max-w-[60ch]">
-				<h2 class="font-display text-2xl font-semibold md:text-3xl">12 nodarbību 1:1 pakete</h2>
-				<p class="mt-2 text-ink-2">Individuālas 1:1 nodarbības — 12 nodarbību pakete.</p>
+				<h2 class="font-display text-2xl font-semibold md:text-3xl">12 nodarbību 1:1 paka</h2>
+				<p class="mt-2 text-ink-2">Individuālas 1:1 nodarbības — 12 nodarbību paka.</p>
 				<div class="mt-5">
 					<a
 						href="https://tidycal.com/noraozolanta/konsultacija"
@@ -157,7 +157,7 @@
 					>
 				</div>
 			</div>
-			<p class="font-medium md:text-right">600 €</p>
+			<p class="font-medium md:text-right">600 €</p>
 		</article>
 	</div>
 </section>
