@@ -17,9 +17,7 @@
 				<p class="font-display text-2xl font-semibold">Paldies!</p>
 				<p class="mt-2 text-ink-2">{$message.text}</p>
 			{:else}
-				<label for="footer-name" class="font-display text-2xl font-semibold tracking-tight">
-					Mana misija:
-				</label>
+				<h2 class="font-display text-2xl font-semibold tracking-tight">Mana misija:</h2>
 				<p class="mt-2 text-ink-2">
 					Palīdzēt latvietēm runāt brīvi angļu valodā. Vēlies uzzināt vairāk? Tad droši vari...
 				</p>
@@ -36,6 +34,7 @@
 							placeholder="Vārds"
 							required
 							aria-required="true"
+							aria-label="Vārds"
 							bind:value={$form.name}
 						/>
 						<input
