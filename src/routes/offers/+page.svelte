@@ -47,31 +47,53 @@
 			<p class="font-medium md:text-right">Bezmaksas</p>
 		</article>
 
-		<!-- 2 · Self-Talk Freebie -->
+		<!-- 2 · Self-Talk Video -->
 		<article
 			class="grid gap-4 border-b border-rule py-8 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10"
 		>
 			<div class="max-w-[60ch]">
-				<h2 class="font-display text-2xl font-semibold md:text-3xl">Self-Talk Freebie</h2>
-				<p class="mt-2 text-ink-2">Bezmaksas resurss par pašrunu, runājot angliski.</p>
+				<h2 class="font-display text-2xl font-semibold md:text-3xl">Self-Talk Video</h2>
+				<p class="mt-2 text-ink-2">Bezmaksas resurss, kas parāda, kā trenēties jebkur un jebkad.</p>
 				<p class="mt-4">
 					<a
 						href="https://self-talk-freebie.subscribepage.io"
 						target="_blank"
 						rel="noopener noreferrer"
-						class="link-cta">Saņemt →</a
+						class="link-cta">Saņemt video →</a
 					>
 				</p>
 			</div>
 			<p class="font-medium md:text-right">Bezmaksas</p>
 		</article>
 
+		<!-- 2.5 · Webinar -->
+		<article
+			class="grid gap-4 border-b border-rule py-8 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10"
+		>
+			<div class="max-w-[60ch]">
+				<h2 class="font-display text-2xl font-semibold md:text-3xl">
+					Vebināra "Vocabulary Workshop" ieraksts
+				</h2>
+				<p class="mt-2 text-ink-2">
+					Ieraksts no vebināra par to, kā mācīties vārdiņus smadznēm draudzīgā veidā.
+				</p>
+				<p class="mt-4">
+					<a
+						href="https://preview.mailerlite.io/forms/1213635/162621411069789648/share"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="link-cta">Saņemt ierakstu →</a
+					>
+				</p>
+			</div>
+			<p class="font-medium md:text-right">Bezmaksas</p>
+		</article>
 		<!-- 3 · My English Roadmap Session -->
 		<article
 			class="grid gap-4 border-b border-rule py-10 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10"
 		>
 			<div class="max-w-[60ch]">
-				<h2 class="font-display text-2xl font-semibold md:text-3xl">My English Roadmap Session</h2>
+				<h2 class="font-display text-2xl font-semibold md:text-3xl">My English Learning Plan</h2>
 				<p class="mt-2 text-ink-2">
 					Strukturēta sesija, kuras rezultāts ir skaidrs virziens nākamajiem 2–3 mēnešiem.
 				</p>
@@ -92,9 +114,11 @@
 			class="grid gap-4 border-b border-rule py-8 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10"
 		>
 			<div class="max-w-[60ch]">
-				<h2 class="font-display text-2xl font-semibold md:text-3xl">Speak Freely Club</h2>
+				<h2 class="font-display text-2xl font-semibold md:text-3xl">
+					Sarunvalodas grupa Speak Freely Club
+				</h2>
 				<p class="mt-2 text-ink-2">
-					Strukturēts klubs regulārai runāšanas praksei atbalstošā vidē.
+					Tava sporta zāle angļu valodai, drošā un jautrā vidē, kur trenēt valodu ir viegli.
 				</p>
 				<div class="mt-5">
 					<a
@@ -105,8 +129,29 @@
 					>
 				</div>
 			</div>
+			<p class="font-medium md:text-right">
+				200 € kopā par kārtu (3 mēneši)<br />vai<br />75 € mēnesī
+			</p>
 		</article>
+		<article
+			class="grid gap-4 border-b border-rule py-8 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10"
+		>
+			<div class="max-w-[60ch]">
+				<h2 class="font-display text-2xl font-semibold md:text-3xl">
+					Drīzumā: video kurss "Get Ready for Your Presentation"
+				</h2>
 
+				<div class="mt-5">
+					<a
+						href="https://dvay2t.subscribepage.io"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="btn btn-outline">Pieteikties waitlistam</a
+					>
+				</div>
+			</div>
+			<p class="font-medium md:text-right">?</p>
+		</article>
 		<!-- 5 · Programma “Augļu valoda” · flagship -->
 		<article
 			class="-mx-4 grid gap-4 bg-paper-2 px-4 py-10 md:-mx-6 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10 md:px-6 md:py-12"
@@ -117,8 +162,8 @@
 					Valoda, kas nes <span class="mark-amber">augļus</span>
 				</p>
 				<p class="mt-3 text-lg leading-relaxed">
-					Transformējoša 3 mēnešu programma sievietēm, kuras ir gatavas pārstāt baidīties runāt
-					angļu valodā.
+					Transformējoša 3 mēnešu programma sievietēm, kuras ir gatavas pārvarēt savu runāšanas
+					bloku angļu valodā.
 				</p>
 				<div class="mt-6 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
 					<a
@@ -139,6 +184,9 @@
 					</button>
 				</div>
 			</div>
+			<p class="font-medium md:text-right">
+				591 € kopā<br />vai<br />197 € mēnesī
+			</p>
 		</article>
 
 		<!-- 6 · 12 nodarbību 1:1 paka -->
@@ -146,8 +194,11 @@
 			class="grid gap-4 border-b border-rule py-10 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10"
 		>
 			<div class="max-w-[60ch]">
-				<h2 class="font-display text-2xl font-semibold md:text-3xl">12 nodarbību 1:1 paka</h2>
-				<p class="mt-2 text-ink-2">Individuālas 1:1 nodarbības — 12 nodarbību paka.</p>
+				<h2 class="font-display text-2xl font-semibold md:text-3xl">12 nodarbību paka</h2>
+				<p class="mt-2 text-ink-2">
+					Individuālas 1:1 nodarbības, 12 nodarbību paka jeb 3 mēnešu paka (nodarbības 1x nedēļā, 60
+					min).
+				</p>
 				<div class="mt-5">
 					<a
 						href="https://tidycal.com/noraozolanta/konsultacija"

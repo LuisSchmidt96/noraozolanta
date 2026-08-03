@@ -12,19 +12,22 @@
 	<div
 		class="container mx-auto grid gap-10 px-4 py-14 md:grid-cols-[3fr_2fr] md:items-start md:gap-16"
 	>
-		<div class="max-w-xl">
+		<div class="max-w-2xl">
 			{#if $message?.status === 'success'}
 				<p class="font-display text-2xl font-semibold">Paldies!</p>
 				<p class="mt-2 text-ink-2">{$message.text}</p>
 			{:else}
 				<label for="footer-name" class="font-display text-2xl font-semibold tracking-tight">
-					Iknedēļas vēstule par valodu, pārliecību un dzīvi
+					Mana misija:
 				</label>
 				<p class="mt-2 text-ink-2">
-					Godīgas, piezemētas atziņas par angļu valodas apguvi — bez spiediena.
+					Palīdzēt latvietēm runāt brīvi angļu valodā. Vēlies uzzināt vairāk? Tad droši vari...
 				</p>
 				<form method="post" action="?/newsletter" use:enhance class="mt-5">
 					<div class="flex flex-col gap-3 sm:flex-row">
+						<button type="submit" class="btn btn-primary" disabled={$delayed}>
+							{$delayed ? 'Sūta…' : 'Pieteikties epastiem no Noras '}
+						</button>
 						<input
 							id="footer-name"
 							type="text"
@@ -45,9 +48,6 @@
 							aria-label="E-pasta adrese"
 							bind:value={$form.email}
 						/>
-						<button type="submit" class="btn btn-primary" disabled={$delayed}>
-							{$delayed ? 'Sūta…' : 'Pierakstīties'}
-						</button>
 					</div>
 					{#if $message?.status === 'error'}
 						<p class="mt-3 text-sm text-error" role="alert">

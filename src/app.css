@@ -232,6 +232,17 @@ h4 {
 	font-size: 1.1875rem;
 }
 
+/* Two-line CTA label (design.md · CTA voice). Must live here rather than as
+ * Tailwind utilities on the element: .btn is unlayered, so it outranks anything
+ * in @layer utilities and whitespace-normal would silently lose. */
+.btn-wrap {
+	white-space: normal;
+	text-align: center;
+	text-wrap: balance;
+	max-width: 24rem;
+	line-height: 1.35;
+}
+
 .btn-primary {
 	background-color: var(--color-accent);
 	border: 1px solid var(--color-accent);

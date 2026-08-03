@@ -27,15 +27,18 @@
 				Pārvari bailes un iegūsti pārliecību <span class="mark-amber">runājot angliski</span>!
 			</h1>
 			<p class="max-w-[60ch] text-lg leading-relaxed md:text-xl">
-				Vienīgā angļu valodas pasniedzēja un koučs Latvijā, kas darbojas arī ar emocionālo un
+				Viena no top angļu valodas pasniedzējām un koučiem Latvijā, kas darbojas arī emocionālo un
 				psiholoģisko pusi valodas mācībās.
 			</p>
 			<p class="max-w-[60ch] text-lg leading-relaxed md:text-xl">
 				Šeit Tu vari trenēties drošā, atbalstošā vidē un tad runāšana beidzot nāk pati no sevis.
 			</p>
 			<div class="mt-2 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
-				<a href="https://subscribepage.io/programmaaugluvaloda" class="btn btn-primary btn-lg">
-					Apskatīt programmu
+				<a
+					href="https://subscribepage.io/programmaaugluvaloda"
+					class="btn btn-primary btn-lg btn-wrap"
+				>
+					Pieteikties epastiem par to, kā beidzot justies brīvi angliski
 				</a>
 				<button
 					onclick={(e) => {
@@ -44,7 +47,7 @@
 					}}
 					class="link-cta cursor-pointer border-none bg-transparent p-0 text-lg"
 				>
-					Pieraksties jaunumiem →
+					Apskatīt piedāvājumus un cenas →
 				</button>
 			</div>
 		</div>
@@ -61,7 +64,7 @@
 
 <!-- Dalībnieču rezultāti · lead quote + two before/after cards -->
 <section id="testimonials" class="container mx-auto px-4 py-16 md:py-28">
-	<h2 class="text-3xl font-semibold md:text-4xl">Dalībnieču rezultāti no programmas</h2>
+	<h2 class="text-3xl font-semibold md:text-4xl">Atsauksmes no klientēm</h2>
 
 	<figure class="mt-10 max-w-3xl">
 		<blockquote class="border-l-2 border-accent-2 pl-6 text-lg leading-relaxed md:text-xl">

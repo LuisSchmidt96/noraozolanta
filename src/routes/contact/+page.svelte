@@ -103,7 +103,7 @@
 				<h2 class="font-display text-2xl font-semibold md:text-3xl">
 					Vēlies kaut ko pajautāt “pa kluso”?
 				</h2>
-				<p class="text-ink-2">Droši uzraksti man ziņu — atbildēšu personīgi.</p>
+				<p class="text-ink-2">Droši uzraksti man ziņu.</p>
 			</div>
 			{#if $message?.status === 'success'}
 				<p class="font-display text-2xl font-semibold" role="status">{$message.text}</p>

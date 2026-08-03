@@ -28,16 +28,17 @@
 		<div class="flex max-w-[58ch] flex-col gap-6 text-lg leading-relaxed">
 			<h1 class="text-4xl font-bold md:text-5xl">Čau!</h1>
 			<p>
-				Ja vēl neesam pazīstamas/i, mani sauc Nora. Es esmu angļu valodas pasniedzēja, kas strādā ar
-				runāšanas barjerām un palīdz cilvēkiem beidzot sākt runāt — bez bailēm, kaunsajūtas vai
-				perfekcionisma.
+				Mani sauc Nora un esmu angļu valodas pasniedzēja un koučs, kas palīdz cilvēkiem kā tev
+				beidzot runāt brīvi angliski.
 			</p>
 			<p>
-				Es ticu, ka valodu var apgūt citādi: ar skaidru mērķi, drošu vidi un reālu plānu, kas strādā
-				arī tad, ja iepriekšējās metodes nav palīdzējušas.
+				Vai nu tas nozīmē sagatovties prezentācijai angliski, koferencei vai vienkārši uzlabot savu
+				valodu, lai vari strādāt labākā, starptautiskā uzņēmumā, ar šo visu es jau palīdzu sievietēm
+				8+ gadu gājumā.
 			</p>
 			<p>
-				Mana misija — palīdzēt latvietēm/šiem runāt angļu valodā ar pārliecību, skaidrību un mieru.
+				Es ticu, ka valodu var apgūt citādi: ar skaidru mērķi, nervu sistēmai un smadzenēm draudzīgā
+				veidā + ar reālu plānu, kas strādā tev. Arī tad, ja iepriekšējās metodes nav palīdzējušas.
 			</p>
 			<p class="font-display text-2xl">— Nora</p>
 			<p class="mt-4 text-base text-ink-2">
