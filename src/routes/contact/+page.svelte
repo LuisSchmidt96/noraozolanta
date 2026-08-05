@@ -105,94 +105,98 @@
 				</h2>
 				<p class="text-ink-2">Droši uzraksti man ziņu.</p>
 			</div>
-			{#if $message?.status === 'success'}
-				<p class="font-display text-2xl font-semibold" role="status">{$message.text}</p>
-			{:else}
-				<form method="post" action="?/contact" use:enhance class="flex flex-col gap-1">
-					<div class="flex flex-col gap-1">
-						<label for="contact-name" class="text-sm font-medium">Vārds</label>
-						<input
-							id="contact-name"
-							type="text"
-							class="input"
-							name="name"
-							required
-							aria-required="true"
-							aria-invalid={$errors.name ? 'true' : undefined}
-							bind:value={$form.name}
-						/>
-						<p class="min-h-5 text-sm text-error">
-							{$errors.name ?? ''}
-						</p>
-					</div>
-					<div class="flex flex-col gap-1">
-						<label for="contact-email" class="text-sm font-medium">E-pasts</label>
-						<input
-							id="contact-email"
-							type="email"
-							class="input"
-							name="email"
-							required
-							aria-required="true"
-							aria-invalid={$errors.email ? 'true' : undefined}
-							bind:value={$form.email}
-						/>
-						<p class="min-h-5 text-sm text-error">
-							{$errors.email ?? ''}
-						</p>
-					</div>
-					<div class="flex flex-col gap-1">
-						<label for="contact-message" class="text-sm font-medium"
-							>Par ko Tu vēlētos parunāt?</label
-						>
-						<textarea
-							id="contact-message"
-							class="input min-h-32"
-							name="message"
-							rows="5"
-							required
-							aria-required="true"
-							aria-invalid={$errors.message ? 'true' : undefined}
-							bind:value={$form.message}
-						></textarea>
-						<p class="min-h-5 text-sm text-error">
-							{$errors.message ?? ''}
-						</p>
-					</div>
-					<div class="flex items-center gap-3">
-						<input
-							type="checkbox"
-							class="checkbox"
-							id="marketingConsent"
-							name="marketingConsent"
-							bind:checked={$form.marketingConsent}
-						/>
-						<label for="marketingConsent">Vēlos saņemt jaunumus e-pastā (pēc izvēles)</label>
-					</div>
-					{#if $message?.status === 'error'}
-						<p class="text-sm text-error" role="alert">{$message.text}</p>
-					{/if}
-					<button type="submit" class="btn btn-primary mt-6 w-fit" disabled={$delayed}>
-						{$delayed ? 'Sūta…' : 'Nosūtīt ziņu'}
-					</button>
+			<!-- min-h reserves the form's height so the section doesn't collapse on
+			     success. Desktop only — on mobile the shrink is wanted. -->
+			<div class="flex flex-col justify-center md:min-h-120">
+				{#if $message?.status === 'success'}
+					<p class="font-display text-2xl font-semibold" role="status">{$message.text}</p>
+				{:else}
+					<form method="post" action="?/contact" use:enhance class="flex flex-col gap-1">
+						<div class="flex flex-col gap-1">
+							<label for="contact-name" class="text-sm font-medium">Vārds</label>
+							<input
+								id="contact-name"
+								type="text"
+								class="input"
+								name="name"
+								required
+								aria-required="true"
+								aria-invalid={$errors.name ? 'true' : undefined}
+								bind:value={$form.name}
+							/>
+							<p class="min-h-5 text-sm text-error">
+								{$errors.name ?? ''}
+							</p>
+						</div>
+						<div class="flex flex-col gap-1">
+							<label for="contact-email" class="text-sm font-medium">E-pasts</label>
+							<input
+								id="contact-email"
+								type="email"
+								class="input"
+								name="email"
+								required
+								aria-required="true"
+								aria-invalid={$errors.email ? 'true' : undefined}
+								bind:value={$form.email}
+							/>
+							<p class="min-h-5 text-sm text-error">
+								{$errors.email ?? ''}
+							</p>
+						</div>
+						<div class="flex flex-col gap-1">
+							<label for="contact-message" class="text-sm font-medium"
+								>Par ko Tu vēlētos parunāt?</label
+							>
+							<textarea
+								id="contact-message"
+								class="input min-h-32"
+								name="message"
+								rows="5"
+								required
+								aria-required="true"
+								aria-invalid={$errors.message ? 'true' : undefined}
+								bind:value={$form.message}
+							></textarea>
+							<p class="min-h-5 text-sm text-error">
+								{$errors.message ?? ''}
+							</p>
+						</div>
+						<div class="flex items-center gap-3">
+							<input
+								type="checkbox"
+								class="checkbox"
+								id="marketingConsent"
+								name="marketingConsent"
+								bind:checked={$form.marketingConsent}
+							/>
+							<label for="marketingConsent">Vēlos saņemt jaunumus e-pastā (pēc izvēles)</label>
+						</div>
+						{#if $message?.status === 'error'}
+							<p class="text-sm text-error" role="alert">{$message.text}</p>
+						{/if}
+						<button type="submit" class="btn btn-primary mt-6 w-fit" disabled={$delayed}>
+							{$delayed ? 'Sūta…' : 'Nosūtīt ziņu'}
+						</button>
 
-					<!-- Honeypot -->
-					<div
-						class="absolute top-auto left-[-10000px] h-px w-px overflow-hidden"
-						aria-hidden="true"
-					>
-						<label for="company">Company</label>
-						<input
-							id="company"
-							name="company"
-							type="text"
-							tabindex="-1"
-							autocomplete="off"
-							value=""
-						/>
-					</div>
-				</form>
-			{/if}
+						<!-- Honeypot -->
+						<div
+							class="absolute top-auto left-[-10000px] h-px w-px overflow-hidden"
+							aria-hidden="true"
+						>
+							<label for="company">Company</label>
+							<input
+								id="company"
+								name="company"
+								type="text"
+								tabindex="-1"
+								autocomplete="off"
+								value=""
+							/>
+						</div>
+					</form>
+				{/if}
+			</div>
 		</div>
 	</section>
 </div>
