@@ -51,7 +51,7 @@ export async function submitContactForm(
 	if (hp) {
 		return message(form, {
 			status: 'success',
-			text: 'Ziņojums nosūtīts! Paldies — sazināsimies drīzumā.'
+			text: 'Ziņojums nosūtīts! Paldies, sazināsimies drīzumā.'
 		});
 	}
 
@@ -119,14 +119,14 @@ ${clean.message}
 
 		return message(form, {
 			status: 'success',
-			text: 'Ziņojums nosūtīts! Paldies — pārbaudiet e-pastu, lai apstiprinātu jaunumu saņemšanu.'
+			text: 'Ziņojums nosūtīts! Paldies, pārbaudiet e-pastu, lai apstiprinātu jaunumu saņemšanu.'
 		});
 	}
 
 	// No marketing consent: the mail is already sent, so this is still a success.
 	return message(form, {
 		status: 'success',
-		text: 'Ziņojums nosūtīts! Paldies — sazināsimies drīzumā.'
+		text: 'Ziņojums nosūtīts! Paldies, sazināsimies drīzumā.'
 	});
 }
 
