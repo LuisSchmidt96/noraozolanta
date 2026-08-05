@@ -88,7 +88,7 @@
 			</div>
 			<p class="font-medium md:text-right">Bezmaksas</p>
 		</article>
-		<!-- 3 · My English Roadmap Session -->
+		<!-- 3 · My English Learning Plan -->
 		<article
 			class="grid gap-4 border-b border-rule py-10 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10"
 		>
@@ -99,7 +99,7 @@
 				</p>
 				<div class="mt-5">
 					<a
-						href="https://tidycal.com/noraozolanta/myenglishroadmapsession"
+						href="https://tidycal.com/noraozolanta/myenglishlearningplan"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="btn btn-outline">Pieteikties sesijai</a
@@ -143,7 +143,7 @@
 
 				<div class="mt-5">
 					<a
-						href="https://dvay2t.subscribepage.io"
+						href="https://docs.google.com/document/d/117wDiZQYpJWMlwSECnHNRjyqjNhkb6y2TyRC95MewKI/edit?usp=sharing"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="btn btn-outline">Pieteikties waitlistam</a

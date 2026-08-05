@@ -34,21 +34,17 @@
 				Šeit Tu vari trenēties drošā, atbalstošā vidē un tad runāšana beidzot nāk pati no sevis.
 			</p>
 			<div class="mt-2 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
-				<a
-					href="https://subscribepage.io/programmaaugluvaloda"
-					class="btn btn-primary btn-lg btn-wrap"
-				>
-					Pieteikties epastiem par to, kā beidzot justies brīvi angliski
-				</a>
 				<button
+					type="button"
 					onclick={(e) => {
 						e.stopPropagation();
 						openNewsletterModal();
 					}}
-					class="link-cta cursor-pointer border-none bg-transparent p-0 text-lg"
+					class="btn btn-primary btn-lg btn-wrap"
 				>
-					Apskatīt piedāvājumus un cenas →
+					Gribu uzzināt, kā justies brīvi angliski (epastos)!
 				</button>
+				<a href="/offers" class="link-cta text-lg">Apskatīt piedāvājumus un cenas →</a>
 			</div>
 		</div>
 		<img
