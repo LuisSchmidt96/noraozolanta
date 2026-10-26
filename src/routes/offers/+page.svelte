@@ -133,25 +133,6 @@
 				200 € kopā par kārtu (3 mēneši)<br />vai<br />75 € mēnesī
 			</p>
 		</article>
-		<article
-			class="grid gap-4 border-b border-rule py-8 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10"
-		>
-			<div class="max-w-[60ch]">
-				<h2 class="font-display text-2xl font-semibold md:text-3xl">
-					Drīzumā: video kurss "Get Ready for Your Presentation"
-				</h2>
-
-				<div class="mt-5">
-					<a
-						href="https://docs.google.com/document/d/117wDiZQYpJWMlwSECnHNRjyqjNhkb6y2TyRC95MewKI/edit?usp=sharing"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="btn btn-outline">Pieteikties waitlistam</a
-					>
-				</div>
-			</div>
-			<p class="font-medium md:text-right">?</p>
-		</article>
 		<!-- 5 · Programma “Augļu valoda” · flagship -->
 		<article
 			class="-mx-4 grid gap-4 bg-paper-2 px-4 py-10 md:-mx-6 md:grid-cols-[minmax(0,1fr)_auto] md:gap-10 md:px-6 md:py-12"
@@ -208,7 +189,7 @@
 					>
 				</div>
 			</div>
-			<p class="font-medium md:text-right">600 €</p>
+			<p class="font-medium md:text-right">3x 160 €</p>
 		</article>
 	</div>
 </section>
